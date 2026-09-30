@@ -20,7 +20,13 @@ and **astrology** (what the tradition says it means). Astronomy calculates the s
 | `data/content.json` | The written interpretations, house history, astrology history and technique atlas |
 | `match.py` | Bonus experiment: which sign my personality strengths would pick → `results/personality_match.json` |
 | `report.py` | Turns `results/chart.json` into `RESULTS.md` |
-| `index.html` | The website |
+| `index.html` | The website: four worlds (My chart · Compatibility · Timing · Learn) |
+| `report.html`, `assets/report.js` | The full downloadable report (designed pages, Save as PDF) |
+| `assets/compat.js` | Sign compatibility and full-chart comparison. The other person's chart is computed in the browser with [astronomy-engine](https://github.com/cosinekitty/astronomy); nothing is uploaded or stored |
+| `assets/ask.js` | Ask My Chart: questions generated from what's notable in the chart, each with evidence |
+| `assets/evidence.js` | Wheel hover, colour-by modes and the "Show on the chart" evidence viewer |
+| `assets/learn.js` | Grammar builder, aspect-angle toy and house wheel |
+| `assets/core.js` | Shared helpers and the static chart-wheel renderer |
 | `check_privacy.py` | Blocks a commit if the birth time or blocked content shows up in any tracked file |
 
 ## Privacy

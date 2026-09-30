@@ -390,6 +390,9 @@ table.dig .sc { font: italic 600 18px var(--serif); }
 .tlist li { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 15px; }
 .tlist li .d { color: var(--muted); font-size: 13px; letter-spacing: .04em; }
 .tlist li .g { color: var(--accent); }
+.tlist .win b { display: block; font-weight: 600; }
+.tlist .wline { display: block; font-size: 13px; color: var(--muted); }
+.tlist .win.now .d { color: var(--accent); font-weight: 700; }
 #profWheel svg { width: 100%; max-width: 340px; display: block; margin: 10px auto; }
 
 /* ---------- years ---------- */
@@ -621,6 +624,175 @@ details.rcpt ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: v
 .scrub-out b { display: block; font: italic 600 22px/1.2 var(--serif); margin: 4px 0 2px; }
 .scrub-out span { font-size: 13px; color: var(--muted); }
 
+/* ---------- worlds nav ---------- */
+nav.top { transform: none !important; }
+nav.top .worlds { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; flex: 1; }
+nav.top .worlds::-webkit-scrollbar { display: none; }
+nav.top .w-l { color: #b9d0cd; text-decoration: none; font: italic 600 18px var(--serif); padding: 6px 12px; border-radius: 99px; white-space: nowrap; }
+nav.top .w-l[aria-current="page"] { color: #071a20; background: #e3c27e; }
+.report-btn { flex: none; background: transparent; color: #f3dfb3; border: 1px solid #e3c27e; border-radius: 99px; padding: 6px 14px; font: 700 12px var(--sans); letter-spacing: .06em; text-decoration: none; white-space: nowrap; margin-right: 6px; }
+.report-btn:hover { background: #e3c27e; color: #071a20; }
+.subnav { border-top: 1px solid #cfa95e22; }
+.subnav .wrap { display: flex; gap: 2px; height: 38px; align-items: center; overflow-x: auto; scrollbar-width: none; }
+.subnav .wrap::-webkit-scrollbar { display: none; }
+body:not([data-world="chart"]) .subnav { display: none; }
+body:not([data-world="chart"]) .lens { display: none; }
+.hero { padding-top: 130px; }
+@media (max-width: 700px) {
+  nav.top .brand { display: none; }
+  nav.top .w-l { font-size: 16px; padding: 5px 9px; }
+  .claims-btn { display: none; }
+  .report-btn { padding: 5px 10px; }
+}
+.world-head { min-height: 46vh; display: flex; align-items: flex-end; padding: 150px 0 90px;
+  --bg: radial-gradient(60vw 50vh at 72% 30%, #f6efd922, transparent 60%), linear-gradient(180deg, #040f14 0%, #0b2a31 100%); --fg: #f4eee3; --muted: #b7cfcb; --accent: #e3c27e; --top: #040f14; }
+.wh { font-size: clamp(64px, 11vw, 150px); font-weight: 500; line-height: .9; margin: 12px 0 14px; }
+.wh em { color: #f3dfb3; }
+
+/* ---------- explore ---------- */
+.explore-head { padding-bottom: clamp(60px, 7vw, 90px); }
+.xtabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.xtabs button { background: transparent; border: 1px solid var(--line); border-radius: 99px; padding: 8px 20px; font: italic 600 20px var(--serif); cursor: pointer; color: var(--muted); }
+.xtabs button[aria-selected="true"] { color: #071a20; background: var(--accent); border-color: var(--accent); }
+.cta { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 20px; margin-top: clamp(40px, 5vw, 60px); padding: 18px 22px; border: 1px solid var(--accent); border-radius: 18px; text-decoration: none; color: var(--fg); background: var(--soft); }
+.cta span { font: italic 500 21px var(--serif); }
+.cta b { font: 700 13px var(--sans); letter-spacing: .08em; color: var(--accent); white-space: nowrap; }
+.cta:hover b { text-decoration: underline; }
+details.more { margin-top: 10px; }
+details.more > summary { cursor: pointer; font: italic 600 20px var(--serif); color: var(--accent); list-style: none; padding: 10px 0; border-top: 1px solid var(--line); }
+details.more > summary::-webkit-details-marker { display: none; }
+details.more > summary::after { content: " +"; }
+details.more[open] > summary::after { content: " −"; }
+details.more .b3 { margin-top: 30px; }
+
+/* planetary system: compact entries that open on demand */
+.psys { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 0 26px; margin: 0 0 50px; }
+.psys div { border-top: 1px solid var(--line); padding: 12px 0; }
+.psys small { display: block; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.psys b { display: block; font: italic 600 22px/1.15 var(--serif); margin: 3px 0; }
+.psys span { font-size: 13px; color: var(--muted); }
+.entry { padding: 18px 0; cursor: default; }
+.entry .head { all: unset; cursor: pointer; display: block; width: 100%; }
+.entry .head:focus-visible { outline: 1px solid var(--accent); }
+.entry h3 { font-size: clamp(26px, 3vw, 36px); }
+.entry h3::after { content: "  +"; color: var(--accent); font-size: .7em; }
+.entry.open h3::after { content: "  −"; }
+.entry:not(.open) .tabs, .entry:not(.open) .tabpane, .entry:not(.open) .asps, .entry:not(.open) .scope { display: none; }
+.entry .meta { margin-bottom: 4px; }
+.entry.open .meta { margin-bottom: 14px; }
+.entry:first-child .tabpane::first-letter { font: inherit; float: none; margin: 0; color: inherit; }
+.seal { width: 56px; height: 56px; font-size: 26px; }
+
+/* ---------- wheel modes + evidence viewer ---------- */
+.modes { margin-top: -8px; }
+.mlabel { font: italic 600 16px var(--serif); color: var(--accent); align-self: center; margin-right: 4px; }
+.mlegend { font-size: 13px; color: var(--muted); min-height: 20px; margin: 10px 0 0; }
+.wheel.mode-aspects .pl { opacity: .35; }
+.wheel.mode-aspects .asp { stroke-width: 2.2; }
+.why-btn { display: inline-block; margin-top: 10px; background: transparent; border: 1px solid var(--accent); color: var(--accent); border-radius: 99px; padding: 4px 12px; font: 700 12px var(--sans); cursor: pointer; letter-spacing: .04em; }
+.why-btn:hover { background: var(--accent); color: #071a20; }
+.evd { position: fixed; top: 0; right: 0; bottom: 0; width: min(440px, 100vw); z-index: 45; overflow-y: auto; background: #081d24f7; backdrop-filter: blur(14px); color: #f2ece2; border-left: 1px solid #cfa95e55; padding: 26px 24px 40px; box-shadow: -20px 0 50px #0007;
+  --fg: #f2ece2; --muted: #a8c3c0; --accent: #e3c27e; --line: #cfa95e33; --soft: #ffffff0d; }
+.evd .x { position: absolute; top: 12px; right: 14px; background: none; border: 0; color: #e3c27e; font-size: 26px; cursor: pointer; }
+.evd h3 { font-size: 30px; margin: 6px 0 12px; }
+.evd .evd-wheel svg, .ask-wheel svg, .fc-wheel svg { width: 100%; height: auto; display: block; }
+.evd-n { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 14px 0 4px; }
+.evd ul, .ask-a ul { margin: 0 0 12px; padding-left: 18px; font-size: 15px; }
+.evd-go { display: flex; flex-wrap: wrap; gap: 6px; }
+.evd-go button { background: transparent; border: 1px solid var(--line); color: var(--fg); border-radius: 99px; padding: 4px 12px; font-size: 13px; cursor: pointer; }
+.evd-go button:hover { border-color: var(--accent); }
+.evd-foot { font-size: 13px; color: var(--muted); margin-top: 16px; }
+.evd-foot a { color: var(--accent); }
+.g-mix { font-family: "Segoe UI Symbol", "Apple Symbols", var(--serif) !important; }
+
+/* ---------- compatibility ---------- */
+.sc-controls { display: flex; flex-wrap: wrap; gap: 14px 18px; align-items: flex-end; margin-bottom: 26px; }
+.sc-controls label, .pf label { display: grid; gap: 6px; }
+.sc-controls select, .pf input, .pf select, .gram select { font: 500 16px var(--sans); padding: 9px 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--soft); color: var(--fg); min-width: 150px; }
+.pf input[type=checkbox], .rels input, .unk input { min-width: 0; width: auto; padding: 0; margin: 0; accent-color: #cfa95e; }
+.plus { font: italic 500 34px var(--serif); color: var(--accent); padding-bottom: 4px; }
+.ctx { display: flex; gap: 6px; flex-wrap: wrap; }
+.ctx button, .fc-q button { background: transparent; border: 1px solid var(--line); color: var(--muted); border-radius: 99px; padding: 7px 14px; cursor: pointer; font-size: 14px; }
+.ctx button[aria-selected="true"], .fc-q button[aria-pressed="true"] { background: var(--accent); color: #071a20; border-color: var(--accent); }
+.sc-head { font: italic 600 clamp(30px, 4vw, 46px)/1.1 var(--serif); margin-bottom: 14px; }
+.sc-head i { color: var(--accent); }
+.sc-head small { display: block; font: 700 11px var(--sans); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+.sc-rows { display: grid; grid-template-columns: 240px 1fr; gap: 0 26px; margin: 0; }
+.sc-rows dt, .sc-rows dd { padding: 12px 0; border-top: 1px solid var(--line); margin: 0; }
+.sc-rows dt { font: italic 600 20px var(--serif); }
+@media (max-width: 700px) { .sc-rows { grid-template-columns: 1fr; } .sc-rows dd { border-top: 0; padding-top: 0; } }
+.sc-note { margin-top: 20px; font: italic 500 19px var(--serif); }
+.sc-note a { color: var(--accent); }
+.priv { display: inline-block; font-size: 14px; color: var(--accent); margin-top: 6px; }
+.fc-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 30px; }
+@media (max-width: 800px) { .fc-form { grid-template-columns: 1fr; } }
+.pf { border: 1px solid var(--line); border-radius: 18px; padding: 16px 18px 18px; margin: 0; display: grid; gap: 12px; }
+.pf legend { font: italic 600 22px var(--serif); padding: 0 6px; }
+.pf-fields { display: grid; gap: 12px; }
+.pf-fields[hidden] { display: none; }
+.unk { font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+.manual { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.manual[hidden] { display: none; }
+.manual input { min-width: 0; }
+.me-toggle { display: flex !important; grid-template-columns: none; align-items: center; gap: 8px; font-size: 15px; }
+.fc-rel { grid-column: 1 / -1; }
+.rels { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 8px; font-size: 15px; }
+.go { grid-column: 1 / -1; justify-self: start; background: var(--accent); color: #071a20; border: 0; border-radius: 99px; padding: 12px 26px; font: 700 15px var(--sans); cursor: pointer; }
+.fc-err { grid-column: 1 / -1; color: #f0a3b5; margin: 0; min-height: 1em; }
+.fc-res { margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--line); }
+.fc-top { display: grid; grid-template-columns: 1fr minmax(0, 460px); gap: 30px; align-items: start; }
+@media (max-width: 900px) { .fc-top { grid-template-columns: 1fr; } }
+.fc-top h3 { font-size: clamp(36px, 5vw, 60px); }
+.fc-top h3 em { color: var(--accent); }
+.fc-suns { font: italic 500 20px var(--serif); color: var(--accent); }
+.fc-key { font-size: 13px; color: var(--muted); text-align: center; }
+.fc-key .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; vertical-align: -1px; margin: 0 4px 0 12px; }
+.fc-key .in { background: #fbf6ee; } .fc-key .out { background: #f3d6dc; }
+.fc-q { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.fc-ans { margin-top: 18px; max-width: 820px; }
+.fc-ans h4 { font: italic 600 26px var(--serif); margin-bottom: 6px; }
+.fc-ans ul, .fc-dims ul { padding-left: 18px; font-size: 15px; }
+li.flow::marker { color: var(--flow); } li.tension::marker { color: var(--tension); } li.blend::marker { color: var(--blend); }
+.fc-dims { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0 34px; }
+.fc-dims article { border-top: 1px solid var(--line); padding: 16px 0; }
+.fc-dims .lh { display: flex; justify-content: space-between; align-items: baseline; }
+.fc-dims .lh b { font: italic 600 22px var(--serif); }
+.fc-dims p { margin: 6px 0; }
+.muted { color: var(--muted); }
+
+/* ---------- ask my chart ---------- */
+.ask { display: grid; grid-template-columns: minmax(0, 340px) 1fr; gap: clamp(24px, 4vw, 50px); }
+@media (max-width: 900px) { .ask { grid-template-columns: 1fr; } }
+.ask-q { display: grid; gap: 0; align-content: start; }
+.ask-q button { all: unset; cursor: pointer; padding: 11px 0; border-top: 1px solid var(--line); font: italic 500 19px/1.3 var(--serif); }
+.ask-q button:hover, .ask-q button:focus-visible, .ask-q button[aria-pressed="true"] { color: var(--accent); }
+.ask-q button[aria-pressed="true"]::before { content: "→ "; }
+.ask-a h3 { font-size: clamp(30px, 3.4vw, 44px); margin: 6px 0 12px; }
+.ask-ev { display: grid; grid-template-columns: minmax(0, 300px) 1fr; gap: 24px; align-items: start; margin-top: 16px; }
+@media (max-width: 700px) { .ask-ev { grid-template-columns: 1fr; } }
+
+/* ---------- learn ---------- */
+.gram { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: flex-end; }
+.gram label { display: grid; gap: 6px; }
+.gram select:disabled { opacity: .4; }
+.gnote { font: italic 600 clamp(24px, 3vw, 36px) var(--serif); margin: 26px 0 14px; }
+.gsteps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0 20px; }
+.gsteps li { border-top: 2px solid var(--accent); padding: 10px 0; }
+.gsteps b { display: block; font: italic 600 21px var(--serif); }
+.gsteps span { display: block; font-size: 15px; }
+.gsteps small { display: block; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+.gsentence { font: italic 500 clamp(20px, 2.2vw, 26px)/1.35 var(--serif); margin-top: 16px; max-width: 820px; }
+.gram-tools button { background: transparent; border: 1px solid var(--accent); color: var(--fg); border-radius: 99px; padding: 6px 14px; cursor: pointer; font-size: 13px; }
+.toy { width: 100%; max-width: 320px; display: block; margin: 0 auto; color: var(--fg); }
+.toy .hw { cursor: pointer; }
+.rng { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; margin-top: 14px; }
+.rng input { accent-color: #1d5a61; }
+.rng output { font: italic 600 22px var(--serif); min-width: 50px; text-align: right; }
+.toy-out { min-height: 80px; margin-top: 12px; font-size: 15px; }
+.toy-out b { display: block; font: italic 600 22px var(--serif); }
+.toy-out span { display: block; }
+.toy-out small { display: block; color: var(--muted); margin-top: 6px; }
+
 /* ---------- finale ---------- */
 .finale { padding-bottom: clamp(80px, 10vw, 130px); }
 .recap { max-width: 860px; margin: 0 auto clamp(60px, 8vw, 100px); }
@@ -643,16 +815,27 @@ details.rcpt ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: v
   <span class="lens-cap" id="lensCap" aria-live="polite"></span>
 </div>
 <div class="gpop" id="gpop" role="dialog" aria-modal="false" hidden></div>
-<nav class="top" aria-label="Sections"><div class="wrap">
-  <a class="brand" href="#top">Charted</a>
-  <div class="links">
-    <span class="grp">Me</span><a class="l" href="#headline">Headline</a><a class="l" href="#big-three">Big Three</a><a class="l" href="#portrait">Portrait</a><a class="l" href="#life">Life</a><a class="l" href="#time">Now</a><a class="l" href="#years">Years</a>
-    <span class="grp">The chart</span><a class="l" href="#chart">Wheel</a><a class="l" href="#planets">Planets</a><a class="l" href="#houses">Houses</a><a class="l" href="#aspects">Aspects</a><a class="l" href="#patterns">Patterns</a><a class="l" href="#mechanics">Mechanics</a><a class="l" href="#learn">Atlas</a>
+<nav class="top show" aria-label="Charted">
+  <div class="wrap">
+    <a class="brand" href="#/chart">Charted</a>
+    <div class="worlds" role="tablist">
+      <a class="w-l" href="#/chart" data-w="chart">My chart</a><a class="w-l" href="#/compat" data-w="compat">Compatibility</a><a class="w-l" href="#/timing" data-w="timing">Timing</a><a class="w-l" href="#/learn" data-w="learn">Learn</a>
+    </div>
+    <a class="report-btn" href="report.html?print=1" target="_blank" rel="noopener">Download report <span aria-hidden="true">↓</span></a>
+    <button class="claims-btn" id="claimsBtn" aria-pressed="false" title="Label every claim by type">Claim types</button>
+    <button class="theme" id="theme" aria-label="Switch light or dark">◐</button>
   </div>
-  <button class="claims-btn" id="claimsBtn" aria-pressed="false" title="Label every claim by type">Claim types</button>
-  <button class="theme" id="theme" aria-label="Switch light or dark">◐</button>
-</div></nav>
+  <div class="subnav" id="subnav">
+    <div class="wrap">
+      <a class="l" href="#headline">Headline</a><a class="l" href="#big-three">Big Three</a><a class="l" href="#portrait">Portrait</a><a class="l" href="#life">Life</a><a class="l" href="#chart">Wheel</a><a class="l" href="#explore">Explore</a><a class="l" href="#ask">Ask my chart</a>
+    </div>
+  </div>
+</nav>
 
+
+
+<main>
+<div class="world" data-world="chart">
 <!-- ============ HERO ============ -->
 <header class="env hero" id="top">
   <div class="wrap">
@@ -691,8 +874,6 @@ details.rcpt ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: v
   </div>
   <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C220,90 460,10 720,40 C980,70 1220,20 1440,48 L1440,90 L0,90 Z" class="seam" data-next="layers"/></svg>
 </header>
-
-<main>
 <!-- ============ HEADLINE ============ -->
 <section class="env env-pearl" id="headline">
   <div class="wrap">
@@ -704,6 +885,7 @@ details.rcpt ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: v
     </div>
     <p class="annot" style="margin-top:26px">Tap any line for the chart factors behind it. The dots show how many independent factors agree.</p>
   </div>
+    <div class="wrap"><a class="cta" href="report.html?print=1" target="_blank" rel="noopener"><span>Want the complete version, with every placement explained?</span><b>Download my full report ↓</b></a></div>
   <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C300,90 560,10 820,44 C1060,76 1260,20 1440,46 L1440,90 L0,90 Z" class="seam"/></svg>
 </section>
 
@@ -713,7 +895,7 @@ details.rcpt ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: v
   <div class="wrap" style="position:relative">
     <div class="sec-head"><span class="roman">II</span><div class="label">Sun · Moon · Rising</div><h2>The Big <em>Three</em></h2></div>
     <div class="frame3" id="frame3"></div>
-    <div class="b3" id="b3"></div>
+    <details class="more"><summary>Read the three in full</summary><div class="b3" id="b3"></div></details>
     <div class="talk">
       <svg viewBox="0 0 360 320" aria-label="The Sun, Moon and rising sign connected in a triangle">
         <g stroke="currentColor" stroke-opacity=".45" fill="none">
@@ -799,17 +981,6 @@ details.rcpt ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: v
   <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C260,0 520,80 760,50 C1000,20 1220,70 1440,36 L1440,90 L0,90 Z" class="seam"/></svg>
 </section>
 
-<!-- ============ THREE LAYERS ============ -->
-<section class="env env-pearl layers" id="layers">
-  <div class="wrap">
-    <div class="label">Now, the evidence · read the seams</div>
-    <h2 class="layers-h" id="layersH"></h2>
-    <div class="layer-row" id="layerRow"></div>
-    <p class="annot" style="margin-top:28px">Look for <span class="scope-chip">🔭 Under the telescope</span> on any planet to see these layers pulled apart.</p>
-  </div>
-  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C300,90 560,10 820,44 C1060,76 1260,20 1440,46 L1440,90 L0,90 Z" class="seam" data-next="chart"/></svg>
-</section>
-
 <!-- ============ I · CHART ============ -->
 <section class="env env-night" id="chart">
   <div class="wrap">
@@ -836,12 +1007,25 @@ details.rcpt ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: v
   <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C260,0 520,80 760,50 C1000,20 1220,70 1440,36 L1440,90 L0,90 Z" class="seam" data-next="big-three"/></svg>
 </section>
 
-<!-- ============ III · PLANETS ============ -->
-<section class="env env-book" id="planets">
+<!-- ============ EXPLORE ============ -->
+<section class="env env-night explore-head" id="explore">
   <div class="wrap">
-    <div class="sec-head"><span class="roman">VI</span><div class="label">Ten placements</div><h2>The <em>Planets</em></h2><button class="whats" data-g="planets">What's this?</button></div>
+    <div class="sec-head"><span class="roman">VI</span><div class="label">The evidence, in depth</div><h2>Explore the <em>chart</em></h2></div>
+    <p class="lede" style="margin:-30px 0 26px">Everything above is built from these parts. Pick one to investigate; the full reading of every piece is in your report.</p>
+    <div class="xtabs" role="tablist" id="xtabs">
+      <button role="tab" data-x="planets" aria-selected="true">Planets</button><button role="tab" data-x="houses" aria-selected="false">Houses</button><button role="tab" data-x="aspects" aria-selected="false">Aspects</button><button role="tab" data-x="patterns" aria-selected="false">Patterns</button><button role="tab" data-x="mechanics" aria-selected="false">Mechanics</button>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C300,20 560,80 820,50 C1080,20 1280,60 1440,40 L1440,90 L0,90 Z" class="seam"/></svg>
+</section>
+
+<!-- ============ III · PLANETS ============ -->
+<section data-xpanel="planets" class="xpanel env env-book" id="planets">
+  <div class="wrap">
+    <div class="sec-head"><span class="roman"></span><div class="label">Ten placements</div><h2>The <em>Planets</em></h2><button class="whats" data-g="planets">What's this?</button></div>
     <div class="wait" data-w="mercury" style="margin:-20px 0 50px"></div>
     <p class="lede" style="margin:0 0 60px">Each planet is a part of the self; its sign describes the style, and its house describes where in life it shows up.</p>
+    <div class="psys" id="psys"></div>
     <div class="book-frame">
       <div class="planets">
         <ul class="pindex" id="pindex"></ul>
@@ -849,13 +1033,14 @@ details.rcpt ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: v
       </div>
     </div>
   </div>
+    <div class="wrap"><a class="cta" href="report.html?print=1" target="_blank" rel="noopener"><span>Want all ten planetary interpretations in full?</span><b>Download my full report ↓</b></a></div>
   <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,80 520,10 760,40 C1000,70 1240,20 1440,50 L1440,90 L0,90 Z" class="seam" data-next="houses"/></svg>
 </section>
 
 <!-- ============ IV · HOUSES ============ -->
-<section class="env env-glass" id="houses">
+<section data-xpanel="houses" class="xpanel env env-glass" id="houses">
   <div class="wrap">
-    <div class="sec-head"><span class="roman">VII</span><div class="label">Twelve rooms</div><h2>The <em>Houses</em></h2><button class="whats" data-g="houses">What's this?</button></div>
+    <div class="sec-head"><span class="roman"></span><div class="label">Twelve rooms</div><h2>The <em>Houses</em></h2><button class="whats" data-g="houses">What's this?</button></div>
     <div class="houses">
       <div class="dial" id="dial"></div>
       <div class="hdetail" id="hdetail" aria-live="polite"></div>
@@ -879,13 +1064,14 @@ details.rcpt ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: v
       </div>
     </div>
   </div>
+    <div class="wrap"><a class="cta" href="report.html?print=1" target="_blank" rel="noopener"><span>Want the complete house-by-house reading?</span><b>Download my full report ↓</b></a></div>
   <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C260,10 500,80 760,46 C1020,12 1240,72 1440,40 L1440,90 L0,90 Z" class="seam" data-next="aspects"/></svg>
 </section>
 
 <!-- ============ V · ASPECTS ============ -->
-<section class="env env-night" id="aspects">
+<section data-xpanel="aspects" class="xpanel env env-night" id="aspects">
   <div class="wrap">
-    <div class="sec-head"><span class="roman">VIII</span><div class="label">How the planets talk</div><h2>The <em>Aspects</em></h2><button class="whats" data-g="aspects">What's this?</button></div>
+    <div class="sec-head"><span class="roman"></span><div class="label">How the planets talk</div><h2>The <em>Aspects</em></h2><button class="whats" data-g="aspects">What's this?</button></div>
     <p class="lede" style="margin:-30px 0 40px">Aspects are the angles between planets. Lines in <span style="color:var(--flow)">aqua</span> flow easily, lines in <span style="color:var(--tension)">rose</span> create friction that pushes growth, and <span style="color:var(--blend)">gold</span> marks planets fused together.</p>
     <div class="sky" id="sky"></div>
     <div class="asp-detail" id="aspDetail" aria-live="polite"></div>
@@ -908,13 +1094,14 @@ details.rcpt ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: v
       </div>
     </div>
   </div>
+    <div class="wrap"><a class="cta" href="report.html?print=1" target="_blank" rel="noopener"><span>Want every aspect, orb and minor aspect?</span><b>Download my full report ↓</b></a></div>
   <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C280,80 540,6 800,40 C1060,74 1260,24 1440,46 L1440,90 L0,90 Z" class="seam" data-next="patterns"/></svg>
 </section>
 
 <!-- ============ VI · PATTERNS ============ -->
-<section class="env env-pearl" id="patterns">
+<section data-xpanel="patterns" class="xpanel env env-pearl" id="patterns">
   <div class="wrap">
-    <div class="sec-head"><span class="roman">IX</span><div class="label">Elements · modalities · rulers</div><h2>The <em>Patterns</em></h2><button class="whats" data-g="patterns">What's this?</button></div>
+    <div class="sec-head"><span class="roman"></span><div class="label">Elements · modalities · rulers</div><h2>The <em>Patterns</em></h2><button class="whats" data-g="patterns">What's this?</button></div>
     <div class="spread">
       <div>
         <div class="label">Elements</div>
@@ -949,13 +1136,14 @@ details.rcpt ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: v
       </div>
     </div>
   </div>
+    <div class="wrap"><a class="cta" href="report.html?print=1" target="_blank" rel="noopener"><span>Want every pattern, ruler and retrograde in one place?</span><b>Download my full report ↓</b></a></div>
   <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,46 C240,10 520,80 780,44 C1040,8 1250,64 1440,34 L1440,90 L0,90 Z" class="seam" data-next="mechanics"/></svg>
 </section>
 
 <!-- ============ VII · MECHANICS ============ -->
-<section class="env env-book" id="mechanics">
+<section data-xpanel="mechanics" class="xpanel env env-book" id="mechanics">
   <div class="wrap">
-    <div class="sec-head"><span class="roman">X</span><div class="label">Advanced chart mechanics</div><h2>Under the <em>hood</em></h2><button class="whats" data-g="mechanics">What's this?</button></div>
+    <div class="sec-head"><span class="roman"></span><div class="label">Advanced chart mechanics</div><h2>Under the <em>hood</em></h2><button class="whats" data-g="mechanics">What's this?</button></div>
     <div class="spread">
       <div>
         <div class="label">Essential dignity</div>
@@ -1004,100 +1192,18 @@ details.rcpt ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: v
       </div>
     </div>
   </div>
+    <div class="wrap"><a class="cta" href="report.html?print=1" target="_blank" rel="noopener"><span>Want the full dignity tables and technical data?</span><b>Download my full report ↓</b></a></div>
   <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C240,80 520,10 760,40 C1000,70 1240,20 1440,50 L1440,90 L0,90 Z" class="seam" data-next="time"/></svg>
 </section>
 
-<!-- ============ VIII · TIME ============ -->
-<section class="env env-night" id="time">
+<!-- ============ ASK ============ -->
+<section class="env env-pearl" id="ask">
   <div class="wrap">
-    <div class="sec-head"><span class="roman">XI</span><div class="label">The chart in motion</div><h2>Right <em>now</em></h2><button class="whats" data-g="time">What's this?</button></div>
-    <p class="lede" id="timeIntro" style="margin:-30px 0 50px"></p>
-    <div class="now-grid">
-      <div>
-        <div class="label" id="asOf"></div>
-        <div class="moon-now" id="moonNow"></div>
-        <ul class="facts" id="skyNow"></ul>
-      </div>
-      <div>
-        <div class="label">My transits today</div>
-        <ul class="tlist" id="transitsNow"></ul>
-        <div class="label" style="margin-top:36px">Exact transits in the next twelve months</div>
-        <ul class="tlist" id="upcoming"></ul>
-        <p class="annot" id="transitNote"></p>
-      </div>
-    </div>
-    <hr class="rule">
-    <div class="spread">
-      <div>
-        <div class="label">Annual profection</div>
-        <h3>The <em id="profH"></em> year</h3>
-        <div id="profWheel"></div>
-        <p id="profText"></p>
-      </div>
-      <div>
-        <div class="label">Time lords & progressions</div>
-        <h3>Who's <em>in charge</em> now</h3>
-        <ul class="facts big" id="lords"></ul>
-        <p id="firdText"></p>
-        <p id="progText"></p>
-        <ul class="facts" id="arcList"></ul>
-      </div>
-    </div>
+    <div class="sec-head"><span class="roman">VII</span><div class="label">Questions this chart can answer</div><h2>Ask my <em>chart</em></h2></div>
+    <p class="lede" style="margin:-30px 0 30px">These questions are generated from what is actually notable in this chart. Each answer shows its evidence and lights it up on the wheel.</p>
+    <div class="ask" id="askList"></div>
   </div>
-  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C280,80 540,6 800,40 C1060,74 1260,24 1440,46 L1440,90 L0,90 Z" class="seam" data-next="years"/></svg>
-</section>
-
-<!-- ============ IX · YEARS ============ -->
-<section class="env env-glass" id="years">
-  <div class="wrap">
-    <div class="sec-head"><span class="roman">XII</span><div class="label">A life, in cycles</div><h2>My <em>years</em></h2><button class="whats" data-g="time">What's this?</button></div>
-    <p class="lede" style="margin:-30px 0 30px">Returns, progressions and time-lord periods across a lifetime. Tap a marker to see what lands in the same year.</p>
-    <div class="filters" id="yearFilters" role="group" aria-label="Show cycles">
-      <button data-y="major" aria-pressed="true">Major cycles</button><button data-y="all" aria-pressed="false">Everything</button><button data-y="saturn" aria-pressed="false">Saturn</button><button data-y="jupiter" aria-pressed="false">Jupiter</button><button data-y="nodes" aria-pressed="false">Nodes</button><button data-y="prog" aria-pressed="false">Progressions</button><button data-y="firdaria" aria-pressed="false">Time lords</button>
-    </div>
-    <div class="years" id="yearsLine"></div>
-    <div class="scrub">
-      <label for="ageRange"><span class="label">Scrub through a life</span> <b>Age <output id="ageOut">20</output></b></label>
-      <input type="range" id="ageRange" min="0" max="74" step="1" value="20">
-      <div class="scrub-out" id="scrubOut" aria-live="polite"></div>
-    </div>
-    <div class="year-detail" id="yearDetail" aria-live="polite"></div>
-    <hr class="rule">
-    <div class="spread">
-      <div>
-        <div class="label">Put a date under the microscope</div>
-        <h3>What was the sky <em>doing</em>?</h3>
-        <p style="color:var(--muted)">Pick a date, past or future: a first day of college, a move, a milestone. You'll see the techniques astrologers would examine around it. This doesn't mean astrology caused anything; it shows how timing techniques are used.</p>
-        <div class="prompts">First day of college · a move · a first job · a graduation · a date in the future</div>
-        <label class="date-in"><span class="label">Date</span><input type="date" id="dateIn" min="2006-03-06" max="2080-12-31"></label>
-      </div>
-      <div class="lookup" id="lookup" aria-live="polite"></div>
-    </div>
-  </div>
-  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,46 C240,10 520,80 780,44 C1040,8 1250,64 1440,34 L1440,90 L0,90 Z" class="seam" data-next="portrait"/></svg>
-</section>
-
-<!-- ============ XI · LEARN ============ -->
-<section class="env env-pearl" id="learn">
-  <div class="wrap">
-    <div class="sec-head"><span class="roman">XIII</span><div class="label">How a chart is built · where it came from</div><h2>The <em>atlas</em></h2></div>
-    <div class="label">Build a chart, step by step</div>
-    <ol class="build" id="build"></ol>
-    <hr class="rule">
-    <div class="label">Four thousand years, briefly</div>
-    <ol class="history" id="history"></ol>
-    <hr class="rule">
-    <div class="label">Everything else Western astrology does</div>
-    <p class="lede" style="margin:10px 0 30px">This page reads one natal chart. The tradition is much bigger; these techniques exist but aren't calculated here.</p>
-    <div class="atlas" id="atlas"></div>
-    <hr class="rule">
-    <div class="label">Chart debugger</div>
-    <h3 class="dbg-h">Why do two websites give me <em>different answers?</em></h3>
-    <div class="debug" id="debug"></div>
-    <p class="note" id="schools"></p>
-    <p class="note" id="science"></p>
-  </div>
-  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C300,20 560,80 820,50 C1080,20 1280,60 1440,40 L1440,90 L0,90 Z" class="seam" data-next="bonus"/></svg>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,46 C240,10 520,80 780,44 C1040,8 1250,64 1440,34 L1440,90 L0,90 Z" class="seam"/></svg>
 </section>
 
 <!-- ============ BONUS ============ -->
@@ -1129,6 +1235,181 @@ details.rcpt ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: v
   </div>
 </section>
 
+</div>
+<div class="world" data-world="compat" hidden>
+<!-- ============ COMPATIBILITY ============ -->
+<header class="env world-head env-night" id="compat-top">
+  <div class="wrap">
+    <div class="label">Understand us</div>
+    <h1 class="wh">Compat<em>ibility</em></h1>
+    <p class="lede">Start with Sun signs, then compare two full charts. Relationship type changes the questions: a parent isn't a partner.</p>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C220,90 460,10 720,40 C980,70 1220,20 1440,48 L1440,90 L0,90 Z" class="seam"/></svg>
+</header>
+<section class="env env-shell" id="signs-compat">
+  <div class="wrap">
+    <div class="sec-head"><span class="roman">I</span><div class="label">Layer one · Sun signs</div><h2>Sign <em>compatibility</em></h2></div>
+    <div id="signCompat"></div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C260,0 520,80 760,50 C1000,20 1220,70 1440,36 L1440,90 L0,90 Z" class="seam"/></svg>
+</section>
+<section class="env env-night" id="full-compat">
+  <div class="wrap">
+    <div class="sec-head"><span class="roman">II</span><div class="label">Layer two · full charts</div><h2>Compare two <em>charts</em></h2></div>
+    <div id="fullCompat"></div>
+  </div>
+</section>
+
+</div>
+<div class="world" data-world="timing" hidden>
+<!-- ============ TIMING HEAD ============ -->
+<header class="env world-head env-night" id="timing-top">
+  <div class="wrap">
+    <div class="label">Understand now</div>
+    <h1 class="wh">Tim<em>ing</em></h1>
+    <p class="lede">The natal chart is one moment. These techniques move it through time: what's active now, what's coming, and the long cycles of a life.</p>
+  </div>
+</header>
+
+<!-- ============ VIII · TIME ============ -->
+<section class="env env-night" id="time">
+  <div class="wrap">
+    <div class="sec-head"><span class="roman">I</span><div class="label">The chart in motion</div><h2>Right <em>now</em></h2><button class="whats" data-g="time">What's this?</button></div>
+    <p class="lede" id="timeIntro" style="margin:-30px 0 50px"></p>
+    <div class="now-grid">
+      <div>
+        <div class="label" id="asOf"></div>
+        <div class="moon-now" id="moonNow"></div>
+        <ul class="facts" id="skyNow"></ul>
+      </div>
+      <div>
+        <div class="label">My transits today</div>
+        <ul class="tlist" id="transitsNow"></ul>
+        <div class="label" style="margin-top:36px">Transit windows, next twelve months <span style="font-weight:500;letter-spacing:0;text-transform:none;color:var(--muted)">(within 1°)</span></div>
+        <ul class="tlist" id="upcoming"></ul>
+        <p class="annot" id="transitNote"></p>
+      </div>
+    </div>
+    <hr class="rule">
+    <div class="spread">
+      <div>
+        <div class="label">Annual profection</div>
+        <h3>The <em id="profH"></em> year</h3>
+        <div id="profWheel"></div>
+        <p id="profText"></p>
+      </div>
+      <div>
+        <div class="label">Time lords & progressions</div>
+        <h3>Who's <em>in charge</em> now</h3>
+        <ul class="facts big" id="lords"></ul>
+        <p id="firdText"></p>
+        <p id="progText"></p>
+        <ul class="facts" id="arcList"></ul>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C280,80 540,6 800,40 C1060,74 1260,24 1440,46 L1440,90 L0,90 Z" class="seam" data-next="years"/></svg>
+</section>
+
+<!-- ============ IX · YEARS ============ -->
+<section class="env env-glass" id="years">
+  <div class="wrap">
+    <div class="sec-head"><span class="roman">II</span><div class="label">A life, in cycles</div><h2>My <em>years</em></h2><button class="whats" data-g="time">What's this?</button></div>
+    <p class="lede" style="margin:-30px 0 30px">Returns, progressions and time-lord periods across a lifetime. Tap a marker to see what lands in the same year.</p>
+    <div class="filters" id="yearFilters" role="group" aria-label="Show cycles">
+      <button data-y="major" aria-pressed="true">Major cycles</button><button data-y="all" aria-pressed="false">Everything</button><button data-y="saturn" aria-pressed="false">Saturn</button><button data-y="jupiter" aria-pressed="false">Jupiter</button><button data-y="nodes" aria-pressed="false">Nodes</button><button data-y="prog" aria-pressed="false">Progressions</button><button data-y="firdaria" aria-pressed="false">Time lords</button>
+    </div>
+    <div class="years" id="yearsLine"></div>
+    <div class="scrub">
+      <label for="ageRange"><span class="label">Scrub through a life</span> <b>Age <output id="ageOut">20</output></b></label>
+      <input type="range" id="ageRange" min="0" max="74" step="1" value="20">
+      <div class="scrub-out" id="scrubOut" aria-live="polite"></div>
+    </div>
+    <div class="year-detail" id="yearDetail" aria-live="polite"></div>
+    <hr class="rule">
+    <div class="spread">
+      <div>
+        <div class="label">Put a date under the microscope</div>
+        <h3>What was the sky <em>doing</em>?</h3>
+        <p style="color:var(--muted)">Pick a date, past or future: a first day of college, a move, a milestone. You'll see the techniques astrologers would examine around it. This doesn't mean astrology caused anything; it shows how timing techniques are used.</p>
+        <div class="prompts">First day of college · a move · a first job · a graduation · a date in the future</div>
+        <label class="date-in"><span class="label">Date</span><input type="date" id="dateIn" min="2006-03-06" max="2080-12-31"></label>
+      </div>
+      <div class="lookup" id="lookup" aria-live="polite"></div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,46 C240,10 520,80 780,44 C1040,8 1250,64 1440,34 L1440,90 L0,90 Z" class="seam" data-next="portrait"/></svg>
+</section>
+
+</div>
+<div class="world" data-world="learn" hidden>
+<!-- ============ LEARN HEAD ============ -->
+<header class="env world-head env-night" id="learn-top">
+  <div class="wrap">
+    <div class="label">Understand astrology</div>
+    <h1 class="wh">Le<em>arn</em></h1>
+    <p class="lede">Enough astrology to read this chart, taught by doing: build a placement, turn an angle, walk the houses.</p>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C220,90 460,10 720,40 C980,70 1220,20 1440,48 L1440,90 L0,90 Z" class="seam"/></svg>
+</header>
+
+<!-- ============ LEARN INTERACTIVE ============ -->
+<section class="env env-glass" id="learn-play">
+  <div class="wrap">
+    <div class="sec-head"><span class="roman">I</span><div class="label">The grammar of a chart</div><h2>Build a <em>placement</em></h2></div>
+    <div id="grammar"></div>
+    <hr class="rule">
+    <div class="spread">
+      <div>
+        <div class="label">Aspects are angles</div>
+        <h3>Turn the <em>angle</em></h3>
+        <div id="angleToy"></div>
+      </div>
+      <div>
+        <div class="label">Twelve houses, one wheel</div>
+        <h3>Walk the <em>houses</em></h3>
+        <div id="houseToy"></div>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,46 C240,10 520,80 780,44 C1040,8 1250,64 1440,34 L1440,90 L0,90 Z" class="seam"/></svg>
+</section>
+
+<!-- ============ THREE LAYERS ============ -->
+<section class="env env-pearl layers" id="layers">
+  <div class="wrap">
+    <div class="label">Now, the evidence · read the seams</div>
+    <h2 class="layers-h" id="layersH"></h2>
+    <div class="layer-row" id="layerRow"></div>
+    <p class="annot" style="margin-top:28px">Look for <span class="scope-chip">🔭 Under the telescope</span> on any planet to see these layers pulled apart.</p>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C300,90 560,10 820,44 C1060,76 1260,20 1440,46 L1440,90 L0,90 Z" class="seam" data-next="chart"/></svg>
+</section>
+
+<!-- ============ XI · LEARN ============ -->
+<section class="env env-pearl" id="learn">
+  <div class="wrap">
+    <div class="sec-head"><span class="roman">II</span><div class="label">How a chart is built · where it came from</div><h2>The <em>atlas</em></h2></div>
+    <div class="label">Build a chart, step by step</div>
+    <ol class="build" id="build"></ol>
+    <hr class="rule">
+    <div class="label">Four thousand years, briefly</div>
+    <ol class="history" id="history"></ol>
+    <hr class="rule">
+    <div class="label">Everything else Western astrology does</div>
+    <p class="lede" style="margin:10px 0 30px">This page reads one natal chart. The tradition is much bigger; these techniques exist but aren't calculated here.</p>
+    <div class="atlas" id="atlas"></div>
+    <hr class="rule">
+    <div class="label">Chart debugger</div>
+    <h3 class="dbg-h">Why do two websites give me <em>different answers?</em></h3>
+    <div class="debug" id="debug"></div>
+    <p class="note" id="schools"></p>
+    <p class="note" id="science"></p>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C300,20 560,80 820,50 C1080,20 1280,60 1440,40 L1440,90 L0,90 Z" class="seam" data-next="bonus"/></svg>
+</section>
+
+</div>
 </main>
 
 <footer>
@@ -1145,6 +1426,12 @@ details.rcpt ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: v
   </div>
 </footer>
 
+<script src="assets/core.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/astronomy-engine@2.1.19/astronomy.browser.min.js" defer></script>
+<script src="assets/evidence.js" defer></script>
+<script src="assets/compat.js" defer></script>
+<script src="assets/ask.js" defer></script>
+<script src="assets/learn.js" defer></script>
 <script>
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -1174,8 +1461,8 @@ $("#theme").onclick = () => {
 function paintSeams() {
   document.querySelectorAll(".seam").forEach(p => {
     const sec = p.closest("section, header");
-    let next = sec.tagName === "HEADER" ? document.querySelector("main section") : sec.nextElementSibling;
-    while (next && !next.matches("section, footer")) next = next.nextElementSibling;
+    let next = sec.nextElementSibling;
+    while (next && (!next.matches("section, header, footer") || next.hidden || getComputedStyle(next).display === "none")) next = next.nextElementSibling;
     const col = next && next.tagName === "SECTION" ? getComputedStyle(next).getPropertyValue("--top").trim() : "#06141a";
     p.setAttribute("fill", col || "#06141a");
   });
@@ -1435,8 +1722,8 @@ Promise.all(["results/chart.json", "data/content.json", "results/personality_mat
     const p = P[n];
     const asps = aspectsOf(n).map(a => `${T(K.aspectTypes[a.type].glyph)} ${other(a, n)}`).join("  ·  ");
     return `<article class="entry" id="p-${n}"><div class="seal g">${T(PG[n])}</div><div>
-      <div class="label">${esc(K.labels[n])}<span class="imp">${importanceOf(n)}</span></div><h3>${n} in <em>${p.sign}</em></h3>
-      <div class="meta" data-c="calc"><i>${T(SG[signIdx(p.sign)])}</i> ${metaLine(p)}</div>${schools(n)}
+      <button class="head" aria-expanded="false"><div class="label">${esc(K.labels[n])}<span class="imp">${importanceOf(n)}</span></div><h3>${n} in <em>${p.sign}</em></h3>
+      <div class="meta" data-c="calc"><i>${T(SG[signIdx(p.sign)])}</i> ${metaLine(p)}</div></button>${schools(n)}
       ${asps ? `<div class="asps">${asps}</div>` : ""}${scope(n)}</div></article>`;
   }).join("");
 
@@ -1712,7 +1999,13 @@ Promise.all(["results/chart.json", "data/content.json", "results/personality_mat
   $("#skyNow").innerHTML = Object.entries(TM.sky_now).map(([n, v]) => `<li data-c="astro"><span><span class="g">${T(PG[n])}</span> ${n}</span><span>${v.degree}° ${v.sign}${TM.retrograde_now.includes(n) ? " · ℞" : ""}</span></li>`).join("");
   const AG = t => T(K.aspectTypes[t].glyph);
   $("#transitsNow").innerHTML = TM.transits_now.length ? TM.transits_now.map(t => `<li><span class="d">${t.orb}° orb</span><span data-c="calc">Transiting ${t.transit} <span class="g">${AG(t.type)}</span> natal ${t.natal}</span></li>`).join("") : "<li><span></span><span>No slow-planet contacts within 2° today.</span></li>";
-  $("#upcoming").innerHTML = TM.upcoming.map(t => `<li><span class="d">${new Date(t.date + "T12:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}</span><span data-c="calc">${t.transit} <span class="g">${AG(t.type)}</span> natal ${t.natal}</span></li>`).join("");
+  const fd = d => new Date(d + "T12:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+  const today = new Date(X.as_of + "T12:00");
+  $("#upcoming").innerHTML = (TM.windows || []).map(w => {
+    const active = (!w.start || new Date(w.start + "T12:00") <= today) && (!w.end || new Date(w.end + "T12:00") >= today);
+    return `<li class="win${active ? " now" : ""}"><span class="d">${active ? "Active now" : fd(w.start)}</span><span data-c="calc"><b>${w.transit} <span class="g">${AG(w.type)}</span> natal ${w.natal}</b>
+      <span class="wline">Enters orb ${w.start ? fd(w.start) : "before this period"} · ${w.exact.length ? "exact " + w.exact.map(fd).join(" and ") : "closest approach, not exact"} · leaves ${w.end ? fd(w.end) : "after this period"}</span></span></li>`;
+  }).join("");
   $("#transitNote").textContent = KT.transits;
   const age = X.age, prof = TM.profections[age];
   $("#profH").textContent = ord(prof.house) + "-house";
@@ -2085,6 +2378,29 @@ Promise.all(["results/chart.json", "data/content.json", "results/personality_mat
     r.value = X.age; upd();
   })();
 
+  // ===================== PLANETARY SYSTEM (compact) =====================
+  document.querySelectorAll(".entry .head").forEach(h => h.onclick = () => { const o = h.closest(".entry").classList.toggle("open"); h.setAttribute("aria-expanded", o); });
+  document.querySelectorAll('.pindex a').forEach(a => a.addEventListener("click", () => { const e = document.querySelector(a.getAttribute("href")); e?.classList.add("open"); }));
+  (() => {
+    const most = [...order].sort((a, b) => aspectsOf(b).length - aspectsOf(a).length)[0];
+    const tight = C.aspects.filter(a => a.orb != null).sort((a, b) => a.orb - b.orb).slice(0, 2);
+    const ang = C.planets.filter(p => [1, 4, 7, 10].includes(p.house)).map(p => p.planet);
+    const retro = C.planets.filter(p => p.retrograde).map(p => p.planet);
+    const dom = X.dignities.filter(d => d.domicile || d.exaltation).map(d => d.planet);
+    $("#psys").innerHTML = [
+      ["Chart ruler", `${T(PG.Venus)} Venus`, `rules ${C.rising_sign} Rising · ${ord(P.Venus.house)} house`],
+      ["Most connected", `${T(PG[most])} ${most}`, `${aspectsOf(most).length} major aspects`],
+      ["Tightest links", tight.map(a => `${T(PG[a.a])}${T(K.aspectTypes[a.type].glyph)}${T(PG[a.b])}`).join("  "), tight.map(a => `${aspText(a).title} (${a.orb}°)`).join(" · ")],
+      ["Angular", ang.map(n => T(PG[n])).join(" "), ang.join(", ")],
+      ["Retrograde", retro.map(n => T(PG[n])).join(" "), retro.join(", ")],
+      ["In own sign", dom.length ? dom.join(", ") : "None", dom.length ? "" : "every planet is a guest"],
+    ].map(([l, b, sp]) => `<div data-c="calc"><small>${l}</small><b class="g-mix">${b}</b><span>${esc(sp)}</span></div>`).join("");
+  })();
+
+  // share the loaded chart with the other modules (compatibility, ask, learn, evidence viewer)
+  window.CH = { C, K, M, X, P, D, focus, highlight, showPlanet: n => showPlanet(n), order };
+  document.dispatchEvent(new Event("chart-ready"));
+
   // ===================== FINALE: THE SKY YOU ARRIVED UNDER =====================
   (() => {
     const clone = $("#wheel svg").cloneNode(true);
@@ -2097,12 +2413,40 @@ Promise.all(["results/chart.json", "data/content.json", "results/personality_mat
 
 
   paintSeams();
+  if (location.hash && !location.hash.startsWith("#/")) route();
 })
 .catch(err => { console.error(err); $("#panel").innerHTML = '<p>Couldn\'t load the chart. Open this page through a web server (GitHub Pages or <code>python -m http.server</code>).</p>'; });
 
 // nav: appears after the hero, highlights the current chapter
 const nav = $("nav.top"), links = [...document.querySelectorAll("nav a.l")];
-new IntersectionObserver(([e]) => { nav.classList.toggle("show", !e.isIntersecting); document.body.classList.toggle("nav-on", !e.isIntersecting); }, { threshold: .15 }).observe($(".hero"));
+new IntersectionObserver(([e]) => document.body.classList.toggle("nav-on", !e.isIntersecting), { threshold: .15 }).observe($(".hero"));
+
+// ---------- worlds: My chart · Compatibility · Timing · Learn ----------
+function showWorld(w, target) {
+  document.querySelectorAll(".world").forEach(x => x.hidden = x.dataset.world !== w);
+  document.querySelectorAll(".w-l").forEach(a => a.setAttribute("aria-current", a.dataset.w === w ? "page" : "false"));
+  document.body.dataset.world = w;
+  paintSeams();
+  if (target) requestAnimationFrame(() => target.scrollIntoView({ block: "start", behavior: "instant" })); else scrollTo({ top: 0, behavior: "instant" });
+  document.dispatchEvent(new CustomEvent("world", { detail: w }));
+}
+function showPanel(k) {
+  document.querySelectorAll(".xpanel").forEach(x => x.hidden = x.dataset.xpanel !== k);
+  document.querySelectorAll("#xtabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.x === k));
+  paintSeams();
+}
+document.querySelectorAll("#xtabs button").forEach(b => b.onclick = () => showPanel(b.dataset.x));
+function route() {
+  const h = location.hash;
+  if (!h || h.startsWith("#/")) return showWorld((h || "#/chart").slice(2) || "chart");
+  const t = document.getElementById(decodeURIComponent(h.slice(1)));
+  if (!t) return;
+  const panel = t.closest(".xpanel"); if (panel) showPanel(panel.dataset.xpanel);
+  showWorld(t.closest(".world")?.dataset.world || "chart", t);
+}
+addEventListener("hashchange", route);
+showPanel("planets");
+route();
 const spy = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id)); }), { rootMargin: "-45% 0px -50% 0px" });
 document.querySelectorAll("main section[id]").forEach(s => spy.observe(s));
 </script>

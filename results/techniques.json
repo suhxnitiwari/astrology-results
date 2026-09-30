@@ -1282,6 +1282,220 @@
       "sub": "Moon"
     },
     "solar_return": "2027-03-06",
+    "windows": [
+      {
+        "transit": "Uranus",
+        "type": "sextile",
+        "natal": "Saturn",
+        "start": "2026-07-11",
+        "end": "2026-11-12",
+        "exact": [
+          "2026-08-07",
+          "2026-10-15"
+        ]
+      },
+      {
+        "transit": "Jupiter",
+        "type": "square",
+        "natal": "Jupiter",
+        "start": "2026-09-22",
+        "end": "2026-10-02",
+        "exact": [
+          "2026-09-26"
+        ]
+      },
+      {
+        "transit": "Saturn",
+        "type": "sextile",
+        "natal": "Mars",
+        "start": "2026-10-31",
+        "end": "2027-01-19",
+        "exact": [
+          "2026-11-20",
+          "2026-12-31"
+        ]
+      },
+      {
+        "transit": "Jupiter",
+        "type": "trine",
+        "natal": "Pluto",
+        "start": "2026-11-13",
+        "end": "2027-01-11",
+        "exact": [
+          "2026-11-26",
+          "2026-12-29"
+        ]
+      },
+      {
+        "transit": "Neptune",
+        "type": "sextile",
+        "natal": "Venus",
+        "start": "2026-12-09",
+        "end": "2026-12-16",
+        "exact": []
+      },
+      {
+        "transit": "Pluto",
+        "type": "opposition",
+        "natal": "Saturn",
+        "start": "2026-12-27",
+        "end": "2027-03-01",
+        "exact": [
+          "2027-01-28"
+        ]
+      },
+      {
+        "transit": "Jupiter",
+        "type": "square",
+        "natal": "Jupiter",
+        "start": "2027-02-28",
+        "end": "2027-03-20",
+        "exact": [
+          "2027-03-09"
+        ]
+      },
+      {
+        "transit": "Jupiter",
+        "type": "opposition",
+        "natal": "Neptune",
+        "start": "2027-03-05",
+        "end": "2027-03-29",
+        "exact": [
+          "2027-03-14"
+        ]
+      },
+      {
+        "transit": "Saturn",
+        "type": "sextile",
+        "natal": "Neptune",
+        "start": "2027-04-05",
+        "end": "2027-04-20",
+        "exact": [
+          "2027-04-12"
+        ]
+      },
+      {
+        "transit": "Neptune",
+        "type": "trine",
+        "natal": "Saturn",
+        "start": "2027-03-28",
+        "end": "2027-05-28",
+        "exact": [
+          "2027-04-24"
+        ]
+      },
+      {
+        "transit": "Jupiter",
+        "type": "opposition",
+        "natal": "Neptune",
+        "start": "2027-04-27",
+        "end": "2027-05-22",
+        "exact": [
+          "2027-05-12"
+        ]
+      },
+      {
+        "transit": "Uranus",
+        "type": "sextile",
+        "natal": "Saturn",
+        "start": "2027-04-30",
+        "end": "2027-06-03",
+        "exact": [
+          "2027-05-17"
+        ]
+      },
+      {
+        "transit": "Jupiter",
+        "type": "square",
+        "natal": "Jupiter",
+        "start": "2027-05-07",
+        "end": "2027-05-27",
+        "exact": [
+          "2027-05-18"
+        ]
+      },
+      {
+        "transit": "Saturn",
+        "type": "trine",
+        "natal": "Pluto",
+        "start": "2027-06-18",
+        "end": "2027-07-22",
+        "exact": [
+          "2027-07-01"
+        ]
+      },
+      {
+        "transit": "Jupiter",
+        "type": "trine",
+        "natal": "Pluto",
+        "start": "2027-07-04",
+        "end": "2027-07-13",
+        "exact": [
+          "2027-07-08"
+        ]
+      },
+      {
+        "transit": "Uranus",
+        "type": "conjunction",
+        "natal": "Mars",
+        "start": "2027-06-24",
+        "end": "2027-08-06",
+        "exact": [
+          "2027-07-13"
+        ]
+      },
+      {
+        "transit": "Pluto",
+        "type": "opposition",
+        "natal": "Saturn",
+        "start": "2027-07-19",
+        "end": "2028-01-08",
+        "exact": [
+          "2027-09-02",
+          "2027-12-01"
+        ]
+      },
+      {
+        "transit": "Jupiter",
+        "type": "square",
+        "natal": "Mars",
+        "start": "2027-08-30",
+        "end": "2027-09-07",
+        "exact": [
+          "2027-09-03"
+        ]
+      },
+      {
+        "transit": "Jupiter",
+        "type": "opposition",
+        "natal": "Uranus",
+        "start": "2027-09-11",
+        "end": "2027-09-19",
+        "exact": [
+          "2027-09-15"
+        ]
+      },
+      {
+        "transit": "Saturn",
+        "type": "trine",
+        "natal": "Pluto",
+        "start": "2027-08-28",
+        "end": "2027-10-02",
+        "exact": [
+          "2027-09-18"
+        ]
+      },
+      {
+        "transit": "Neptune",
+        "type": "trine",
+        "natal": "Saturn",
+        "start": "2027-08-22",
+        "end": "2027-11-09",
+        "exact": [
+          "2027-09-30"
+        ]
+      }
+    ],
     "monthly_slow": {
       "planets": [
         "Jupiter",

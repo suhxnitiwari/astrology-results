@@ -325,6 +325,33 @@ def build():
                         upcoming.append({"transit": t, "type": kind, "natal": n, "date": fmt_date(j - 1, off)})
                     last[key] = (prev[1] if prev else 99, o)
 
+    # transit windows: when each slow-planet contact enters a 1° orb, is exact, and leaves (Moon excluded)
+    windows = []
+    for t in slow:
+        series = [swe.calc_ut(jd_now + d, PLANETS[t])[0][0] for d in range(-400, 366 + 400)]
+        for n in PLANETS:
+            if n == "Moon":
+                continue
+            for kind, (angle, _) in ASPECTS.items():
+                orbs = [abs(sep(x, pos[n]) - angle) for x in series]
+                d = 0
+                while d < len(orbs):
+                    if orbs[d] <= 1:
+                        s0 = d
+                        while d < len(orbs) and orbs[d] <= 1:
+                            d += 1
+                        s1 = d - 1
+                        # keep runs that overlap the next twelve months (offsets 400..766)
+                        if s1 >= 400 and s0 <= 766:
+                            exact = [fmt_date(jd_now + k - 400, off) for k in range(s0 + 1, s1)
+                                     if orbs[k] <= orbs[k - 1] and orbs[k] <= orbs[k + 1] and orbs[k] < 0.2]
+                            windows.append({"transit": t, "type": kind, "natal": n,
+                                            "start": fmt_date(jd_now + s0 - 400, off) if s0 > 0 else None,
+                                            "end": fmt_date(jd_now + s1 - 400, off) if s1 < len(orbs) - 1 else None,
+                                            "exact": exact})
+                    d += 1
+    windows.sort(key=lambda w: w["exact"][0] if w["exact"] else (w["start"] or ""))
+
     # returns
     def crossings(body, target, start, years):
         out, j = [], start
@@ -430,7 +457,7 @@ def build():
             "profections": prof, "sky_now": sky_now, "transits_now": transits_now, "upcoming": upcoming,
             "returns": returns, "progressions": prog, "progression_events": prog_events,
             "solar_arc": {"arc": round(arc, 1), "contacts": solar_arc}, "firdaria": firdaria, "firdaria_now": fird_now,
-            "solar_return": solar_return, "monthly_slow": {"planets": slow, "positions": monthly}, "retrograde_now": retro_now, "moon_now": moon_now,
+            "solar_return": solar_return, "windows": windows, "monthly_slow": {"planets": slow, "positions": monthly}, "retrograde_now": retro_now, "moon_now": moon_now,
         },
         "sign_same_all_day": sign_confidence,
     }
