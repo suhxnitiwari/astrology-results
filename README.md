@@ -1,9 +1,10 @@
-# Suhani's Sky
+# Charted
 
-**Your sky, explained.** My Western natal chart as an interactive atlas: a chart wheel you can build
+**Your birth chart, taken apart and put back together.** A Western natal chart as an interactive atlas: a chart wheel you can build
 step by step, the Big Three, ten planets, houses and where their meanings came from, aspects, dignities,
 sect, dispositors, fixed stars, transits, profections, progressions, a 2006–2080 timeline, and a synthesis
-of what the chart repeats and where it argues with itself.
+of what the chart repeats and where it argues with itself, a Life Lens (love, work, friendship, home,
+creativity, self), a traceable chart wheel, chart DNA and an age scrubber.
 
 Every result separates **astronomy** (where the planets were), **calculation** (how the chart is built)
 and **astrology** (what the tradition says it means). Astronomy calculates the sky; astrology interprets it.

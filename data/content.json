@@ -741,37 +741,92 @@
   "repeatsNote": "Astrology reads repetition as emphasis: when several independent parts of a chart point the same way, the theme is weighted more heavily. These are transparent counts of interpretive indicators, not scores.",
   "contradictions": [
     {
-      "title": "Feels in waves, thinks in words",
-      "a": "Pisces Sun: intuitive, absorbing, non-linear",
-      "b": "Gemini Moon: verbal, curious, quick",
-      "why": "Sun □ Moon, both mutable"
+      "poles": [
+        "Soft",
+        "Forceful"
+      ],
+      "a": [
+        "Pisces Sun",
+        "Moon △ Venus",
+        "Taurus Rising"
+      ],
+      "b": [
+        "Moon ☌ Mars",
+        "Sun □ Mars",
+        "Mercury □ Pluto"
+      ],
+      "both": "Gentleness is the default setting; force appears when something she cares about is at stake. The Mars contacts describe how quickly she moves once she's decided."
     },
     {
-      "title": "Looks unhurried, moves fast",
-      "a": "Taurus Rising: steady, composed, earthy",
-      "b": "Moon and Mars in Gemini, and no earth planets at all",
-      "why": "Rising (fixed earth) vs. the 2nd-house Gemini pair (mutable air)"
+      "poles": [
+        "Private",
+        "Visible"
+      ],
+      "a": [
+        "Saturn in the 4th",
+        "Three retrograde planets working inward",
+        "Pisces Sun"
+      ],
+      "b": [
+        "Venus, the chart ruler, in the 10th",
+        "Neptune in the 10th",
+        "Seven planets above the horizon"
+      ],
+      "both": "The public side is real, and it's powered by a private foundation. Venus ☍ Saturn is the see-saw between them."
     },
     {
-      "title": "All in, but needs room",
-      "a": "Jupiter in Scorpio in the 7th: deep, committed bonds",
-      "b": "Venus in Aquarius, Sun ☌ Uranus, Moon □ Uranus: freedom and space",
-      "why": "Water-sign devotion vs. Uranian independence"
+      "poles": [
+        "Idealistic",
+        "Analytical"
+      ],
+      "a": [
+        "Pisces Sun",
+        "Neptune in the 10th",
+        "Jupiter □ Neptune"
+      ],
+      "b": [
+        "Moon in Gemini",
+        "Mars in Gemini",
+        "Mercury □ Pluto"
+      ],
+      "both": "She dreams in pictures and then interrogates the dream. Sun □ Moon keeps the two in conversation."
     },
     {
-      "title": "Public life and private roots",
-      "a": "Venus, the chart ruler, at the top of the chart in the 10th",
-      "b": "Saturn at the base of the chart in the 4th",
-      "why": "Venus ☍ Saturn across the private/public axis"
+      "poles": [
+        "Devoted",
+        "Free"
+      ],
+      "a": [
+        "Jupiter in Scorpio in the 7th",
+        "Venus ☍ Saturn",
+        "Four fixed planets"
+      ],
+      "b": [
+        "Venus in Aquarius",
+        "Sun ☌ Uranus",
+        "Moon □ Uranus"
+      ],
+      "both": "Commitment is deep precisely when it doesn't feel like a cage. Astrologically, the freedom signatures describe how she loves, not whether she stays."
     },
     {
-      "title": "Dreams bigger than the plan",
-      "a": "Jupiter: expansion and faith",
-      "b": "Neptune: ideals without edges",
-      "why": "Jupiter □ Neptune, half a degree from exact"
+      "poles": [
+        "Steady",
+        "Quick"
+      ],
+      "a": [
+        "Taurus Rising",
+        "Saturn ⚹ Moon",
+        "Saturn ⚹ Mars"
+      ],
+      "b": [
+        "Six mutable planets",
+        "Moon and Mars in Gemini",
+        "No earth planets"
+      ],
+      "both": "Steadiness is the frame and speed is the engine. Saturn's sextiles are the bridge: structure that supports the speed."
     }
   ],
-  "contradictionsNote": "Astrologers don't resolve tensions by deciding which side is 'true'. Both operate; circumstances decide which leads; and friction is traditionally read as a source of energy and growth, not a flaw.",
+  "contradictionsNote": "Astrology isn't saying she's one or the other. These parts of the chart describe different contexts in which each side is said to show up.",
   "importance": {
     "Foundational": [
       "Sun",
@@ -847,7 +902,400 @@
     }
   ],
   "hero": {
-    "promise": "Your sky, explained.",
-    "sub": "Not just where the planets were, but why, what astrologers believe it means, where those meanings came from, and which parts are astronomy versus interpretation."
+    "promise": "Your birth chart, taken apart and put back together.",
+    "kicker": "A Western natal chart",
+    "lede": "A Pisces Sun, a Gemini Moon, Taurus rising, and a Sun sitting exactly on Achernar, the star at the end of the celestial river. Here is that sky, what matters in it, and what astrologers would make of it."
+  },
+  "name": "Charted",
+  "glance": [
+    {
+      "icon": "🌊",
+      "label": "Dominant elements",
+      "value": "Water & air",
+      "note": "4 planets each, tied"
+    },
+    {
+      "icon": "🪨",
+      "label": "Missing element",
+      "value": "Earth",
+      "note": "no planets; only the rising sign"
+    },
+    {
+      "icon": "🌀",
+      "label": "Dominant mode",
+      "value": "Mutable",
+      "note": "6 of 10 planets"
+    },
+    {
+      "icon": "☀️",
+      "label": "Orientation",
+      "value": "Public-facing",
+      "note": "7 planets above the horizon"
+    },
+    {
+      "icon": "⚖️",
+      "label": "Chart shape",
+      "value": "Seesaw",
+      "note": "two groups, two empty stretches"
+    },
+    {
+      "icon": "🪐",
+      "label": "Main character",
+      "value": "Jupiter",
+      "note": "not the Sun; see why below"
+    },
+    {
+      "icon": "✨",
+      "label": "Rarest signature",
+      "value": "Sun on Achernar",
+      "note": "0.0° from the river's-end star"
+    }
+  ],
+  "five": [
+    {
+      "text": "Friends, groups and shared hopes are where she comes most alive.",
+      "evidence": [
+        "Sun in the 11th",
+        "Mercury in the 11th",
+        "Uranus in the 11th",
+        "Venus in Aquarius",
+        "Neptune in Aquarius"
+      ]
+    },
+    {
+      "text": "Feelings become real once they're spoken.",
+      "evidence": [
+        "Moon ☌ Mars in Gemini",
+        "Mercury rules both",
+        "Mercury □ Pluto, the tightest aspect",
+        "Mercury ⚹ Venus"
+      ]
+    },
+    {
+      "text": "Calm on the surface, quick underneath.",
+      "evidence": [
+        "Taurus Rising",
+        "Moon in Gemini",
+        "Mars in Gemini",
+        "No earth planets",
+        "Six mutable planets"
+      ]
+    },
+    {
+      "text": "Love here is devoted and built to last, but it needs room to breathe.",
+      "evidence": [
+        "Jupiter in Scorpio in the 7th",
+        "Venus ☍ Saturn",
+        "Moon △ Venus",
+        "Venus in Aquarius",
+        "Sun ☌ Uranus"
+      ]
+    },
+    {
+      "text": "Big dreams, meant to be seen.",
+      "evidence": [
+        "Venus (chart ruler) in the 10th",
+        "Neptune in the 10th",
+        "Seven planets above the horizon",
+        "Jupiter □ Neptune"
+      ]
+    }
+  ],
+  "wait": {
+    "earth": {
+      "title": "Wait. There's no earth.",
+      "text": "Not one planet sits in an earth sign. In astrology, a missing element doesn't mean a missing trait: people without earth planets are often very practical, because they build that quality on purpose.",
+      "not": [
+        "It doesn't mean she's impractical or unreliable.",
+        "It doesn't mean she can't finish things."
+      ],
+      "compensates": [
+        "Taurus Rising: the chart's only earth, right at the front door",
+        "Moon and Mars in the 2nd, the house of money and resources",
+        "Saturn in the 4th, building foundations",
+        "Four planets in fixed signs, plus five in succedent (building) houses"
+      ]
+    },
+    "sun": {
+      "title": "Wait. The Sun isn't the main character.",
+      "text": "Scored on chart structure (angular house, rulerships, sect, exact aspects, a fixed star), Jupiter comes out ahead of the Sun. It rules her Sun sign, trines the Sun, sits on an angle in the partnership house, is the helpful planet of her day chart, and anchors the rulership loop."
+    },
+    "mercury": {
+      "title": "Wait. The 'weakest' planet runs the show.",
+      "text": "By traditional dignity, Mercury in Pisces is at its lowest: in detriment and fall. Yet it rules both the Moon and Mars, makes the tightest aspect in the chart (a square to Pluto within half a degree), and sits in the loop that every rulership chain returns to. Quiet on paper, central in practice."
+    },
+    "cardinal": {
+      "title": "Wait. No cardinal planets, so where does initiative come from?",
+      "text": "Cardinal signs are the 'starters', and she has none. Astrologically, initiative comes through other channels: Mars joined to the Moon (acting on feeling), Sun ☌ Uranus (sudden, original starts), a Jupiter-led rulership loop, and a North Node in Aries, the first cardinal sign, pointing toward bold beginnings."
+    },
+    "rulers": {
+      "title": "Wait. Both rulers of her Sun sign are in a standoff.",
+      "text": "Pisces has two rulers: Jupiter (traditional) and Neptune (modern). In her chart they square each other within half a degree. Astrologers read that as vision and faith pushing each other to grow: dreams large enough that they need a plan."
+    }
+  },
+  "bigThreeFrame": {
+    "sun": {
+      "head": "You think you are",
+      "line": "intuitive, imaginative, deeply attuned to people"
+    },
+    "moon": {
+      "head": "You actually need",
+      "line": "conversation, variety and a way to put feelings into words"
+    },
+    "rising": {
+      "head": "People first meet",
+      "line": "someone calm, grounded and unhurried"
+    },
+    "agree": "All three are relational. Pisces absorbs people, Gemini talks with them, and Taurus puts them at ease. The rising sign's ruler, Venus, trines the Moon, so the warm surface and the chatty interior genuinely get along.",
+    "fight": [
+      [
+        "Sun wants",
+        "to flow, feel and follow intuition"
+      ],
+      [
+        "Moon needs",
+        "to name it, analyse it and talk it through"
+      ],
+      [
+        "Rising projects",
+        "steadiness and ease, whatever is happening underneath"
+      ]
+    ],
+    "result": "An unhurried surface over a mind that's already three steps ahead and a heart that has taken in the whole room."
+  },
+  "charactersIntro": "Not every planet matters equally. This ranking is a transparent heuristic, not a measurement: points for being a luminary or the chart ruler, sitting in an angular house, ruling the Sun's or Moon's sign, anchoring the rulership loop, holding a sect role, a fixed-star contact, the number of major aspects, and each near-exact aspect.",
+  "charactersNotes": {
+    "quiet": [
+      "Mercury",
+      "In detriment and fall, yet it rules the Moon and Mars, makes the tightest aspect, and sits in the rulership loop."
+    ],
+    "loud": [
+      "Uranus",
+      "Conjunct the Sun and square the Moon and Mars, so it's hard to miss, but it's a generational placement with no rulership role in the traditional chart."
+    ]
+  },
+  "life": {
+    "love": {
+      "title": "Love & attraction",
+      "intro": "Venus, Mars, the 7th house and the Descendant, read together.",
+      "items": [
+        {
+          "q": "How she loves",
+          "a": "Friendship-first, thoughtful and loyal. Care shows up as consistency and being taken seriously.",
+          "f": [
+            "Venus in Aquarius",
+            "Venus ☍ Saturn",
+            "Moon △ Venus"
+          ]
+        },
+        {
+          "q": "What draws her in",
+          "a": "A quick mind and real depth: someone who can banter and also go beneath the surface.",
+          "f": [
+            "Mars in Gemini",
+            "Moon in Gemini",
+            "Scorpio Descendant",
+            "Jupiter in Scorpio in the 7th"
+          ]
+        },
+        {
+          "q": "What makes her feel chosen",
+          "a": "Steady follow-through over time, and conversation. Being talked to, and actually listened to.",
+          "f": [
+            "Venus ☍ Saturn",
+            "Moon ⚹ Saturn",
+            "Moon in Gemini"
+          ]
+        },
+        {
+          "q": "What creates friction",
+          "a": "Closeness versus room to breathe: wanting depth and also independence.",
+          "f": [
+            "Jupiter in Scorpio in the 7th",
+            "Venus in Aquarius",
+            "Moon □ Uranus"
+          ]
+        },
+        {
+          "q": "What she may romanticise",
+          "a": "Potential: the person someone could become, and the story of the relationship.",
+          "f": [
+            "Pisces Sun",
+            "Neptune in the same house as Venus",
+            "Jupiter □ Neptune"
+          ]
+        },
+        {
+          "q": "Need vs. attraction",
+          "a": "She needs reliability and steadiness; she's drawn to brilliance, novelty and intensity. The best matches, astrologically, offer both.",
+          "f": [
+            "Venus ☍ Saturn",
+            "Taurus Rising",
+            "Sun ☌ Uranus",
+            "Mars in Gemini",
+            "Scorpio Descendant"
+          ]
+        }
+      ]
+    },
+    "work": {
+      "title": "Work & ambition",
+      "intro": "The 10th, 2nd and 6th houses, the Sun, Saturn and Jupiter, kept separate rather than collapsed into 'career'.",
+      "items": [
+        {
+          "q": "Recognition",
+          "a": "Noticed for grace, taste and people skills, and wanting recognition that's been earned.",
+          "f": [
+            "Venus (chart ruler) in the 10th",
+            "Saturn in Leo"
+          ]
+        },
+        {
+          "q": "Work style",
+          "a": "Fast, verbal and multi-threaded; intuitive leaps checked by sharp questions.",
+          "f": [
+            "Mars in Gemini",
+            "Mercury in Pisces",
+            "Mercury □ Pluto",
+            "Six mutable planets"
+          ]
+        },
+        {
+          "q": "Money",
+          "a": "Earning and building resources is emotionally meaningful, and disciplined.",
+          "f": [
+            "Moon in the 2nd",
+            "Mars in the 2nd",
+            "Saturn ⚹ Moon and Mars"
+          ]
+        },
+        {
+          "q": "Authority",
+          "a": "Authority built from the foundation up, and leadership through groups rather than hierarchy.",
+          "f": [
+            "Saturn in the 4th",
+            "Sun in the 11th",
+            "Saturn is the malefic of the day sect"
+          ]
+        },
+        {
+          "q": "Calling",
+          "a": "Work with an ideal attached: creative, humane or visionary, and visible.",
+          "f": [
+            "Neptune in the 10th",
+            "Venus in the 10th",
+            "Jupiter □ Neptune",
+            "Sun in the 11th"
+          ]
+        },
+        {
+          "q": "Daily environment",
+          "a": "Variety, conversation and collaborators; the 6th house holds no planets, so routine takes its cue from the Gemini pair.",
+          "f": [
+            "No planets in the 6th",
+            "Moon and Mars in Gemini",
+            "Jupiter in the 7th"
+          ]
+        }
+      ]
+    },
+    "people": {
+      "title": "How people experience her",
+      "intro": "The rising sign, the chart ruler, the Descendant and the Moon, as astrological interpretation, not psychological fact.",
+      "items": [
+        {
+          "q": "First five minutes",
+          "a": "Calm, warm and put-together.",
+          "f": [
+            "Taurus Rising",
+            "Venus, the chart ruler, in the 10th"
+          ]
+        },
+        {
+          "q": "After five months",
+          "a": "Quicker, funnier and more complex than the first impression suggested.",
+          "f": [
+            "Moon in Gemini",
+            "Mars in Gemini",
+            "Pisces Sun"
+          ]
+        },
+        {
+          "q": "People who love her",
+          "a": "Find her loyal, generous and deeply attentive.",
+          "f": [
+            "Sun △ Jupiter",
+            "Moon △ Venus",
+            "Jupiter in the 7th"
+          ]
+        },
+        {
+          "q": "People who clash with her",
+          "a": "May be surprised by how direct and independent she can be.",
+          "f": [
+            "Moon ☌ Mars",
+            "Sun ☌ Uranus",
+            "Moon □ Uranus"
+          ]
+        }
+      ]
+    }
+  },
+  "weight": {
+    "4": "Strong recurring theme",
+    "3": "Moderate theme",
+    "2": "Supporting detail",
+    "1": "Single indicator"
+  },
+  "glossary": {
+    "rising": {
+      "t": "Rising sign",
+      "def": "The sign on the eastern horizon at the moment of birth.",
+      "calc": "Computed from exact birth time, latitude and longitude; it moves about one degree every four minutes.",
+      "hist": "The Hellenistic 'Hour-Marker' (horoskopos): the point from which every house is counted.",
+      "debate": "Sensitive to birth time; many birth records are rounded."
+    },
+    "planets": {
+      "t": "Planets",
+      "def": "The Sun, Moon and eight planets used in modern Western astrology.",
+      "calc": "Geocentric ecliptic longitudes from an ephemeris (here, the Swiss Ephemeris).",
+      "hist": "Ancient astrology used seven; Uranus, Neptune and Pluto were added after their discovery (1781, 1846, 1930).",
+      "debate": "Traditional and modern astrologers disagree about how much the outer planets matter personally."
+    },
+    "houses": {
+      "t": "Houses",
+      "def": "Twelve divisions of the sky, counted from the rising point, each linked to areas of life.",
+      "calc": "Depends on the house system; this site uses Porphyry, which matches her canonical chart.",
+      "hist": "Meanings grew from geometry (angles, aspects to the Ascendant) and planetary joys in Hellenistic astrology.",
+      "debate": "There has never been one agreed house system."
+    },
+    "aspects": {
+      "t": "Aspects",
+      "def": "Named angles between planets: 0°, 60°, 90°, 120° and 180°.",
+      "calc": "Measured along the ecliptic; an allowed deviation (orb) decides what counts.",
+      "hist": "The five 'Ptolemaic' aspects come from Greek geometry and harmonic theory.",
+      "debate": "Orbs vary between astrologers and websites."
+    },
+    "patterns": {
+      "t": "Patterns",
+      "def": "Elements, modalities, rulers and the chart's overall shape.",
+      "calc": "Counts and rulership chains derived from planet signs.",
+      "hist": "Element and modality theory is Greek; rulership schemes are Hellenistic.",
+      "debate": "What gets counted (angles? weights?) changes the totals."
+    },
+    "mechanics": {
+      "t": "Chart mechanics",
+      "def": "Traditional tools for judging a planet's condition: dignity, sect, dispositors.",
+      "calc": "Lookup tables applied to each planet's sign and degree.",
+      "hist": "Hellenistic and medieval astrology; revived in the 1990s.",
+      "debate": "Modern psychological astrology often ignores them."
+    },
+    "time": {
+      "t": "Timing techniques",
+      "def": "Ways astrologers move a natal chart through time: transits, profections, progressions.",
+      "calc": "Transits use real planetary positions; profections and progressions are symbolic calculations.",
+      "hist": "Profections and firdaria are ancient and Persian; secondary progressions are later European.",
+      "debate": "Different schools emphasise different techniques."
+    }
   }
 }

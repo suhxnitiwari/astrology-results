@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Suhani's Sky</title>
-<meta name="description" content="Suhani's Western natal chart, explored as an interactive map: Pisces Sun, Gemini Moon, Taurus Rising.">
+<title>Charted</title>
+<meta name="description" content="Charted: a birth chart taken apart and put back together. Pisces Sun, Gemini Moon, Taurus Rising.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -471,6 +471,163 @@ table.dig .sc { font: italic 600 18px var(--serif); }
 .debug summary { cursor: pointer; font: italic 600 21px var(--serif); }
 .debug p { margin: 8px 0 0; font-size: 15px; color: var(--muted); }
 
+/* ---------- nav modes ---------- */
+nav.top .grp { flex: none; align-self: center; font: italic 600 15px var(--serif); color: #e3c27e; padding: 0 6px 0 12px; opacity: .8; white-space: nowrap; }
+nav.top .grp:first-child { padding-left: 0; }
+
+/* ---------- headline ---------- */
+.glance { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.gl-i { background: var(--soft); padding: 18px 16px; border: 1px solid var(--line); border-radius: 16px; backdrop-filter: blur(4px); }
+.gl-i .ic { font-size: 22px; }
+.gl-i small { display: block; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-top: 8px; }
+.gl-i b { display: block; font: italic 600 clamp(24px, 2.4vw, 30px)/1.1 var(--serif); margin: 4px 0; }
+.gl-i span { font-size: 13px; color: var(--muted); }
+.five-wrap { margin-top: clamp(40px, 6vw, 70px); }
+.five { list-style: none; margin: 14px 0 0; padding: 0; counter-reset: f; }
+.five > li { border-top: 1px solid var(--line); counter-increment: f; }
+.five button { all: unset; box-sizing: border-box; width: 100%; cursor: pointer; display: grid; grid-template-columns: 50px 1fr auto; gap: 14px; align-items: center; padding: 16px 0; }
+.five button::before { content: counter(f); font: italic 500 40px/1 var(--serif); color: var(--accent); }
+.five button:focus-visible { outline: 1px solid var(--accent); }
+.five .t { font: italic 500 clamp(22px, 2.6vw, 32px)/1.25 var(--serif); }
+.five.small .t { font-size: clamp(19px, 2vw, 24px); }
+.ev-list { display: none; padding: 0 0 16px 64px; }
+.five li.open .ev-list { display: block; }
+.ev-list ul { margin: 6px 0 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
+.dots { display: inline-flex; gap: 4px; align-items: center; }
+.dots.sm i { width: 9px; height: 9px; border-radius: 50%; border: 1px solid var(--accent); }
+.dots.sm i.on { background: var(--accent); }
+.wt { display: block; font: 600 11px var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 2px; font-style: normal; }
+
+/* ---------- wait, what? ---------- */
+.wait { margin: 34px 0; padding: 22px 26px; border-radius: 18px; border: 1px solid var(--accent); background: var(--soft); position: relative; }
+.wait:empty { display: none; }
+.wt-k { font: italic 500 16px var(--serif); color: var(--accent); }
+.wait > b { display: block; font: italic 600 clamp(24px, 2.6vw, 32px)/1.15 var(--serif); margin: 2px 0 8px; }
+.wait p { margin: 0; max-width: 760px; }
+.wt-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 16px; }
+@media (max-width: 700px) { .wt-cols { grid-template-columns: 1fr; } }
+.wt-cols ul { margin: 6px 0 0; padding-left: 18px; font-size: 15px; color: var(--muted); }
+
+/* ---------- big three frame ---------- */
+.frame3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border-radius: 18px; overflow: hidden; margin-bottom: clamp(50px, 7vw, 90px); }
+@media (max-width: 800px) { .frame3 { grid-template-columns: 1fr; } }
+.fr { background: var(--soft); padding: 22px 20px; }
+.fr small { display: block; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+.fr b { display: block; font: italic 600 clamp(32px, 3.6vw, 46px)/1.1 var(--serif); margin: 8px 0 6px; }
+.fr b .g { font-size: .7em; color: var(--accent); }
+.fr span { color: var(--muted); }
+.fight { list-style: none; margin: 8px 0 0; padding: 0; }
+.fight li { padding: 8px 0; border-top: 1px solid var(--line); }
+.fight b { font: italic 600 20px var(--serif); margin-right: 6px; }
+
+/* ---------- portrait: cast + DNA ---------- */
+.cast { list-style: none; margin: 16px 0 0; padding: 0; }
+.cast li { display: grid; grid-template-columns: 44px 1fr; gap: 12px; padding: 14px 0; border-top: 1px solid var(--line); }
+.cast .md { font-size: 28px; }
+.cast b { display: block; font: italic 600 26px var(--serif); }
+.cast .pts { font: 600 12px var(--sans); color: var(--muted); letter-spacing: .06em; margin-left: 6px; font-style: normal; }
+.cast span { font-size: 14px; color: var(--muted); }
+.cast-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+@media (max-width: 560px) { .cast-notes { grid-template-columns: 1fr; } }
+.cast-notes b { display: block; font: italic 600 22px var(--serif); margin: 4px 0; }
+.cast-notes p { margin: 0; font-size: 14px; color: var(--muted); }
+.dna { margin-top: 16px; }
+.dna-r { display: grid; grid-template-columns: 150px 1fr 28px; gap: 12px; align-items: center; padding: 3px 0; font-size: 14px; }
+.dna-r span { color: var(--muted); }
+.dna-r b { font: italic 600 18px var(--serif); text-align: right; }
+.dna .bar { display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; }
+.dna .bar i { height: 14px; border-radius: 3px; background: var(--line); }
+.dna-gap { height: 10px; }
+.argues .amp { font-style: normal; color: var(--accent); margin: 0 4px; }
+.argues .vs { grid-template-columns: 1fr 30px 1fr; align-items: start; }
+.argues .vs ul { margin: 0; padding-left: 16px; }
+.argues .both { margin: 10px 0 0; font-size: 15px; }
+.argues .both .why { margin: 0 0 2px; }
+
+/* ---------- life ---------- */
+.life-tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.life-tabs button { background: transparent; border: 1px solid var(--line); border-radius: 99px; padding: 8px 18px; font: italic 600 19px var(--serif); cursor: pointer; color: var(--muted); }
+.life-tabs button[aria-selected="true"] { color: var(--fg); border-color: var(--accent); background: var(--soft); }
+.life-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 40px; }
+.life-card { padding: 22px 0; border-top: 1px solid var(--line); }
+.life-card .lh { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.life-card .lh b { font: italic 600 clamp(24px, 2.4vw, 30px)/1.15 var(--serif); }
+.life-card p { margin: 8px 0 10px; font-size: 17px; }
+.life-card summary { cursor: pointer; font-size: 13px; font-weight: 700; color: var(--accent); }
+.life-card ul { margin: 8px 0 4px; padding-left: 18px; font-size: 14px; color: var(--muted); }
+.life-card small { color: var(--muted); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+
+/* ---------- glossary ---------- */
+.whats { grid-column: 2; justify-self: start; background: transparent; border: 1px solid var(--line); border-radius: 99px; padding: 4px 12px; font-size: 12px; color: var(--muted); cursor: pointer; margin-top: 6px; }
+@media (max-width: 700px) { .whats { grid-column: 1; } }
+.whats:hover { color: var(--fg); border-color: var(--accent); }
+.gpop { position: fixed; z-index: 40; width: min(380px, calc(100vw - 24px)); background: #0b242c; color: #f2ece2; border: 1px solid #cfa95e88; border-radius: 16px; padding: 18px 20px; box-shadow: 0 20px 50px #0008; font-size: 14px; }
+.gpop b { font: italic 600 24px var(--serif); color: #f3dfb3; }
+.gpop dl { margin: 10px 0 0; }
+.gpop dt { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: #e3c27e; font-weight: 700; margin-top: 8px; }
+.gpop dd { margin: 2px 0 0; color: #c9dcd8; }
+.gpop .x { position: absolute; top: 8px; right: 10px; background: none; border: 0; color: #e3c27e; font-size: 22px; cursor: pointer; }
+
+/* ---------- years & microscope ---------- */
+.prompts { font: italic 500 17px var(--serif); color: var(--muted); margin-top: 8px; }
+
+/* ---------- life lens ---------- */
+.lens { position: fixed; left: 50%; bottom: 16px; width: max-content; transform: translate(-50%, 140%); z-index: 29; display: flex; flex-wrap: wrap; align-items: center; gap: 4px; max-width: calc(100vw - 24px);
+  background: #071a20e6; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid #cfa95e55; border-radius: 22px; padding: 6px 8px; color: #f2ece2; transition: transform .4s ease; box-shadow: 0 10px 30px #0006; }
+body.nav-on .lens { transform: translate(-50%, 0); }
+.lens-k { font: italic 600 15px var(--serif); color: #e3c27e; padding: 0 8px; }
+.lens button { background: transparent; border: 1px solid transparent; color: #c9dcd8; border-radius: 99px; padding: 5px 11px; font-size: 13px; cursor: pointer; }
+.lens button:hover { border-color: #cfa95e66; }
+.lens button[aria-pressed="true"] { background: #e3c27e; color: #071a20; }
+.lens .off { display: none; }
+.lens.active .off { display: inline-block; }
+.lens-cap { display: none; flex-basis: 100%; font-size: 12px; color: #a8c3c0; padding: 2px 8px 4px; }
+.lens.active .lens-cap { display: block; }
+@media (max-width: 600px) { .lens { bottom: 10px; } .lens-k { display: none; } .lens button { padding: 4px 8px; font-size: 12px; } }
+.entry { transition: opacity .3s; }
+.entry.lens-dim { opacity: .28; }
+#dial .w.lens-on path { fill: #e3c27e; fill-opacity: .85; }
+#dial .w.lens-off { opacity: .35; }
+
+/* ---------- trace ---------- */
+.trace-btn { background: transparent; border: 1px solid var(--accent); color: var(--accent); border-radius: 99px; padding: 5px 14px; font-size: 13px; cursor: pointer; margin: -6px 0 16px; }
+.trace { list-style: none; margin: 0 0 14px; padding: 0; }
+.trace li { padding: 8px 0; border-top: 1px solid var(--line); font-size: 15px; }
+.trace b { display: inline-block; min-width: 96px; font: italic 600 18px var(--serif); color: var(--accent); }
+.lnk { all: unset; cursor: pointer; text-decoration: underline; }
+
+/* ---------- DNA interaction ---------- */
+.dna-r { cursor: pointer; border-radius: 8px; padding: 3px 6px; margin: 0 -6px; }
+.dna-r:hover, .dna-r:focus-visible { background: var(--soft); outline: none; }
+.dna-r.sel { background: var(--soft); box-shadow: inset 3px 0 0 var(--accent); }
+.dna-cap { font-size: 14px; color: var(--muted); margin-top: 12px; min-height: 42px; }
+.dna-cap a { color: var(--accent); }
+
+/* ---------- receipts ---------- */
+details.rcpt { margin-top: 12px; }
+details.rcpt summary { cursor: pointer; font-size: 13px; font-weight: 700; color: var(--accent); list-style: none; }
+details.rcpt summary::-webkit-details-marker { display: none; }
+details.rcpt ul { margin: 8px 0 0; padding-left: 18px; font-size: 14px; color: var(--muted); }
+
+/* ---------- scrubber ---------- */
+.scrub { margin-top: 26px; }
+.scrub label { display: flex; align-items: baseline; gap: 14px; }
+.scrub label b { font: italic 600 26px var(--serif); }
+.scrub input[type=range] { width: 100%; margin: 12px 0 18px; accent-color: #9a4862; height: 28px; }
+.scrub-out { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border-radius: 16px; overflow: hidden; }
+@media (max-width: 800px) { .scrub-out { grid-template-columns: 1fr 1fr; } }
+.scrub-out > div { background: var(--soft); padding: 14px 16px; }
+.scrub-out small { display: block; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.scrub-out b { display: block; font: italic 600 22px/1.2 var(--serif); margin: 4px 0 2px; }
+.scrub-out span { font-size: 13px; color: var(--muted); }
+
+/* ---------- finale ---------- */
+.finale { padding-bottom: clamp(80px, 10vw, 130px); }
+.recap { max-width: 860px; margin: 0 auto clamp(60px, 8vw, 100px); }
+.finale-sky { max-width: 560px; margin: 0 auto; opacity: .95; }
+.finale-sky svg { width: 100%; height: auto; display: block; pointer-events: none; }
+.finale-h { text-align: center; font-size: clamp(40px, 6vw, 78px); margin: 40px 0 10px; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
@@ -479,12 +636,18 @@ table.dig .sc { font: italic 600 18px var(--serif); }
 </head>
 <body>
 
+<div class="lens" id="lens" role="toolbar" aria-label="Ask the chart">
+  <span class="lens-k">Ask the chart</span>
+  <button data-l="love">Love</button><button data-l="work">Work</button><button data-l="friends">Friendship</button><button data-l="home">Home</button><button data-l="create">Creativity</button><button data-l="self">Self</button>
+  <button data-l="" class="off" aria-label="Clear lens">✕</button>
+  <span class="lens-cap" id="lensCap" aria-live="polite"></span>
+</div>
+<div class="gpop" id="gpop" role="dialog" aria-modal="false" hidden></div>
 <nav class="top" aria-label="Sections"><div class="wrap">
-  <a class="brand" href="#top">Suhani's Sky</a>
+  <a class="brand" href="#top">Charted</a>
   <div class="links">
-    <a class="l" href="#chart">Chart</a><a class="l" href="#big-three">Big Three</a><a class="l" href="#planets">Planets</a>
-    <a class="l" href="#houses">Houses</a><a class="l" href="#aspects">Aspects</a><a class="l" href="#patterns">Patterns</a><a class="l" href="#mechanics">Mechanics</a>
-    <a class="l" href="#time">Time</a><a class="l" href="#years">Years</a><a class="l" href="#portrait">Portrait</a><a class="l" href="#learn">Learn</a>
+    <span class="grp">Me</span><a class="l" href="#headline">Headline</a><a class="l" href="#big-three">Big Three</a><a class="l" href="#portrait">Portrait</a><a class="l" href="#life">Life</a><a class="l" href="#time">Now</a><a class="l" href="#years">Years</a>
+    <span class="grp">The chart</span><a class="l" href="#chart">Wheel</a><a class="l" href="#planets">Planets</a><a class="l" href="#houses">Houses</a><a class="l" href="#aspects">Aspects</a><a class="l" href="#patterns">Patterns</a><a class="l" href="#mechanics">Mechanics</a><a class="l" href="#learn">Atlas</a>
   </div>
   <button class="claims-btn" id="claimsBtn" aria-pressed="false" title="Label every claim by type">Claim types</button>
   <button class="theme" id="theme" aria-label="Switch light or dark">◐</button>
@@ -494,12 +657,12 @@ table.dig .sc { font: italic 600 18px var(--serif); }
 <header class="env hero" id="top">
   <div class="wrap">
     <div>
-      <div class="label">A Western natal chart · Lucknow · 2006</div>
-      <h1>Suhani's Sky</h1>
+      <div class="label">A Western natal chart</div>
+      <h1>Charted</h1>
       <p class="promise" id="promise"></p>
-      <p class="lede">Four planets in water, four in air, none in earth, and seven of ten above the horizon. Here is my sky, and how it fits together.</p>
+      <p class="lede" id="heroLede"></p>
       <ul class="big3" id="heroBig3"></ul>
-      <a class="enter" href="#chart">Enter the chart <span aria-hidden="true">↓</span></a>
+      <a class="enter" href="#headline">Start with the headline <span aria-hidden="true">↓</span></a>
     </div>
     <div class="orbit" aria-hidden="true">
       <svg viewBox="0 0 520 520">
@@ -530,10 +693,116 @@ table.dig .sc { font: italic 600 18px var(--serif); }
 </header>
 
 <main>
+<!-- ============ HEADLINE ============ -->
+<section class="env env-pearl" id="headline">
+  <div class="wrap">
+    <div class="sec-head"><span class="roman">I</span><div class="label">Your sky at a glance</div><h2>The <em>headline</em></h2></div>
+    <div class="glance" id="glance"></div>
+    <div class="five-wrap">
+      <div class="label">If you remember five things about this chart</div>
+      <ol class="five" id="five"></ol>
+    </div>
+    <p class="annot" style="margin-top:26px">Tap any line for the chart factors behind it. The dots show how many independent factors agree.</p>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C300,90 560,10 820,44 C1060,76 1260,20 1440,46 L1440,90 L0,90 Z" class="seam"/></svg>
+</section>
+
+<!-- ============ II · BIG THREE ============ -->
+<section class="env env-sun" id="big-three">
+  <div class="caustic" aria-hidden="true"></div>
+  <div class="wrap" style="position:relative">
+    <div class="sec-head"><span class="roman">II</span><div class="label">Sun · Moon · Rising</div><h2>The Big <em>Three</em></h2></div>
+    <div class="frame3" id="frame3"></div>
+    <div class="b3" id="b3"></div>
+    <div class="talk">
+      <svg viewBox="0 0 360 320" aria-label="The Sun, Moon and rising sign connected in a triangle">
+        <g stroke="currentColor" stroke-opacity=".45" fill="none">
+          <line x1="180" y1="40" x2="50" y2="270"/><line x1="180" y1="40" x2="310" y2="270" stroke-dasharray="4 6"/><line x1="50" y1="270" x2="310" y2="270"/>
+        </g>
+        <g font-family="Cormorant Garamond, serif" font-style="italic" font-size="15" fill="currentColor" fill-opacity=".8" text-anchor="middle">
+          <text x="92" y="146" transform="rotate(-60 92 146)">square · both mutable</text>
+          <text x="180" y="294">Venus △ Moon</text>
+          <text x="268" y="146" transform="rotate(60 268 146)">Mercury in Pisces</text>
+        </g>
+        <g font-size="26" text-anchor="middle" class="g">
+          <circle cx="180" cy="40" r="26" fill="#fff9ec" stroke="#cfa95e"/><text x="180" y="49" fill="#7f5f24">☉︎</text>
+          <circle cx="50" cy="270" r="26" fill="#fff9ec" stroke="#cfa95e"/><text x="50" y="279" fill="#7f5f24">☽︎</text>
+          <circle cx="310" cy="270" r="26" fill="#fff9ec" stroke="#cfa95e"/><text x="310" y="278" fill="#7f5f24" font-size="16" font-family="DM Sans" font-weight="700">ASC</text>
+        </g>
+      </svg>
+      <div>
+        <div class="label">When they agree</div>
+        <p id="agree" class="pull" style="margin:8px 0 26px"></p>
+        <div class="label">When they fight</div>
+        <ul class="fight" id="fight"></ul>
+        <p id="fightResult" class="pull" style="margin-top:14px"></p>
+        <div class="label" style="margin-top:30px">The wiring between them</div>
+        <ol id="talk"></ol>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,55 C300,10 560,85 820,45 C1060,10 1260,60 1440,30 L1440,90 L0,90 Z" class="seam" data-next="planets"/></svg>
+</section>
+
+<!-- ============ X · PORTRAIT ============ -->
+<section class="env env-night" id="portrait">
+  <div class="wrap">
+    <div class="sec-head"><span class="roman">III</span><div class="label">Read together</div><h2>The <em>Portrait</em></h2></div>
+    <p class="lede" style="margin:-30px 0 50px">Single placements are words; themes are sentences. Everything further down the page is the evidence for what's here.</p>
+    <div class="spread">
+      <div>
+        <div class="label">Main characters</div>
+        <h3>Who <em>really</em> runs this chart</h3>
+        <p id="charIntro" style="color:var(--muted)"></p>
+        <ol class="cast" id="cast"></ol>
+        <div class="cast-notes" id="castNotes"></div>
+      </div>
+      <div>
+        <div class="label">Chart DNA</div>
+        <h3>The chart's <em>fingerprint</em></h3>
+        <div class="dna" id="dna"></div>
+        <p class="dna-cap" id="dnaCap" aria-live="polite">Tap a row to light up those placements across the page.</p>
+        <p class="annot">Every chart produces a different barcode. Hers has two empty rows: earth and cardinal.</p>
+      </div>
+    </div>
+    <div class="wait" data-w="sun"></div>
+    <hr class="rule">
+    <div class="spread">
+      <div>
+        <div class="label">What repeats</div>
+        <h3>Themes the chart <em>keeps returning to</em></h3>
+        <p id="repeatsNote" style="color:var(--muted)"></p>
+        <div class="repeats" id="repeats"></div>
+      </div>
+      <div>
+        <div class="label">What contradicts</div>
+        <h3>Where the chart <em>argues with itself</em></h3>
+        <ul class="argues" id="argues"></ul>
+        <p class="annot" id="arguesNote"></p>
+      </div>
+    </div>
+    <hr class="rule">
+    <div class="label" style="margin-bottom:10px">Themes, read together</div>
+    <ol class="themes" id="themes"></ol>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C300,20 560,80 820,50 C1080,20 1280,60 1440,40 L1440,90 L0,90 Z" class="seam" data-next="learn"/></svg>
+</section>
+
+<!-- ============ LIFE ============ -->
+<section class="env env-glass" id="life">
+  <div class="wrap">
+    <div class="sec-head"><span class="roman">IV</span><div class="label">Where the chart shows up</div><h2>Your <em>life</em></h2></div>
+    <div class="life-tabs" role="tablist" id="lifeTabs"></div>
+    <p class="lede" id="lifeIntro" style="margin:10px 0 30px"></p>
+    <div class="life-grid" id="lifeGrid"></div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C260,0 520,80 760,50 C1000,20 1220,70 1440,36 L1440,90 L0,90 Z" class="seam"/></svg>
+</section>
+
 <!-- ============ THREE LAYERS ============ -->
 <section class="env env-pearl layers" id="layers">
   <div class="wrap">
-    <div class="label">Read the seams</div>
+    <div class="label">Now, the evidence · read the seams</div>
     <h2 class="layers-h" id="layersH"></h2>
     <div class="layer-row" id="layerRow"></div>
     <p class="annot" style="margin-top:28px">Look for <span class="scope-chip">🔭 Under the telescope</span> on any planet to see these layers pulled apart.</p>
@@ -544,7 +813,7 @@ table.dig .sc { font: italic 600 18px var(--serif); }
 <!-- ============ I · CHART ============ -->
 <section class="env env-night" id="chart">
   <div class="wrap">
-    <div class="sec-head"><span class="roman">I</span><div class="label">The chart</div><h2>A map of <em>the sky</em></h2></div>
+    <div class="sec-head"><span class="roman">V</span><div class="label">The chart</div><h2>A map of <em>the sky</em></h2><button class="whats" data-g="rising">What's this?</button></div>
     <div class="chart-grid">
       <div>
         <div class="filters" role="group" aria-label="Aspect lines">
@@ -567,42 +836,12 @@ table.dig .sc { font: italic 600 18px var(--serif); }
   <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,40 C260,0 520,80 760,50 C1000,20 1220,70 1440,36 L1440,90 L0,90 Z" class="seam" data-next="big-three"/></svg>
 </section>
 
-<!-- ============ II · BIG THREE ============ -->
-<section class="env env-sun" id="big-three">
-  <div class="caustic" aria-hidden="true"></div>
-  <div class="wrap" style="position:relative">
-    <div class="sec-head"><span class="roman">II</span><div class="label">Sun · Moon · Rising</div><h2>The Big <em>Three</em></h2></div>
-    <div class="b3" id="b3"></div>
-    <div class="talk">
-      <svg viewBox="0 0 360 320" aria-label="The Sun, Moon and rising sign connected in a triangle">
-        <g stroke="currentColor" stroke-opacity=".45" fill="none">
-          <line x1="180" y1="40" x2="50" y2="270"/><line x1="180" y1="40" x2="310" y2="270" stroke-dasharray="4 6"/><line x1="50" y1="270" x2="310" y2="270"/>
-        </g>
-        <g font-family="Cormorant Garamond, serif" font-style="italic" font-size="15" fill="currentColor" fill-opacity=".8" text-anchor="middle">
-          <text x="92" y="146" transform="rotate(-60 92 146)">square · both mutable</text>
-          <text x="180" y="294">Venus △ Moon</text>
-          <text x="268" y="146" transform="rotate(60 268 146)">Mercury in Pisces</text>
-        </g>
-        <g font-size="26" text-anchor="middle" class="g">
-          <circle cx="180" cy="40" r="26" fill="#fff9ec" stroke="#cfa95e"/><text x="180" y="49" fill="#7f5f24">☉︎</text>
-          <circle cx="50" cy="270" r="26" fill="#fff9ec" stroke="#cfa95e"/><text x="50" y="279" fill="#7f5f24">☽︎</text>
-          <circle cx="310" cy="270" r="26" fill="#fff9ec" stroke="#cfa95e"/><text x="310" y="278" fill="#7f5f24" font-size="16" font-family="DM Sans" font-weight="700">ASC</text>
-        </g>
-      </svg>
-      <div>
-        <div class="label">How the three talk to each other</div>
-        <ol id="talk"></ol>
-      </div>
-    </div>
-  </div>
-  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,55 C300,10 560,85 820,45 C1060,10 1260,60 1440,30 L1440,90 L0,90 Z" class="seam" data-next="planets"/></svg>
-</section>
-
 <!-- ============ III · PLANETS ============ -->
 <section class="env env-book" id="planets">
   <div class="wrap">
-    <div class="sec-head"><span class="roman">III</span><div class="label">Ten placements</div><h2>The <em>Planets</em></h2></div>
-    <p class="lede" style="margin:-30px 0 60px">Each planet is a part of the self; its sign describes the style, and its house describes where in life it shows up.</p>
+    <div class="sec-head"><span class="roman">VI</span><div class="label">Ten placements</div><h2>The <em>Planets</em></h2><button class="whats" data-g="planets">What's this?</button></div>
+    <div class="wait" data-w="mercury" style="margin:-20px 0 50px"></div>
+    <p class="lede" style="margin:0 0 60px">Each planet is a part of the self; its sign describes the style, and its house describes where in life it shows up.</p>
     <div class="book-frame">
       <div class="planets">
         <ul class="pindex" id="pindex"></ul>
@@ -616,7 +855,7 @@ table.dig .sc { font: italic 600 18px var(--serif); }
 <!-- ============ IV · HOUSES ============ -->
 <section class="env env-glass" id="houses">
   <div class="wrap">
-    <div class="sec-head"><span class="roman">IV</span><div class="label">Twelve rooms</div><h2>The <em>Houses</em></h2></div>
+    <div class="sec-head"><span class="roman">VII</span><div class="label">Twelve rooms</div><h2>The <em>Houses</em></h2><button class="whats" data-g="houses">What's this?</button></div>
     <div class="houses">
       <div class="dial" id="dial"></div>
       <div class="hdetail" id="hdetail" aria-live="polite"></div>
@@ -646,12 +885,13 @@ table.dig .sc { font: italic 600 18px var(--serif); }
 <!-- ============ V · ASPECTS ============ -->
 <section class="env env-night" id="aspects">
   <div class="wrap">
-    <div class="sec-head"><span class="roman">V</span><div class="label">How the planets talk</div><h2>The <em>Aspects</em></h2></div>
+    <div class="sec-head"><span class="roman">VIII</span><div class="label">How the planets talk</div><h2>The <em>Aspects</em></h2><button class="whats" data-g="aspects">What's this?</button></div>
     <p class="lede" style="margin:-30px 0 40px">Aspects are the angles between planets. Lines in <span style="color:var(--flow)">aqua</span> flow easily, lines in <span style="color:var(--tension)">rose</span> create friction that pushes growth, and <span style="color:var(--blend)">gold</span> marks planets fused together.</p>
     <div class="sky" id="sky"></div>
     <div class="asp-detail" id="aspDetail" aria-live="polite"></div>
     <div class="aspgrid" id="aspGrid"></div>
     <div class="note" id="aspPattern" style="margin-top:50px"></div>
+    <div class="wait" data-w="rulers"></div>
     <hr class="rule">
     <div class="spread">
       <div>
@@ -674,11 +914,12 @@ table.dig .sc { font: italic 600 18px var(--serif); }
 <!-- ============ VI · PATTERNS ============ -->
 <section class="env env-pearl" id="patterns">
   <div class="wrap">
-    <div class="sec-head"><span class="roman">VI</span><div class="label">Elements · modalities · rulers</div><h2>The <em>Patterns</em></h2></div>
+    <div class="sec-head"><span class="roman">IX</span><div class="label">Elements · modalities · rulers</div><h2>The <em>Patterns</em></h2><button class="whats" data-g="patterns">What's this?</button></div>
     <div class="spread">
       <div>
         <div class="label">Elements</div>
         <h3>Water and air, <em>no earth</em></h3>
+        <div class="wait" data-w="earth"></div>
         <div class="vessels" id="vessels"></div>
         <p id="elText"></p>
       </div>
@@ -687,6 +928,7 @@ table.dig .sc { font: italic 600 18px var(--serif); }
         <h3>Six mutable, <em>zero cardinal</em></h3>
         <div class="lanes" id="lanes"></div>
         <p id="modText"></p>
+        <div class="wait" data-w="cardinal"></div>
       </div>
     </div>
     <hr class="rule">
@@ -713,7 +955,7 @@ table.dig .sc { font: italic 600 18px var(--serif); }
 <!-- ============ VII · MECHANICS ============ -->
 <section class="env env-book" id="mechanics">
   <div class="wrap">
-    <div class="sec-head"><span class="roman">VII</span><div class="label">Advanced chart mechanics</div><h2>Under the <em>hood</em></h2></div>
+    <div class="sec-head"><span class="roman">X</span><div class="label">Advanced chart mechanics</div><h2>Under the <em>hood</em></h2><button class="whats" data-g="mechanics">What's this?</button></div>
     <div class="spread">
       <div>
         <div class="label">Essential dignity</div>
@@ -768,7 +1010,7 @@ table.dig .sc { font: italic 600 18px var(--serif); }
 <!-- ============ VIII · TIME ============ -->
 <section class="env env-night" id="time">
   <div class="wrap">
-    <div class="sec-head"><span class="roman">VIII</span><div class="label">The chart in motion</div><h2>Right <em>now</em></h2></div>
+    <div class="sec-head"><span class="roman">XI</span><div class="label">The chart in motion</div><h2>Right <em>now</em></h2><button class="whats" data-g="time">What's this?</button></div>
     <p class="lede" id="timeIntro" style="margin:-30px 0 50px"></p>
     <div class="now-grid">
       <div>
@@ -808,16 +1050,25 @@ table.dig .sc { font: italic 600 18px var(--serif); }
 <!-- ============ IX · YEARS ============ -->
 <section class="env env-glass" id="years">
   <div class="wrap">
-    <div class="sec-head"><span class="roman">IX</span><div class="label">2006 → 2080</div><h2>My <em>years</em></h2></div>
-    <p class="lede" style="margin:-30px 0 40px">Returns, progressions, profection cycles and firdaria periods on one line. Tap a marker to see what it is and what lands in the same year.</p>
+    <div class="sec-head"><span class="roman">XII</span><div class="label">A life, in cycles</div><h2>My <em>years</em></h2><button class="whats" data-g="time">What's this?</button></div>
+    <p class="lede" style="margin:-30px 0 30px">Returns, progressions and time-lord periods across a lifetime. Tap a marker to see what lands in the same year.</p>
+    <div class="filters" id="yearFilters" role="group" aria-label="Show cycles">
+      <button data-y="major" aria-pressed="true">Major cycles</button><button data-y="all" aria-pressed="false">Everything</button><button data-y="saturn" aria-pressed="false">Saturn</button><button data-y="jupiter" aria-pressed="false">Jupiter</button><button data-y="nodes" aria-pressed="false">Nodes</button><button data-y="prog" aria-pressed="false">Progressions</button><button data-y="firdaria" aria-pressed="false">Time lords</button>
+    </div>
     <div class="years" id="yearsLine"></div>
+    <div class="scrub">
+      <label for="ageRange"><span class="label">Scrub through a life</span> <b>Age <output id="ageOut">20</output></b></label>
+      <input type="range" id="ageRange" min="0" max="74" step="1" value="20">
+      <div class="scrub-out" id="scrubOut" aria-live="polite"></div>
+    </div>
     <div class="year-detail" id="yearDetail" aria-live="polite"></div>
     <hr class="rule">
     <div class="spread">
       <div>
-        <div class="label">Look up any date</div>
-        <h3>What was <em>going on</em>?</h3>
+        <div class="label">Put a date under the microscope</div>
+        <h3>What was the sky <em>doing</em>?</h3>
         <p style="color:var(--muted)">Pick a date, past or future: a first day of college, a move, a milestone. You'll see the techniques astrologers would examine around it. This doesn't mean astrology caused anything; it shows how timing techniques are used.</p>
+        <div class="prompts">First day of college · a move · a first job · a graduation · a date in the future</div>
         <label class="date-in"><span class="label">Date</span><input type="date" id="dateIn" min="2006-03-06" max="2080-12-31"></label>
       </div>
       <div class="lookup" id="lookup" aria-live="polite"></div>
@@ -826,36 +1077,10 @@ table.dig .sc { font: italic 600 18px var(--serif); }
   <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,46 C240,10 520,80 780,44 C1040,8 1250,64 1440,34 L1440,90 L0,90 Z" class="seam" data-next="portrait"/></svg>
 </section>
 
-<!-- ============ X · PORTRAIT ============ -->
-<section class="env env-night" id="portrait">
-  <div class="wrap">
-    <div class="sec-head"><span class="roman">X</span><div class="label">Read together</div><h2>The <em>Portrait</em></h2></div>
-    <p class="lede" style="margin:-30px 0 40px">Single placements are words; themes are sentences. Each of these comes from several parts of the chart agreeing with each other.</p>
-    <div class="spread">
-      <div>
-        <div class="label">What repeats</div>
-        <h3>Themes the chart <em>keeps returning to</em></h3>
-        <p id="repeatsNote" style="color:var(--muted)"></p>
-        <div class="repeats" id="repeats"></div>
-      </div>
-      <div>
-        <div class="label">What contradicts</div>
-        <h3>Where the chart <em>argues with itself</em></h3>
-        <ul class="argues" id="argues"></ul>
-        <p class="annot" id="arguesNote"></p>
-      </div>
-    </div>
-    <hr class="rule">
-    <div class="label" style="margin-bottom:10px">Themes, read together</div>
-    <ol class="themes" id="themes"></ol>
-  </div>
-  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0,50 C300,20 560,80 820,50 C1080,20 1280,60 1440,40 L1440,90 L0,90 Z" class="seam" data-next="learn"/></svg>
-</section>
-
 <!-- ============ XI · LEARN ============ -->
 <section class="env env-pearl" id="learn">
   <div class="wrap">
-    <div class="sec-head"><span class="roman">XI</span><div class="label">How a chart is built · where it came from</div><h2>The <em>atlas</em></h2></div>
+    <div class="sec-head"><span class="roman">XIII</span><div class="label">How a chart is built · where it came from</div><h2>The <em>atlas</em></h2></div>
     <div class="label">Build a chart, step by step</div>
     <ol class="build" id="build"></ol>
     <hr class="rule">
@@ -890,6 +1115,20 @@ table.dig .sc { font: italic 600 18px var(--serif); }
     </div>
   </div>
 </section>
+
+<!-- ============ FINALE ============ -->
+<section class="env env-night finale" id="finale">
+  <div class="wrap">
+    <div class="recap">
+      <div class="label">Five things, once more</div>
+      <ol class="five small" id="fiveRecap"></ol>
+    </div>
+    <div class="finale-sky" id="finaleSky" aria-hidden="true"></div>
+    <h2 class="finale-h">The sky you <em>arrived under</em></h2>
+    <p class="annot" style="text-align:center">Tropical zodiac · Porphyry houses · Swiss Ephemeris</p>
+  </div>
+</section>
+
 </main>
 
 <footer>
@@ -934,8 +1173,11 @@ $("#theme").onclick = () => {
 // wave seams take the colour of the section they lead into
 function paintSeams() {
   document.querySelectorAll(".seam").forEach(p => {
-    const next = document.getElementById(p.dataset.next);
-    p.setAttribute("fill", getComputedStyle(next).getPropertyValue("--top").trim() || "#081b22");
+    const sec = p.closest("section, header");
+    let next = sec.tagName === "HEADER" ? document.querySelector("main section") : sec.nextElementSibling;
+    while (next && !next.matches("section, footer")) next = next.nextElementSibling;
+    const col = next && next.tagName === "SECTION" ? getComputedStyle(next).getPropertyValue("--top").trim() : "#06141a";
+    p.setAttribute("fill", col || "#06141a");
   });
 }
 
@@ -992,6 +1234,9 @@ Promise.all(["results/chart.json", "data/content.json", "results/personality_mat
   const HH = K.houseHistory;
   const houseKind = h => [1, 4, 7, 10].includes(h) ? "angular" : [2, 5, 8, 11].includes(h) ? "succedent" : "cadent";
   const DISCOVERED = { Uranus: 1781, Neptune: 1846, Pluto: 1930 };
+  const weightLevel = n => n >= 5 ? 4 : n >= 3 ? 3 : n === 2 ? 2 : 1;
+  const weightLabel = n => K.weight[weightLevel(n)] + ` · ${n} factor${n > 1 ? "s" : ""}`;
+  const dotsFor = n => Array.from({ length: 4 }, (_, i) => `<i class="${i < weightLevel(n) ? "on" : ""}"></i>`).join("");
   const importanceOf = n => Object.entries(K.importance).find(([, l]) => l.includes(n))?.[0] || "";
   function tradReading(n) {
     const p = P[n], d = DIG[n], h = p.house, out = [];
@@ -1516,8 +1761,12 @@ Promise.all(["results/chart.json", "data/content.json", "results/personality_mat
   TM.firdaria.filter(f => f.from_age > 0 && BIRTH + f.from_age <= 2080).forEach(f => events.push({ year: BIRTH + f.from_age, label: `${f.lord} firdaria begins`, key: "firdaria", lane: 2 }));
   const LANES = ["Returns", "Progressions", "Time lords"], LC = ["#1d5a61", "#5f4d9a", "#9a4862"];
   (() => {
-    const Wd = 1000, Ht = 230, x0 = 110, x1 = 980, X = y => x0 + (y - BIRTH) / (2080 - BIRTH) * (x1 - x0);
+    const Wd = 1000, Ht = 250, x0 = 110, x1 = 980, X = y => x0 + (y - BIRTH) / (2080 - BIRTH) * (x1 - x0);
     const s = el("svg", { viewBox: `0 0 ${Wd} ${Ht}`, role: "img", "aria-label": "Life timeline of astrological techniques" });
+    [["Childhood", 0, 13], ["Teens", 13, 20], ["20s", 20, 30], ["30s", 30, 40], ["40s", 40, 50], ["50s", 50, 60], ["60s", 60, 70], ["70s", 70, 74]].forEach(([l, a, b], i) => {
+      el("rect", { x: X(BIRTH + a), y: 26, width: X(BIRTH + b) - X(BIRTH + a), height: 152, fill: "currentColor", "fill-opacity": i % 2 ? .035 : 0 }, s);
+      const t = el("text", { x: (X(BIRTH + a) + X(BIRTH + b)) / 2, y: 240, "text-anchor": "middle", "font-size": 12, fill: "currentColor", "fill-opacity": .75, "font-family": "Cormorant Garamond, serif", "font-style": "italic" }, s); t.textContent = l;
+    });
     LANES.forEach((l, i) => {
       const y = 50 + i * 55;
       el("line", { x1: x0, y1: y, x2: x1, y2: y, stroke: "currentColor", "stroke-opacity": .2 }, s);
@@ -1533,13 +1782,14 @@ Promise.all(["results/chart.json", "data/content.json", "results/personality_mat
     const nt = el("text", { x: X(2026), y: 14, "text-anchor": "middle", "font-size": 11, fill: "#7f5f24", "font-family": "DM Sans", "font-weight": 700, "letter-spacing": 1 }, s); nt.textContent = "NOW";
     const counts = {}; events.forEach(e => counts[e.year] = (counts[e.year] || 0) + 1);
     events.forEach((e, i) => {
-      const g = el("g", { class: "mk", tabindex: 0, role: "button", "aria-label": `${e.year}: ${e.label}` }, s);
+      const g = el("g", { class: "mk", tabindex: 0, role: "button", "aria-label": `${e.year}: ${e.label}`, "data-key": e.key, "data-major": ["jupiter", "saturn", "nodal", "uranus_opposition"].includes(e.key) || e.label.includes("Sun enters") ? 1 : 0 }, s);
       if (counts[e.year] > 1) el("circle", { cx: X(e.year), cy: 50 + e.lane * 55, r: 14, fill: "none", stroke: "#cfa95e", "stroke-width": 1.5, "stroke-dasharray": "2 3" }, g);
       el("circle", { cx: X(e.year), cy: 50 + e.lane * 55, r: 7, fill: LC[e.lane], stroke: "#fff", "stroke-width": 1.5 }, g);
       g.addEventListener("click", () => pickYear(e.year, g));
       g.addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); pickYear(e.year, g); } });
     });
     $("#yearsLine").appendChild(s);
+    window.__pickYear = y => pickYear(y, [...s.querySelectorAll(".mk")].find(m => m.getAttribute("aria-label").startsWith(y + ":")));
     function pickYear(y, g) {
       s.querySelectorAll(".mk").forEach(m => m.classList.remove("sel")); g?.classList.add("sel");
       const age = y - BIRTH, pf = TM.profections[age] || { house: age % 12 + 1, sign: SIGNS[(signIdx(C.rising_sign) + age) % 12] };
@@ -1548,6 +1798,13 @@ Promise.all(["results/chart.json", "data/content.json", "results/personality_mat
         <ul>${here.map(e => `<li data-c="calc"><b>${esc(e.label)}</b><br><span style="color:var(--muted)">${esc(K.timelineNotes[e.key] || "")}</span></li>`).join("")}
         ${here.length > 1 ? `<li data-c="interp"><b>Why this year stands out</b><br><span style="color:var(--muted)">${here.length} separate timing techniques land in the same year. Astrologers treat convergence like this as a more significant period than any single signal, though each layer is its own calculation.</span></li>` : ""}</ul>`;
     }
+    const FK = { saturn: ["saturn"], jupiter: ["jupiter"], nodes: ["nodal", "nodal_opposition"], prog: ["prog"], firdaria: ["firdaria"] };
+    function filt(f) {
+      s.querySelectorAll(".mk").forEach(m => m.style.display = f === "all" || (f === "major" ? m.dataset.major === "1" : FK[f].includes(m.dataset.key)) ? "" : "none");
+      document.querySelectorAll("#yearFilters button").forEach(b => b.setAttribute("aria-pressed", b.dataset.y === f));
+    }
+    document.querySelectorAll("#yearFilters button").forEach(b => b.onclick = () => filt(b.dataset.y));
+    filt("major");
     const conv = Object.entries(counts).find(([y, n]) => n > 1 && +y >= 2026);
     pickYear(conv ? +conv[0] : 2035);
   })();
@@ -1585,9 +1842,11 @@ Promise.all(["results/chart.json", "data/content.json", "results/personality_mat
 
   // ===================== PORTRAIT: REPEATS + TENSIONS =====================
   $("#repeatsNote").textContent = K.repeatsNote;
-  $("#repeats").innerHTML = K.repeats.map((r, i) => `<div class="rp"><button aria-expanded="false"><span class="nm">${esc(r.theme)}</span><span class="dots">${r.factors.map(() => "<i></i>").join("")}<b>× ${r.factors.length}</b></span></button><ul data-c="calc">${r.factors.map(f => `<li>${esc(f)}</li>`).join("")}</ul></div>`).join("");
+  $("#repeats").innerHTML = K.repeats.map((r, i) => `<div class="rp"><button aria-expanded="false"><span class="nm">${esc(r.theme)}<small class="wt">${weightLabel(r.factors.length)}</small></span><span class="dots">${r.factors.map(() => "<i></i>").join("")}<b>× ${r.factors.length}</b></span></button><ul data-c="calc">${r.factors.map(f => `<li>${esc(f)}</li>`).join("")}</ul></div>`).join("");
   $("#repeats").querySelectorAll(".rp button").forEach(b => b.onclick = () => { const o = b.parentElement.classList.toggle("open"); b.setAttribute("aria-expanded", o); });
-  $("#argues").innerHTML = K.contradictions.map(c => `<li data-c="interp"><b>${esc(c.title)}</b><div class="vs"><span>${esc(c.a)}</span><i>vs</i><span>${esc(c.b)}</span></div><span class="why">Why: ${esc(c.why)}</span></li>`).join("");
+  $("#argues").innerHTML = K.contradictions.map(c => `<li data-c="interp"><b>${esc(c.poles[0])} <i class="amp">/</i> ${esc(c.poles[1])}</b>
+    <div class="vs"><ul>${c.a.map(x => `<li>${esc(x)}</li>`).join("")}</ul><i>vs</i><ul>${c.b.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+    <p class="both"><span class="why">How both can be true</span>${esc(c.both)}</p></li>`).join("");
   $("#arguesNote").textContent = K.contradictionsNote;
 
   // ===================== LEARN =====================
@@ -1605,13 +1864,245 @@ Promise.all(["results/chart.json", "data/content.json", "results/personality_mat
   document.querySelectorAll(".lum p, #talk li, .theme-i p, #aspDetail p, #elText, #modText, .chain .to p, .retros p, #nodeText").forEach(e => e.dataset.c ||= "interp");
   document.querySelectorAll(".trio .t p, #emptyNote").forEach(e => e.dataset.c ||= "calc");
 
+  // ===================== HEADLINE =====================
+  $("#heroLede").textContent = K.hero.lede;
+  $("#glance").innerHTML = K.glance.map(g => `<div class="gl-i" data-c="calc"><span class="ic">${g.icon}</span><small>${esc(g.label)}</small><b>${esc(g.value)}</b><span>${esc(g.note)}</span></div>`).join("");
+  const fiveHTML = cls => K.five.map(f => `<li class="${cls}"><button aria-expanded="false"><span class="t">${esc(f.text)}</span><span class="dots sm">${dotsFor(f.evidence.length)}</span></button>
+    <div class="ev-list" data-c="calc"><span class="label">🔭 Show me the astrology</span><ul>${f.evidence.map(e => `<li>${esc(e)}</li>`).join("")}</ul></div></li>`).join("");
+  $("#five").innerHTML = fiveHTML("f");
+  $("#fiveRecap").innerHTML = fiveHTML("f");
+  document.querySelectorAll(".five button").forEach(b => b.onclick = () => { const o = b.parentElement.classList.toggle("open"); b.setAttribute("aria-expanded", o); });
+
+  // "wait, what?" callouts, each from real chart structure
+  document.querySelectorAll(".wait").forEach(w => {
+    const k = K.wait[w.dataset.w]; if (!k) return;
+    w.dataset.c = "interp";
+    w.innerHTML = `<div class="wt-k">Wait —</div><b>${esc(k.title.replace(/^Wait\. /, ""))}</b><p>${esc(k.text)}</p>` +
+      (k.not ? `<div class="wt-cols"><div><span class="label">What it doesn't mean</span><ul>${k.not.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div><div><span class="label">How the chart compensates</span><ul>${k.compensates.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div></div>` : "");
+  });
+
+  // ===================== BIG THREE FRAME =====================
+  const F = K.bigThreeFrame;
+  $("#frame3").innerHTML = [["sun", "☉", C.sun_sign], ["moon", "☽", C.moon_sign], ["rising", "↑", C.rising_sign]]
+    .map(([k, g, sg]) => `<div class="fr"><small>${esc(F[k].head)}</small><b><span class="g">${T(g)}</span> ${sg}</b><span>${esc(F[k].line)}</span></div>`).join("");
+  $("#agree").textContent = F.agree; $("#agree").dataset.c = "interp";
+  $("#fight").innerHTML = F.fight.map(([a, b]) => `<li><b>${esc(a)}</b> ${esc(b)}</li>`).join("");
+  $("#fightResult").innerHTML = `<span class="label" style="display:block;margin-bottom:4px">Result</span>${esc(F.result)}`; $("#fightResult").dataset.c = "interp";
+
+  // ===================== MAIN CHARACTERS =====================
+  (() => {
+    const loop = (() => { const jp = X.dispositors.traditional.chains.Jupiter, l = jp[jp.length - 1]; return jp.slice(jp.indexOf(l), -1); })();
+    const S2 = X.sect, starOf = n => X.fixed_stars.filter(f => f.planet === n);
+    const sunRulers = C.rulers.sun_sign_rulers, moonRulers = C.rulers.moon_sign_rulers, chartRuler = C.rulers.chart_ruler;
+    const rows = order.map(n => {
+      const p = P[n], why = [];
+      let pts = 0;
+      const add = (v, t) => { pts += v; why.push(t); };
+      if (chartRuler.includes(n)) add(3, "chart ruler");
+      if (n === "Sun" || n === "Moon") add(2, "a luminary");
+      if ([1, 4, 7, 10].includes(p.house)) add(2, `angular (${ord(p.house)} house)`);
+      if (sunRulers.includes(n)) add(1, "rules the Sun's sign");
+      if (moonRulers.includes(n)) add(1, "rules the Moon's sign");
+      if (loop.includes(n)) add(2, "in the rulership loop");
+      if ([S2.light, S2.benefic, S2.malefic].includes(n)) add(1, n === S2.light ? "sect light" : n === S2.benefic ? "benefic of the sect" : "malefic of the sect");
+      if (starOf(n).length) add(1, `on ${starOf(n)[0].star}`);
+      const as = aspectsOf(n); if (as.length) add(as.length * .5, `${as.length} major aspects`);
+      const ex = as.filter(a => (a.orb ?? 9) < 1).length; if (ex) add(ex, `${ex} near-exact aspect${ex > 1 ? "s" : ""}`);
+      return { n, pts, why };
+    }).sort((a, b) => b.pts - a.pts);
+    $("#charIntro").textContent = K.charactersIntro;
+    const medals = ["🥇", "🥈", "🥉"];
+    $("#cast").innerHTML = rows.slice(0, 3).map((r, i) => `<li data-c="calc"><span class="md">${medals[i]}</span><div><b><span class="g">${T(PG[r.n])}</span> ${r.n} <span class="pts">${r.pts} pts</span></b><span>${esc(r.why.join(" · "))}</span></div></li>`).join("");
+    const q = K.charactersNotes;
+    $("#castNotes").innerHTML = `<div data-c="interp"><span class="label">Quiet but important</span><b><span class="g">${T(PG[q.quiet[0]])}</span> ${q.quiet[0]}</b><p>${esc(q.quiet[1])}</p></div>
+      <div data-c="interp"><span class="label">Loud but less structural</span><b><span class="g">${T(PG[q.loud[0]])}</span> ${q.loud[0]}</b><p>${esc(q.loud[1])}</p></div>`;
+  })();
+
+  // ===================== CHART DNA =====================
+  (() => {
+    const cnt = o => Object.fromEntries(Object.entries(o).map(([k, v]) => [k, v.length]));
+    const E = cnt(C.elements), Mo = cnt(C.modalities), H = C.hemispheres, HT2 = C.house_types;
+    const retro = C.planets.filter(p => p.retrograde).length;
+    const rows = [
+      ["Water", E.Water, "var(--water)"], ["Air", E.Air, "var(--air)"], ["Fire", E.Fire, "var(--fire)"], ["Earth", E.Earth, "var(--earth)"], null,
+      ["Mutable", Mo.Mutable, "#b9a8de"], ["Fixed", Mo.Fixed, "#b9a8de"], ["Cardinal", Mo.Cardinal, "#b9a8de"], null,
+      ["Above horizon", H.above.length, "#e3c27e"], ["Below", H.below.length, "#e3c27e"], ["East", H.east.length, "#e3c27e"], ["West", H.west.length, "#e3c27e"], null,
+      ["Angular", HT2.angular.length, "#e9b8bf"], ["Succedent", HT2.succedent.length, "#e9b8bf"], ["Cadent", HT2.cadent.length, "#e9b8bf"], null,
+      ["Yang (fire + air)", E.Fire + E.Air, "#a9b9ec"], ["Yin (earth + water)", E.Earth + E.Water, "#a9b9ec"], ["Retrograde", retro, "#a9b9ec"],
+    ];
+    $("#dna").innerHTML = rows.map(r => r ? `<div class="dna-r" data-c="calc"><span>${r[0]}</span><div class="bar">${Array.from({ length: 10 }, (_, i) => `<i style="${i < r[1] ? `background:${r[2]}` : ""}"></i>`).join("")}</div><b>${r[1] || "—"}</b></div>` : `<div class="dna-gap"></div>`).join("");
+  })();
+
+  // ===================== LIFE =====================
+  (() => {
+    const keys = Object.keys(K.life);
+    $("#lifeTabs").innerHTML = keys.map((k, i) => `<button role="tab" aria-selected="${i === 0}" data-k="${k}">${esc(K.life[k].title)}</button>`).join("");
+    function show(k) {
+      const L = K.life[k];
+      $("#lifeTabs").querySelectorAll("button").forEach(b => b.setAttribute("aria-selected", b.dataset.k === k));
+      $("#lifeIntro").textContent = L.intro;
+      $("#lifeGrid").innerHTML = L.items.map(it => `<article class="life-card" data-c="interp"><div class="lh"><b>${esc(it.q)}</b><span class="dots sm" title="${esc(weightLabel(it.f.length))}">${dotsFor(it.f.length)}</span></div>
+        <p>${esc(it.a)}</p><details><summary>🔭 Show me the astrology</summary><ul>${it.f.map(x => `<li>${esc(x)}</li>`).join("")}</ul><small>${esc(weightLabel(it.f.length))}</small></details></article>`).join("");
+    }
+    $("#lifeTabs").querySelectorAll("button").forEach(b => b.onclick = () => show(b.dataset.k));
+    show(keys[0]);
+  })();
+
+  // ===================== GLOSSARY POPOVER =====================
+  (() => {
+    const pop = $("#gpop");
+    document.querySelectorAll(".whats").forEach(b => b.onclick = e => {
+      const g = K.glossary[b.dataset.g]; if (!g) return;
+      pop.innerHTML = `<button class="x" aria-label="Close">×</button><b>${esc(g.t)}</b><dl><dt>What it is</dt><dd>${esc(g.def)}</dd><dt>How it's calculated</dt><dd>${esc(g.calc)}</dd><dt>Where it comes from</dt><dd>${esc(g.hist)}</dd><dt>Where people disagree</dt><dd>${esc(g.debate)}</dd></dl>`;
+      pop.hidden = false;
+      const r = b.getBoundingClientRect();
+      pop.style.top = Math.min(innerHeight - pop.offsetHeight - 12, r.bottom + 8) + "px";
+      pop.style.left = Math.max(12, Math.min(innerWidth - pop.offsetWidth - 12, r.left)) + "px";
+      pop.querySelector(".x").onclick = () => pop.hidden = true;
+      e.stopPropagation();
+    });
+    document.addEventListener("click", e => { if (!pop.hidden && !pop.contains(e.target)) pop.hidden = true; });
+    document.addEventListener("keydown", e => { if (e.key === "Escape") pop.hidden = true; });
+    addEventListener("scroll", () => pop.hidden = true, { passive: true });
+  })();
+
+  // ===================== FOCUS: one mechanism for lens, DNA and trace =====================
+  const MRULER = { ...TRULER, Scorpio: "Pluto", Aquarius: "Uranus", Pisces: "Neptune" };
+  function focus(planets, houses = [], label = "") {
+    const set = new Set(planets);
+    highlight(planets, C.aspects.filter(a => set.has(a.a) && set.has(a.b)));
+    document.querySelectorAll(".entry").forEach(e => e.classList.toggle("lens-dim", set.size > 0 && !set.has(e.id.slice(2))));
+    document.querySelectorAll("#dial .w").forEach((w, i) => { w.classList.toggle("lens-on", houses.includes(i + 1)); w.classList.toggle("lens-off", houses.length > 0 && !houses.includes(i + 1)); });
+    document.body.classList.toggle("focusing", set.size > 0);
+    if (!set.size) showOverview();
+  }
+
+  // ----- trace this placement -----
+  function showTrace(n) {
+    const p = P[n], partners = aspectsOf(n).map(a => other(a, n));
+    const chain = (X.dispositors.traditional.chains[n] || X.dispositors.modern.chains[n] || []).slice(1);
+    const rules = order.filter(m => m !== n && (TRULER[P[m].sign] === n || MRULER[P[m].sign] === n));
+    const all = [n, ...partners, ...chain, ...rules];
+    focus([...new Set(all)], [p.house]);
+    highlight([n, ...new Set(all.slice(1))], aspectsOf(n));
+    panel.innerHTML = `<div class="label">Tracing</div><h3><span class="g" style="color:var(--accent)">${T(PG[n])}</span> Everything connected to <em>${n}</em></h3>
+      <ul class="trace" data-c="calc">
+        <li><b>Sits in</b>${p.sign}, ${ord(p.house)} house</li>
+        <li><b>Talks to</b>${aspectsOf(n).map(a => `${T(K.aspectTypes[a.type].glyph)} ${other(a, n)}`).join(" · ") || "no major aspects"}</li>
+        <li><b>Answers to</b>${chain.length ? [n, ...chain].join(" → ") : "itself"}</li>
+        <li><b>Hosts</b>${rules.length ? rules.join(", ") : "no other planets"}</li>
+      </ul>
+      <p class="hint"><button class="lnk" data-back="${n}">Back to ${n}</button> · <button class="lnk" data-ov>Overview</button></p>`;
+    panel.querySelector("[data-back]").onclick = () => showPlanet(n);
+    panel.querySelector("[data-ov]").onclick = () => { focus([]); };
+  }
+  // add the trace button to every planet panel
+  const _showPlanet = showPlanet;
+  showPlanet = n => { _showPlanet(n); const b = document.createElement("button"); b.className = "trace-btn"; b.textContent = "Trace this placement"; b.onclick = () => showTrace(n); panel.querySelector(".meta").after(b); };
+
+  // ----- life lens -----
+  const LENS = {
+    love: { p: ["Venus", "Mars", "Moon", "Jupiter"], h: [5, 7, 8], txt: "Venus, Mars and the Moon, plus Jupiter in the 7th · houses 5, 7, 8" },
+    work: { p: ["Sun", "Saturn", "Venus", "Neptune", "Mars", "Moon", "Jupiter"], h: [2, 6, 10], txt: "Venus and Neptune in the 10th, the Moon–Mars pair in the 2nd, Saturn · houses 2, 6, 10" },
+    friends: { p: ["Sun", "Mercury", "Uranus", "Venus", "Jupiter"], h: [3, 11], txt: "The 11th-house trio, Venus in Aquarius, and Jupiter (joy of the 11th) · houses 3, 11" },
+    home: { p: ["Moon", "Saturn", "Venus"], h: [4], txt: "The Moon, Saturn in the 4th, and Venus opposite it · house 4" },
+    create: { p: ["Venus", "Neptune", "Sun", "Mercury"], h: [5], txt: "Venus, Neptune and the Pisces placements · house 5" },
+    self: { p: ["Sun", "Moon", "Venus", "Mars"], h: [1], txt: "Sun, Moon, the chart ruler Venus, and Mars · house 1" },
+  };
+  const lensBar = $("#lens");
+  lensBar.querySelectorAll("button").forEach(b => b.onclick = () => {
+    const k = b.dataset.l, L = LENS[k];
+    lensBar.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b && !!k));
+    if (!L) { focus([]); $("#lensCap").textContent = ""; lensBar.classList.remove("active"); return; }
+    focus(L.p, L.h, k);
+    lensBar.classList.add("active");
+    $("#lensCap").textContent = L.txt;
+    if (K.life[k]) document.querySelector(`#lifeTabs button[data-k="${k}"]`)?.click();
+  });
+
+  // ----- chart DNA rows light up their placements -----
+  (() => {
+    const E = C.elements, Mo = C.modalities, H = C.hemispheres, HT2 = C.house_types;
+    const lists = {
+      Water: E.Water, Air: E.Air, Fire: E.Fire, Earth: E.Earth, Mutable: Mo.Mutable, Fixed: Mo.Fixed, Cardinal: Mo.Cardinal,
+      "Above horizon": H.above, Below: H.below, East: H.east, West: H.west, Angular: HT2.angular, Succedent: HT2.succedent, Cadent: HT2.cadent,
+      "Yang (fire + air)": [...E.Fire, ...E.Air], "Yin (earth + water)": [...E.Earth, ...E.Water], Retrograde: C.planets.filter(p => p.retrograde).map(p => p.planet),
+    };
+    document.querySelectorAll(".dna-r").forEach(r => {
+      const name = r.querySelector("span").textContent, list = lists[name] || [];
+      r.tabIndex = 0; r.setAttribute("role", "button");
+      const go = () => {
+        const on = !r.classList.contains("sel");
+        document.querySelectorAll(".dna-r").forEach(x => x.classList.remove("sel"));
+        if (!on) { focus([]); $("#dnaCap").textContent = "Tap a row to light up those placements across the page."; return; }
+        r.classList.add("sel"); focus(list);
+        $("#dnaCap").innerHTML = list.length ? `<b>${esc(name)}</b>: ${list.map(n => `${T(PG[n])} ${n}`).join(" · ")}. Now lit on the wheel and in the planet pages. <a href="#chart">See the wheel ↑</a>`
+          : `<b>${esc(name)}</b>: no planets.${name === "Earth" ? " The only earth is the rising sign, Taurus." : ""}`;
+      };
+      r.onclick = go; r.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } };
+    });
+  })();
+
+  // ----- receipts on the Big Three and the portrait themes -----
+  const receipts = list => `<details class="rcpt"><summary>🔭 Show me the astrology</summary><ul data-c="calc">${list.map(x => `<li>${esc(x)}</li>`).join("")}</ul></details>`;
+  const lumReceipts = {
+    sun: [`Sun at ${P.Sun.degree}° ${P.Sun.sign}`, `${ord(P.Sun.house)} house`, ...aspectsOf("Sun").map(a => `${aspText(a).title}`), "On the star Achernar"],
+    moon: [`Moon in ${P.Moon.sign}`, `${ord(P.Moon.house)} house`, ...aspectsOf("Moon").map(a => `${aspText(a).title}`), "Ruled by Mercury in Pisces"],
+    rising: [`${C.rising_sign} Rising`, `Chart ruler Venus in ${P.Venus.sign}, ${ord(P.Venus.house)} house`, "No planets in earth signs", "Venus △ Moon"],
+  };
+  document.querySelectorAll("#b3 .lum").forEach((l, i) => l.insertAdjacentHTML("beforeend", receipts(lumReceipts[["sun", "moon", "rising"][i]])));
+  document.querySelectorAll("#themes .theme-i").forEach((li, i) => {
+    const ev = li.querySelector(".ev"); if (!ev) return;
+    ev.insertAdjacentHTML("afterend", receipts(K.themes[i].evidence.split(" · ")));
+    ev.remove();
+  });
+
+  // ----- life timeline scrubber -----
+  (() => {
+    const r = $("#ageRange"), out = $("#scrubOut"), svg = $("#yearsLine svg");
+    const x0 = 110, x1 = 980, Xs = y => x0 + (y - 2006) / 74 * (x1 - x0);
+    const line = el("line", { y1: 22, y2: 178, stroke: "#9a4862", "stroke-width": 2.5, "stroke-dasharray": "4 3" }, svg);
+    const sunLon = signIdx(P.Sun.sign) * 30 + P.Sun.degree + .5;
+    const seq7 = TM.firdaria.slice(0, 7).map(x => x.lord);
+    function upd() {
+      const age = +r.value, yr = 2006 + age;
+      $("#ageOut").textContent = age;
+      line.setAttribute("x1", Xs(yr + .5)); line.setAttribute("x2", Xs(yr + .5));
+      const sg = SIGNS[(signIdx(C.rising_sign) + age) % 12];
+      const f = TM.firdaria.find(x => x.from_age <= age + .5 && age + .5 < x.to_age);
+      let sub = ""; if (f && seq7.includes(f.lord)) { const k = Math.floor((age + .5 - f.from_age) / ((f.to_age - f.from_age) / 7)); sub = seq7[(seq7.indexOf(f.lord) + k) % 7]; }
+      const psun = SIGNS[Math.floor(((sunLon + age) % 360) / 30)];
+      const MAJ = ["jupiter", "saturn", "nodal", "uranus_opposition"];
+      const nowEv = events.find(e => MAJ.includes(e.key) && (e.year === yr || (e.key === "saturn" && e.year === yr - 1)));
+      const next = nowEv || events.filter(e => e.year > yr && MAJ.includes(e.key)).sort((a, b) => a.year - b.year)[0];
+      out.innerHTML = `<div data-c="calc"><small>Profection</small><b>${ord(age % 12 + 1)} house</b><span>${sg} · Lord of the Year ${TRULER[sg]}</span></div>
+        <div data-c="calc"><small>Firdaria</small><b>${f ? f.lord : "—"}</b><span>${sub ? sub + " sub-period" : ""}</span></div>
+        <div data-c="calc"><small>Progressed Sun</small><b>${psun}</b><span>about ${Math.round((sunLon + age) % 30)}°</span></div>
+        <div data-c="calc"><small>${nowEv ? "Major return, now" : "Next major return"}</small><b>${next ? next.label : "—"}</b><span>${next ? (nowEv && next.key === "saturn" ? "Nov 2034 – Jul 2035" : next.year) + " · age " + (next.year - 2006) : ""}</span></div>`;
+      window.__pickYear?.(yr);
+    }
+    r.addEventListener("input", upd);
+    r.value = X.age; upd();
+  })();
+
+  // ===================== FINALE: THE SKY YOU ARRIVED UNDER =====================
+  (() => {
+    const clone = $("#wheel svg").cloneNode(true);
+    clone.querySelectorAll(".build-only, .hb, .asp-hit").forEach(n => n.remove());
+    clone.querySelectorAll("[tabindex]").forEach(n => { n.removeAttribute("tabindex"); n.removeAttribute("role"); });
+    clone.querySelectorAll(".L").forEach(n => n.classList.remove("off"));
+    clone.setAttribute("aria-hidden", "true");
+    $("#finaleSky").appendChild(clone);
+  })();
+
+
   paintSeams();
 })
 .catch(err => { console.error(err); $("#panel").innerHTML = '<p>Couldn\'t load the chart. Open this page through a web server (GitHub Pages or <code>python -m http.server</code>).</p>'; });
 
 // nav: appears after the hero, highlights the current chapter
 const nav = $("nav.top"), links = [...document.querySelectorAll("nav a.l")];
-new IntersectionObserver(([e]) => nav.classList.toggle("show", !e.isIntersecting), { threshold: .15 }).observe($(".hero"));
+new IntersectionObserver(([e]) => { nav.classList.toggle("show", !e.isIntersecting); document.body.classList.toggle("nav-on", !e.isIntersecting); }, { threshold: .15 }).observe($(".hero"));
 const spy = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id)); }), { rootMargin: "-45% 0px -50% 0px" });
 document.querySelectorAll("main section[id]").forEach(s => spy.observe(s));
 </script>
