@@ -1,0 +1,4 @@
+# Private birth details never leave this machine
+birth_data.local.json
+.venv/
+__pycache__/

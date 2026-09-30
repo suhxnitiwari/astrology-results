@@ -1,0 +1,163 @@
+{
+  "place": "Lucknow, Uttar Pradesh, India",
+  "western": {
+    "sun_sign": "Pisces",
+    "moon_sign": "Gemini",
+    "rising_sign": "Taurus",
+    "planets": [
+      {
+        "planet": "Sun",
+        "sign": "Pisces",
+        "house": 11,
+        "retrograde": false,
+        "degree": 15
+      },
+      {
+        "planet": "Moon",
+        "sign": "Gemini",
+        "house": 2,
+        "retrograde": false
+      },
+      {
+        "planet": "Mercury",
+        "sign": "Pisces",
+        "house": 11,
+        "retrograde": true,
+        "degree": 26
+      },
+      {
+        "planet": "Venus",
+        "sign": "Aquarius",
+        "house": 10,
+        "retrograde": false,
+        "degree": 0
+      },
+      {
+        "planet": "Mars",
+        "sign": "Gemini",
+        "house": 2,
+        "retrograde": false,
+        "degree": 8
+      },
+      {
+        "planet": "Jupiter",
+        "sign": "Scorpio",
+        "house": 7,
+        "retrograde": true,
+        "degree": 18
+      },
+      {
+        "planet": "Saturn",
+        "sign": "Leo",
+        "house": 4,
+        "retrograde": true,
+        "degree": 5
+      },
+      {
+        "planet": "Uranus",
+        "sign": "Pisces",
+        "house": 11,
+        "retrograde": false,
+        "degree": 10
+      },
+      {
+        "planet": "Neptune",
+        "sign": "Aquarius",
+        "house": 10,
+        "retrograde": false,
+        "degree": 18
+      },
+      {
+        "planet": "Pluto",
+        "sign": "Sagittarius",
+        "house": 8,
+        "retrograde": false,
+        "degree": 26
+      }
+    ]
+  },
+  "vedic": {
+    "ayanamsa": "Lahiri",
+    "lagna": "Aries",
+    "lagna_rashi": "Mesha",
+    "moon_rashi": "Vrishabha",
+    "moon_sign": "Taurus",
+    "sun_rashi": "Kumbha",
+    "nakshatra": "Rohini",
+    "current_mahadasha": "Rahu",
+    "current_antardasha": "Saturn",
+    "planets": [
+      {
+        "planet": "Sun",
+        "sign": "Aquarius",
+        "house": 11,
+        "retrograde": false,
+        "degree": 21,
+        "rashi": "Kumbha"
+      },
+      {
+        "planet": "Moon",
+        "sign": "Taurus",
+        "house": 2,
+        "retrograde": false,
+        "rashi": "Vrishabha"
+      },
+      {
+        "planet": "Mars",
+        "sign": "Taurus",
+        "house": 2,
+        "retrograde": false,
+        "degree": 14,
+        "rashi": "Vrishabha"
+      },
+      {
+        "planet": "Mercury",
+        "sign": "Pisces",
+        "house": 12,
+        "retrograde": true,
+        "degree": 2,
+        "rashi": "Meena"
+      },
+      {
+        "planet": "Jupiter",
+        "sign": "Libra",
+        "house": 7,
+        "retrograde": true,
+        "degree": 24,
+        "rashi": "Tula"
+      },
+      {
+        "planet": "Venus",
+        "sign": "Capricorn",
+        "house": 10,
+        "retrograde": false,
+        "degree": 6,
+        "rashi": "Makara"
+      },
+      {
+        "planet": "Saturn",
+        "sign": "Cancer",
+        "house": 4,
+        "retrograde": true,
+        "degree": 11,
+        "rashi": "Karka"
+      },
+      {
+        "planet": "Rahu",
+        "sign": "Pisces",
+        "house": 12,
+        "retrograde": true,
+        "degree": 11,
+        "rashi": "Meena"
+      },
+      {
+        "planet": "Ketu",
+        "sign": "Virgo",
+        "house": 6,
+        "retrograde": true,
+        "degree": 11,
+        "rashi": "Kanya"
+      }
+    ]
+  }
+}
