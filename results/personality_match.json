@@ -1,0 +1,269 @@
+{
+  "method": "Average of my strength scores for the qualities astrology links to each sign (0-100).",
+  "signs": [
+    {
+      "name": "Scorpio",
+      "glyph": "♏",
+      "match": 93,
+      "strengths": [
+        {
+          "trait": "Loyal",
+          "evidence": "CliftonStrengths #1 Relator"
+        },
+        {
+          "trait": "Driven",
+          "evidence": "Values: Achievement 100%"
+        },
+        {
+          "trait": "Honest",
+          "evidence": "VIA #2 Honesty"
+        },
+        {
+          "trait": "Confident",
+          "evidence": "Big Five Assertiveness 18/20"
+        }
+      ]
+    },
+    {
+      "name": "Aries",
+      "glyph": "♈",
+      "match": 88,
+      "strengths": [
+        {
+          "trait": "Driven",
+          "evidence": "Values: Achievement 100%"
+        },
+        {
+          "trait": "Confident",
+          "evidence": "Big Five Assertiveness 18/20"
+        },
+        {
+          "trait": "A leader",
+          "evidence": "VIA #7 Leadership"
+        },
+        {
+          "trait": "Independent",
+          "evidence": "Values: Self-Direction 83%"
+        }
+      ]
+    },
+    {
+      "name": "Leo",
+      "glyph": "♌",
+      "match": 88,
+      "strengths": [
+        {
+          "trait": "Driven",
+          "evidence": "Values: Achievement 100%"
+        },
+        {
+          "trait": "Confident",
+          "evidence": "Big Five Assertiveness 18/20"
+        },
+        {
+          "trait": "Loving",
+          "evidence": "VIA #1 Love"
+        },
+        {
+          "trait": "A leader",
+          "evidence": "VIA #7 Leadership"
+        },
+        {
+          "trait": "Creative",
+          "evidence": "Career Personality: The Creator"
+        }
+      ]
+    },
+    {
+      "name": "Cancer",
+      "glyph": "♋",
+      "match": 87,
+      "strengths": [
+        {
+          "trait": "Loyal",
+          "evidence": "CliftonStrengths #1 Relator"
+        },
+        {
+          "trait": "Grounded",
+          "evidence": "Values: Security 100%"
+        },
+        {
+          "trait": "Loving",
+          "evidence": "VIA #1 Love"
+        },
+        {
+          "trait": "Empathetic",
+          "evidence": "CliftonStrengths #2 Empathy"
+        },
+        {
+          "trait": "Rooted",
+          "evidence": "Values: Tradition 67%"
+        }
+      ]
+    },
+    {
+      "name": "Capricorn",
+      "glyph": "♑",
+      "match": 87,
+      "strengths": [
+        {
+          "trait": "Driven",
+          "evidence": "Values: Achievement 100%"
+        },
+        {
+          "trait": "Grounded",
+          "evidence": "Values: Security 100%"
+        },
+        {
+          "trait": "Organized",
+          "evidence": "Big Five Orderliness 19/20"
+        },
+        {
+          "trait": "Rooted",
+          "evidence": "Values: Tradition 67%"
+        }
+      ]
+    },
+    {
+      "name": "Pisces",
+      "glyph": "♓",
+      "match": 87,
+      "strengths": [
+        {
+          "trait": "Empathetic",
+          "evidence": "CliftonStrengths #2 Empathy"
+        },
+        {
+          "trait": "Spiritual",
+          "evidence": "VIA #3 Spirituality"
+        },
+        {
+          "trait": "Kind",
+          "evidence": "VIA #4 Kindness"
+        },
+        {
+          "trait": "Creative",
+          "evidence": "Career Personality: The Creator"
+        }
+      ]
+    },
+    {
+      "name": "Taurus",
+      "glyph": "♉",
+      "match": 86,
+      "strengths": [
+        {
+          "trait": "Grounded",
+          "evidence": "Values: Security 100%"
+        },
+        {
+          "trait": "Loyal",
+          "evidence": "CliftonStrengths #1 Relator"
+        },
+        {
+          "trait": "Rooted",
+          "evidence": "Values: Tradition 67%"
+        }
+      ]
+    },
+    {
+      "name": "Virgo",
+      "glyph": "♍",
+      "match": 85,
+      "strengths": [
+        {
+          "trait": "Honest",
+          "evidence": "VIA #2 Honesty"
+        },
+        {
+          "trait": "Organized",
+          "evidence": "Big Five Orderliness 19/20"
+        },
+        {
+          "trait": "Kind",
+          "evidence": "VIA #4 Kindness"
+        },
+        {
+          "trait": "Curious",
+          "evidence": "VIA #5 Love of Learning"
+        }
+      ]
+    },
+    {
+      "name": "Libra",
+      "glyph": "♎",
+      "match": 85,
+      "strengths": [
+        {
+          "trait": "Loving",
+          "evidence": "VIA #1 Love"
+        },
+        {
+          "trait": "Social",
+          "evidence": "Big Five Extraversion 85"
+        },
+        {
+          "trait": "Creative",
+          "evidence": "Career Personality: The Creator"
+        }
+      ]
+    },
+    {
+      "name": "Sagittarius",
+      "glyph": "♐",
+      "match": 80,
+      "strengths": [
+        {
+          "trait": "Spiritual",
+          "evidence": "VIA #3 Spirituality"
+        },
+        {
+          "trait": "Independent",
+          "evidence": "Values: Self-Direction 83%"
+        },
+        {
+          "trait": "Curious",
+          "evidence": "VIA #5 Love of Learning"
+        }
+      ]
+    },
+    {
+      "name": "Gemini",
+      "glyph": "♊",
+      "match": 79,
+      "strengths": [
+        {
+          "trait": "Expressive",
+          "evidence": "CliftonStrengths #5 Communication"
+        },
+        {
+          "trait": "Social",
+          "evidence": "Big Five Extraversion 85"
+        },
+        {
+          "trait": "Curious",
+          "evidence": "VIA #5 Love of Learning"
+        }
+      ]
+    },
+    {
+      "name": "Aquarius",
+      "glyph": "♒",
+      "match": 78,
+      "strengths": [
+        {
+          "trait": "Independent",
+          "evidence": "Values: Self-Direction 83%"
+        },
+        {
+          "trait": "Creative",
+          "evidence": "Career Personality: The Creator"
+        },
+        {
+          "trait": "Curious",
+          "evidence": "VIA #5 Love of Learning"
+        }
+      ]
+    }
+  ]
+}

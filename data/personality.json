@@ -1,0 +1,91 @@
+{
+  "source": "Strengths from my personality tests, including HEXACO, Big Five, VIA, CliftonStrengths, DISC, Enneagram, 16Personalities, Schwartz Values and Career Personality",
+  "type": "ESFJ · The Consul",
+  "traits": {
+    "loyalty": {
+      "label": "Loyal",
+      "score": 95,
+      "evidence": "CliftonStrengths #1 Relator"
+    },
+    "ambition": {
+      "label": "Driven",
+      "score": 95,
+      "evidence": "Values: Achievement 100%"
+    },
+    "stability": {
+      "label": "Grounded",
+      "score": 95,
+      "evidence": "Values: Security 100%"
+    },
+    "empathy": {
+      "label": "Empathetic",
+      "score": 90,
+      "evidence": "CliftonStrengths #2 Empathy"
+    },
+    "warmth": {
+      "label": "Loving",
+      "score": 90,
+      "evidence": "VIA #1 Love"
+    },
+    "confidence": {
+      "label": "Confident",
+      "score": 90,
+      "evidence": "Big Five Assertiveness 18/20"
+    },
+    "organized": {
+      "label": "Organized",
+      "score": 90,
+      "evidence": "Big Five Orderliness 19/20"
+    },
+    "honesty": {
+      "label": "Honest",
+      "score": 92,
+      "evidence": "VIA #2 Honesty"
+    },
+    "spirituality": {
+      "label": "Spiritual",
+      "score": 88,
+      "evidence": "VIA #3 Spirituality"
+    },
+    "leadership": {
+      "label": "A leader",
+      "score": 85,
+      "evidence": "VIA #7 Leadership"
+    },
+    "communication": {
+      "label": "Expressive",
+      "score": 85,
+      "evidence": "CliftonStrengths #5 Communication"
+    },
+    "independence": {
+      "label": "Independent",
+      "score": 83,
+      "evidence": "Values: Self-Direction 83%"
+    },
+    "sociability": {
+      "label": "Social",
+      "score": 82,
+      "evidence": "Big Five Extraversion 85"
+    },
+    "creativity": {
+      "label": "Creative",
+      "score": 82,
+      "evidence": "Career Personality: The Creator"
+    },
+    "kindness": {
+      "label": "Kind",
+      "score": 88,
+      "evidence": "VIA #4 Kindness"
+    },
+    "curiosity": {
+      "label": "Curious",
+      "score": 70,
+      "evidence": "VIA #5 Love of Learning"
+    },
+    "tradition": {
+      "label": "Rooted",
+      "score": 67,
+      "evidence": "Values: Tradition 67%"
+    }
+  }
+}

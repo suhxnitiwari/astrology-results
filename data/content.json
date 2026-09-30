@@ -1,0 +1,853 @@
+{
+  "bigThree": {
+    "sun": {
+      "title": "Sun in Pisces",
+      "line": "The self as a tide",
+      "text": "In Western astrology the Sun describes the core of who someone is becoming. Pisces, the last sign of the zodiac, is associated with imagination, compassion and porous boundaries: the ability to feel what a room feels before anyone speaks. Her Sun sits at 15°, the exact middle of the sign, where its qualities are traditionally read as undiluted. It also sits in the 11th house of friends and shared ideals, so this Pisces self comes alive among people rather than in retreat."
+    },
+    "moon": {
+      "title": "Moon in Gemini",
+      "line": "Feelings, spoken aloud",
+      "text": "The Moon describes emotional needs and instinctive responses. A Gemini Moon is commonly interpreted as someone who understands her feelings by putting them into words: talking, texting, journaling, asking one more question. It is curious and quick, and it needs conversation and variety to feel at home. In her chart the Moon sits in the 2nd house, beside Mars, so emotional security is tied to building something of her own."
+    },
+    "rising": {
+      "title": "Taurus Rising",
+      "line": "The front door is earth",
+      "text": "The rising sign is the doorway: first impressions, style, the body and the pace at which someone enters a room. Taurus Rising is traditionally associated with a composed, unhurried presence and a strong sense of beauty, texture and comfort. Her chart has no planets in earth signs at all, which makes this rising sign the chart's only earth, so the grounded quality people notice first is doing real work."
+    },
+    "together": [
+      {
+        "pair": "Sun ↔ Moon",
+        "note": "Pisces and Gemini are both mutable signs, and they sit in a square. Astrologers read this as two ways of knowing, intuition and analysis, that keep interrupting and improving each other. She can feel an answer and then talk herself into understanding why."
+      },
+      {
+        "pair": "Moon ↔ Sun's sign",
+        "note": "The Moon's ruler, Mercury, lives in Pisces next to the Sun. The Gemini mind reports back to a Pisces heart: even her most analytical thoughts arrive with a feeling attached."
+      },
+      {
+        "pair": "Rising ↔ Moon",
+        "note": "The rising sign's ruler, Venus, trines the Moon. The steady Taurus surface and the chatty Gemini interior get along easily: warmth is how the two connect."
+      }
+    ]
+  },
+  "planets": {
+    "Sun": "Fifteen degrees into Pisces, in the 11th house, 4° from Uranus. The Pisces identity is traditionally gentle and intuitive; the Uranus contact adds an original, unexpected streak, and the 11th house points it toward friends, communities and causes. Her Sun also trines Jupiter in Scorpio, one of the chart's most generous aspects.",
+    "Moon": "In Gemini, in the 2nd house of resources and self-worth, close beside Mars. Emotional security comes from making, earning and keeping things of her own, and from having someone to talk to. The Moon trines Venus (warmth) and sextiles Saturn (follow-through). Its degree is kept private.",
+    "Mercury": "At 26° Pisces in the 11th house, retrograde, having turned backward only days before her birth. Traditional astrology considers Pisces an unusual home for Mercury, because it prefers pictures and intuition to straight logic, and that is exactly what makes this placement poetic. Mercury forms an exact square to Pluto: in Western astrology, a probing, persuasive mind that reads people well and goes straight to the heart of a question.",
+    "Venus": "The chart ruler, because Venus rules Taurus Rising. At 0° Aquarius it has just crossed into the sign: love and taste expressed through friendship, originality and a cool, self-possessed style. In the 10th house, the most visible point of the chart, Venus is associated with being recognised for grace, aesthetics or creative work. It opposes Saturn, trines the Moon and sextiles Mercury.",
+    "Mars": "In Gemini at 8°, in the 2nd house, joined to the Moon. Mars in Gemini acts through words, wit and speed; it is often described as a quick mind in a debate and someone who can run several projects at once. In the 2nd house that energy goes into building resources. Mars sextiles Saturn, which lends staying power to the speed.",
+    "Jupiter": "The traditional ruler of Pisces, placed in Scorpio in the 7th house of partnership and retrograde. Astrologers associate this with growth through deep, committed one-to-one bonds and partners who expand her world. Jupiter trines the Sun from water sign to water sign, and squares Neptune almost exactly.",
+    "Saturn": "In Leo in the 4th house, retrograde. Saturn here is about building something lasting at the foundation of life: home, family, roots, with Leo's wish that the effort be seen and honoured. Saturn opposes Venus across the private/public axis and sextiles both the Moon and Mars, which astrologers read as structure supporting her quickest instincts.",
+    "Uranus": "In Pisces in the 11th house, the house Uranus rules in modern astrology, 4° from the Sun. Uranus in Pisces is generational (2003–2011); the conjunction with the Sun makes it personal: an identity that likes to surprise, and friendships that change her. Uranus is in mutual reception with Neptune.",
+    "Neptune": "The modern ruler of Pisces, in Aquarius in the 10th house beside Venus. Generationally, Neptune in Aquarius belongs to everyone born 1998–2012; in the 10th it is associated with an artistic, idealistic or imaginative public life. Neptune squares Jupiter almost exactly, so both of her Sun sign's rulers are in tension.",
+    "Pluto": "In Sagittarius in the 9th house, the house of higher learning, travel, philosophy and belief. The sign is generational (1995–2008); the house makes it personal: in Western astrology, this is transformation through education, big questions and changing worldviews. Its most personal link is the exact square to Mercury."
+  },
+  "houses": {
+    "1": {
+      "name": "Self",
+      "about": "The body, style and first impressions."
+    },
+    "2": {
+      "name": "Resources",
+      "about": "Money, possessions, talents and self-worth."
+    },
+    "3": {
+      "name": "Mind & kin",
+      "about": "Siblings, early learning, neighbourhood and everyday communication."
+    },
+    "4": {
+      "name": "Roots",
+      "about": "Home, family, ancestry and private life."
+    },
+    "5": {
+      "name": "Joy",
+      "about": "Creativity, romance, play and children."
+    },
+    "6": {
+      "name": "Craft",
+      "about": "Daily work, routines, health and service."
+    },
+    "7": {
+      "name": "Partners",
+      "about": "Marriage, close partnerships and contracts."
+    },
+    "8": {
+      "name": "Depths",
+      "about": "Shared resources, intimacy and transformation."
+    },
+    "9": {
+      "name": "Horizons",
+      "about": "Travel, higher learning, philosophy and belief."
+    },
+    "10": {
+      "name": "Public life",
+      "about": "Career, reputation and the life people see."
+    },
+    "11": {
+      "name": "Circle",
+      "about": "Friends, groups, communities and hopes."
+    },
+    "12": {
+      "name": "The unseen",
+      "about": "Solitude, dreams, retreat and the unconscious."
+    }
+  },
+  "houseNotes": {
+    "11": "Her busiest house: the Sun, Mercury and Uranus, all in Pisces. In Western astrology the 11th is where identity meets community. With the Sun here, she comes most fully into herself through friends, groups and shared hopes, and Uranus (which rules this house in modern astrology) makes it the home of her originality.",
+    "2": "The Moon and Mars together in Gemini. Feelings and drive both point at the 2nd house of resources and self-worth: building, earning and protecting what is hers is emotionally meaningful, not just practical.",
+    "10": "Venus, the chart ruler, with Neptune. The ruler of the whole chart sits at its most public point, which astrologers read as a life that is meant to be visible, especially through aesthetics, creativity and ideals.",
+    "7": "Jupiter in Scorpio. Partnerships are traditionally where this chart grows: loyal, deep and expansive.",
+    "4": "Saturn in Leo. The foundation is serious and dignified: roots she honours and a home she builds carefully.",
+    "empty": "An empty house is not an empty area of life. Its sign, and the planet that rules that sign, still describe it. Her 1st house holds no planets, for example, but its ruler Venus sits in the 10th, so the way she presents herself is tied to her public life.",
+    "9": "Pluto in Sagittarius: the chart's only cadent planet. Learning, travel and changing beliefs are where it is traditionally said to transform."
+  },
+  "aspectTypes": {
+    "conjunction": {
+      "glyph": "☌",
+      "tone": "blend",
+      "about": "Planets in the same place, acting as one."
+    },
+    "sextile": {
+      "glyph": "⚹",
+      "tone": "flow",
+      "about": "An easy, cooperative link that rewards effort."
+    },
+    "trine": {
+      "glyph": "△",
+      "tone": "flow",
+      "about": "Natural harmony; talents that come easily."
+    },
+    "square": {
+      "glyph": "□",
+      "tone": "tension",
+      "about": "Friction that pushes growth and action."
+    },
+    "opposition": {
+      "glyph": "☍",
+      "tone": "tension",
+      "about": "Two ends of a see-saw, asking for balance."
+    }
+  },
+  "aspects": {
+    "Mercury-Pluto-square": {
+      "title": "Mercury square Pluto",
+      "rank": 1,
+      "text": "The tightest aspect in the chart, half a degree from exact. Mercury (mind, speech) meets Pluto (depth, power) at a sharp angle. It is commonly interpreted as a research mind: someone who reads between the lines, isn't satisfied by surface answers and can be quietly, remarkably persuasive."
+    },
+    "Jupiter-Neptune-square": {
+      "title": "Jupiter square Neptune",
+      "rank": 2,
+      "text": "Also half a degree from exact, and unusual: Jupiter and Neptune are the traditional and modern rulers of Pisces, so her Sun sign's two rulers are in tension. Astrologers associate it with large imagination, idealism and faith, dreams big enough that they need a plan to land."
+    },
+    "Moon-Mars-conjunction": {
+      "title": "Moon conjunct Mars",
+      "rank": 3,
+      "text": "Feelings and drive in the same place, in talkative Gemini. Traditionally read as emotional courage: she knows what she feels, says so, and acts on it."
+    },
+    "Sun-Uranus-conjunction": {
+      "title": "Sun conjunct Uranus",
+      "rank": 4,
+      "text": "Identity fused with originality, in the 11th house. Commonly read as someone who surprises people, resists being boxed in and needs room to be herself."
+    },
+    "Sun-Jupiter-trine": {
+      "title": "Sun trine Jupiter",
+      "rank": 5,
+      "text": "Water to water: the Pisces Sun flows easily into Jupiter in Scorpio in the partnership house. One of the classic signatures of optimism, generosity and good fortune through other people."
+    },
+    "Venus-Saturn-opposition": {
+      "title": "Venus opposite Saturn",
+      "rank": 6,
+      "text": "The chart ruler faces Saturn across the 10th and 4th houses. Often read as seriousness about love and commitment, and as a lifelong balance between public ambition and private foundations. Traditionally, this is love that deepens with time."
+    },
+    "Mars-Uranus-square": {
+      "title": "Mars square Uranus",
+      "rank": 7,
+      "text": "Energy that arrives in bursts: inventive, fast and independent. Part of the Pisces–Gemini square pattern."
+    },
+    "Moon-Uranus-square": {
+      "title": "Moon square Uranus",
+      "rank": 8,
+      "text": "A need for emotional freedom and variety; she adapts quickly when circumstances change."
+    },
+    "Sun-Moon-square": {
+      "title": "Sun square Moon",
+      "rank": 9,
+      "text": "Pisces intuition and Gemini analysis at right angles, both mutable. A lively inner dialogue rather than a single voice."
+    },
+    "Sun-Mars-square": {
+      "title": "Sun square Mars",
+      "rank": 10,
+      "text": "A wide square that gives a gentle Pisces Sun a push into action."
+    },
+    "Moon-Venus-trine": {
+      "title": "Moon trine Venus",
+      "rank": 11,
+      "text": "Warmth and taste support each other: affection comes easily and beauty feels emotionally important."
+    },
+    "Moon-Saturn-sextile": {
+      "title": "Moon sextile Saturn",
+      "rank": 12,
+      "text": "Emotional steadiness and loyalty; feelings that are backed by commitment."
+    },
+    "Mars-Saturn-sextile": {
+      "title": "Mars sextile Saturn",
+      "rank": 13,
+      "text": "Speed with structure: the ability to turn quick energy into lasting work."
+    },
+    "Mercury-Venus-sextile": {
+      "title": "Mercury sextile Venus",
+      "rank": 14,
+      "text": "A graceful way with words; tact, charm and an ear for language."
+    }
+  },
+  "aspectPattern": "Four of the squares form one pattern: the Sun and Uranus in Pisces square the Moon and Mars in Gemini, linking the 11th house to the 2nd. It is not a T-square or grand cross, since no opposition completes it, but it is a strong mutable square pattern, and a lot of the chart's energy runs along it.",
+  "patterns": {
+    "elements": "Water 4, Air 4, Fire 2, Earth 0. The chart is split evenly between feeling (water) and thinking (air), with a little fire from Saturn in Leo and Pluto in Sagittarius. No planet sits in an earth sign; the only earth is Taurus Rising. Astrologers often describe a missing element as something a person seeks out and builds deliberately, and here it sits right at the front door.",
+    "modalities": "Mutable 6, Fixed 4, Cardinal 0. Mutable signs are associated with adaptability, versatility and responsiveness; fixed signs (Venus, Jupiter, Saturn, Neptune and the rising sign) supply staying power. With no cardinal planets, this chart is traditionally read as less interested in starting things for their own sake and more interested in shaping and sustaining what matters. The North Node, often read as a direction of growth, is in Aries, the first cardinal sign.",
+    "hemispheres": "Seven of ten planets are above the horizon (houses 7–12), traditionally linked to a life oriented toward the outer world and other people. Seven are also on the eastern side (houses 10–3), associated with self-direction: making her own choices rather than waiting on circumstance.",
+    "houseTypes": "Nine of ten planets sit in angular or succedent houses. Only Pluto, in the 9th, is cadent. In Western astrology angular houses (1, 4, 7, 10) are linked with action and visibility, succedent houses (2, 5, 8, 11) with building and keeping, and cadent houses (3, 6, 9, 12) with learning and adjusting. This chart's energy is aimed firmly at doing and building.",
+    "cluster": "Three planets in Pisces in the 11th house. Some astrologers call three planets in one sign a stellium; many require four, so the careful description is a strong Pisces and 11th-house concentration.",
+    "retrogrades": {
+      "intro": "Three planets were retrograde at birth. Retrograde planets are traditionally read as working inward first: reflecting, revising and revisiting before acting.",
+      "Mercury": "Thinks twice and comes back to ideas; often a strong writer or editor of her own thoughts.",
+      "Jupiter": "A personal philosophy, built from her own experience rather than borrowed.",
+      "Saturn": "Sets her own standards rather than accepting ones handed to her."
+    },
+    "nodes": "North Node in Aries in the 12th house, South Node in Libra in the 6th. In Western astrology the nodes describe a direction of growth: here, from harmony-keeping (Libra) toward bold self-trust (Aries).",
+    "rulers": [
+      {
+        "from": "Taurus Rising",
+        "to": "Venus",
+        "where": "Aquarius · 10th house",
+        "note": "The chart ruler sits at the most public point of the chart, beside Neptune."
+      },
+      {
+        "from": "Pisces Sun",
+        "to": "Jupiter & Neptune",
+        "where": "Scorpio · 7th  /  Aquarius · 10th",
+        "note": "Pisces' traditional and modern rulers square each other within half a degree."
+      },
+      {
+        "from": "Gemini Moon",
+        "to": "Mercury",
+        "where": "Pisces · 11th house",
+        "note": "The Moon's ruler lives in the Sun's sign and house, so head and heart report to the same place."
+      },
+      {
+        "from": "Uranus ⇄ Neptune",
+        "to": "Mutual reception",
+        "where": "Pisces ⇄ Aquarius",
+        "note": "Each sits in the sign the other rules, linking the 11th and 10th houses."
+      }
+    ]
+  },
+  "themes": [
+    {
+      "title": "Water and air, with an earth front door",
+      "text": "The planets split evenly between feeling and thinking, with no earth among them. The steadiness people see first comes from the rising sign alone, and its ruler, Venus, lives in air. She's more fluid and more cerebral than she first appears.",
+      "evidence": "4 water · 4 air · 0 earth planets · Taurus Rising · Venus in Aquarius"
+    },
+    {
+      "title": "The 11th house is the centre of gravity",
+      "text": "The Sun, Mercury and Uranus all sit in the house of friends, groups and hopes, and Uranus rules that house in modern astrology. This chart finds itself among people: circles, collaborations and shared causes.",
+      "evidence": "Sun · Mercury · Uranus in the 11th · Uranus ⇄ Neptune reception"
+    },
+    {
+      "title": "Words are how she feels",
+      "text": "The Moon and Mars share a Gemini placement, the Moon's ruler is Mercury, and Mercury makes the chart's tightest aspect. Emotion, drive and thought all run through language.",
+      "evidence": "Moon ☌ Mars in Gemini · Mercury □ Pluto (0.5°) · Mercury ⚹ Venus"
+    },
+    {
+      "title": "A life meant to be seen",
+      "text": "The chart ruler sits in the 10th house with Neptune, and seven planets are above the horizon. Aesthetics, creativity and ideals are traditionally the channels, and Saturn in the 4th keeps the roots honoured while she's out in public.",
+      "evidence": "Venus (chart ruler) in the 10th · 7 planets above the horizon · Venus ☍ Saturn"
+    },
+    {
+      "title": "Devotion that deepens",
+      "text": "Jupiter in Scorpio in the partnership house trines the Sun, the Moon trines Venus, and Venus opposes Saturn. In astrological terms, this is love that is generous, loyal and built to last.",
+      "evidence": "Jupiter in the 7th · Sun △ Jupiter · Moon △ Venus · Venus ☍ Saturn"
+    },
+    {
+      "title": "Adapt, then hold",
+      "text": "Six mutable planets bend and respond; four fixed ones hold on. There are no cardinal planets, and only Pluto sits in a cadent house, so the chart shapes and sustains rather than drifting, with the Aries North Node pointing toward bolder beginnings.",
+      "evidence": "6 mutable · 4 fixed · 0 cardinal · 1 cadent planet · North Node in Aries"
+    },
+    {
+      "title": "Big dreams, with a plan",
+      "text": "Both rulers of Pisces are locked in an exact square, a signature of vast imagination and idealism, while Saturn sextiles the Moon and Mars to give that imagination follow-through.",
+      "evidence": "Jupiter □ Neptune (0.5°) · Saturn ⚹ Moon · Saturn ⚹ Mars"
+    },
+    {
+      "title": "A Sun at the river's end",
+      "text": "Her Sun sits exactly on Achernar, the star at the end of the celestial river, in the watery sign of Pisces,, with Pisces' traditional ruler Jupiter as its dispositor.",
+      "evidence": "Sun ☌ Achernar (0.0°) · Sun in Pisces · 11th house"
+    },
+    {
+      "title": "Guests, not hosts",
+      "text": "No planet is in its own sign, and the rulership chains loop through Jupiter, Mars and Mercury rather than ending at a single master planet. Traditionally, this is a chart that works through collaboration and exchange.",
+      "evidence": "No domicile planets · no final dispositor · Jupiter → Mars → Mercury loop"
+    }
+  ],
+  "labels": {
+    "Sun": "Who I am",
+    "Moon": "How I feel",
+    "Rising": "How I show up",
+    "Mercury": "How I think",
+    "Venus": "How I love",
+    "Mars": "How I act",
+    "Jupiter": "How I grow",
+    "Saturn": "Where I grow up",
+    "Uranus": "How I break the rules",
+    "Neptune": "How I dream",
+    "Pluto": "How I transform"
+  },
+  "footer": "For the cosmically curious: astrology is used here as a language for reflection and play, not as a scientific personality assessment.",
+  "houseSystem": "Porphyry houses, which match my canonical chart.",
+  "layers": {
+    "intro": "Astronomy calculates the sky. Mathematics builds the chart. Astrology interprets it.",
+    "items": [
+      {
+        "icon": "🔭",
+        "name": "Observation",
+        "tag": "Astronomy",
+        "text": "Where the Sun, Moon and planets appeared along the ecliptic at the moment of birth, seen from Lucknow. Measurable and reproducible."
+      },
+      {
+        "icon": "∠",
+        "name": "Calculation",
+        "tag": "Mathematics + convention",
+        "text": "Dividing the sky into signs and houses, and measuring angles between planets. Exact, but the conventions (tropical zodiac, a house system, aspect orbs) are human choices."
+      },
+      {
+        "icon": "✦",
+        "name": "Tradition & interpretation",
+        "tag": "Astrology",
+        "text": "What each planet, sign, house and angle has come to mean across two thousand years of practice. A symbolic language, not an established science."
+      }
+    ],
+    "evidence": "Scientific research has not established natal placements as predictors of personality or events; a double-blind test published in Nature in 1985 did not support astrologers' ability to match charts to personality profiles."
+  },
+  "significations": {
+    "Sun": "Traditionally: vitality, honour, the father, leadership. Modern: conscious identity and purpose.",
+    "Moon": "Traditionally: the body, the mother, daily life and change. Modern: emotions, needs and instinct.",
+    "Mercury": "Traditionally: speech, reason, writing, trade and cleverness. Modern: how the mind works.",
+    "Venus": "Traditionally: love, beauty, pleasure, art and harmony; one of the two benefics.",
+    "Mars": "Traditionally: action, courage, heat, conflict and cutting; one of the two malefics.",
+    "Jupiter": "Traditionally: growth, abundance, faith, law and good fortune; the greater benefic.",
+    "Saturn": "Traditionally: time, limits, duty, endurance and structure; the greater malefic.",
+    "Uranus": "A modern addition (discovered 1781): innovation, sudden change and freedom.",
+    "Neptune": "A modern addition (discovered 1846): dreams, ideals, imagination and dissolving boundaries.",
+    "Pluto": "A modern addition (discovered 1930): depth, power and transformation."
+  },
+  "houseHistory": {
+    "names": {
+      "1": "Hour-Marker (Horoskopos)",
+      "2": "Gate of Hades",
+      "3": "Goddess",
+      "4": "Subterranean Angle",
+      "5": "Good Fortune",
+      "6": "Bad Fortune",
+      "7": "Setting",
+      "8": "Idle Place",
+      "9": "God",
+      "10": "Midheaven",
+      "11": "Good Spirit",
+      "12": "Bad Spirit"
+    },
+    "joys": {
+      "1": "Mercury",
+      "3": "Moon",
+      "5": "Venus",
+      "6": "Mars",
+      "9": "Sun",
+      "11": "Jupiter",
+      "12": "Saturn"
+    },
+    "toAsc": {
+      "1": "the Ascendant itself",
+      "2": "averse (no classical aspect to the 1st)",
+      "3": "sextile to the 1st",
+      "4": "square to the 1st",
+      "5": "trine to the 1st",
+      "6": "averse",
+      "7": "opposite the 1st",
+      "8": "averse",
+      "9": "trine to the 1st",
+      "10": "square to the 1st",
+      "11": "sextile to the 1st",
+      "12": "averse"
+    },
+    "intro": "House meanings weren't assigned by matching House 1 to Aries, House 2 to Taurus and so on. In Hellenistic astrology they grew out of geometry: which places sit on the angles, which ones 'see' the Ascendant by a classical aspect and which are 'averse' to it, plus the planetary joys, sect and older inherited ideas. Historians still debate parts of how every meaning developed.",
+    "notSigns": "A house is not a sign. The popular 'natural houses' scheme (House 1 = Aries, House 2 = Taurus…) is a modern teaching device, not how house meanings historically arose. Her 1st house is Taurus; it isn't secretly Aries.",
+    "joysNote": "Seven traditional planets were said to 'rejoice' in particular places, and several house meanings echo them: Venus in the 5th (pleasure, children), Mars in the 6th (labour, illness), Jupiter in the 11th (friends, benefactors, the 'Good Spirit'), Saturn in the 12th (isolation). None of her planets sits in its joy, but three of them fill the 11th, the house of Jupiter's joy.",
+    "systems": "There has never been a single agreed way to divide the houses; whole-sign, equal and quadrant methods all appear in ancient sources. This site uses Porphyry, which matches her canonical chart. In whole-sign houses, the oldest method, Pluto would move from the 9th to the 8th; every other planet stays put.",
+    "axes": [
+      {
+        "a": 1,
+        "b": 7,
+        "name": "Self ↔ Other",
+        "text": "Me, my body and my approach, facing partners and one-to-one relationships."
+      },
+      {
+        "a": 2,
+        "b": 8,
+        "name": "Mine ↔ Shared",
+        "text": "My own resources and worth, facing shared resources, other people's money and transformation."
+      },
+      {
+        "a": 3,
+        "b": 9,
+        "name": "Near ↔ Far",
+        "text": "Everyday learning, siblings and local life, facing higher learning, travel and belief."
+      },
+      {
+        "a": 4,
+        "b": 10,
+        "name": "Private ↔ Public",
+        "text": "Home and roots, facing career and reputation."
+      },
+      {
+        "a": 5,
+        "b": 11,
+        "name": "Creation ↔ Community",
+        "text": "Personal pleasure, romance and creativity, facing friends, groups and hopes. (A modern framing; historically more complicated.)"
+      },
+      {
+        "a": 6,
+        "b": 12,
+        "name": "Labour ↔ Withdrawal",
+        "text": "Daily work and health, facing solitude and what is hidden. (Also historically complicated.)"
+      }
+    ]
+  },
+  "mechanics": {
+    "dignityIntro": "Traditional astrology grades each of the seven classical planets by 'essential dignity': how at home it is in its sign and degree. Domicile (+5), exaltation (+4), triplicity (+3), bound (+2) and face (+1) add strength; detriment (−5) and fall (−4) are debilities; a planet with none of the five dignities is 'peregrine', a wanderer. These are Lilly-style scores, shown for reference.",
+    "dignityRead": "Her chart has no planet in its own sign or exaltation. Venus (the chart ruler) holds only its face, Saturn has triplicity and face alongside its detriment, and Mercury is in both detriment and fall in Pisces. In traditional terms this is a chart of 'guests' rather than 'hosts': planets working through other planets' territory, which is exactly why the rulership chains below matter so much.",
+    "sect": "The Sun was above the horizon, so this is a day chart. In a day chart the Sun leads, Jupiter is the benefic 'of the sect' (at its most helpful) and Saturn is the malefic of the sect (its difficulties are considered more manageable). Mars is the out-of-sect malefic. Sect was one of the first things a Hellenistic astrologer checked.",
+    "dispositorsTrad": "Follow each planet to the ruler of its sign, then that ruler's ruler, and so on. With traditional rulers, every path ends in the same three-planet loop: Jupiter (in Mars's sign) → Mars (in Mercury's sign) → Mercury (in Jupiter's sign) → Jupiter. There is no final dispositor; instead, growth (Jupiter), drive (Mars) and thought (Mercury) keep handing the chart back to each other.",
+    "dispositorsMod": "With modern rulers two mutual receptions appear: Uranus in Pisces and Neptune in Aquarius sit in each other's signs, and so do Jupiter in Scorpio and Pluto in Sagittarius. Mutual reception is read as two planets cooperating, each hosting the other.",
+    "decans": "Every sign splits into three 10° decans. In the traditional 'faces' (Chaldean order), her Sun is in the second face of Pisces, ruled by Jupiter; Venus is in its own face at the start of Aquarius. Modern decans use the three signs of the same element instead.",
+    "stars": "Two close fixed-star contacts. Her Sun lies on Achernar, the bright star at the end of the constellation Eridanus; the name comes from the Arabic for 'the river's end', a fitting star for a Pisces Sun. Jupiter sits within a degree of Zubeneschamali, the Scorpion's 'northern claw', traditionally counted among the fortunate stars.",
+    "lilith": "'Lilith' is not one object. Mean Black Moon Lilith (the averaged lunar apogee) is at 4° Virgo; the true or 'osculating' Lilith is at 22° Leo. Many apps print just 'Lilith' without saying which. Asteroid Lilith and 'Dark Moon' Lilith are different objects again, and aren't calculated here.",
+    "nodes": "The nodes are where the Moon's orbit crosses the ecliptic. The true node (with its wobble) is at 4° Aries; the smoothed mean node at 5° Aries.",
+    "draconic": "The draconic chart rotates the zodiac so the North Node sits at 0° Aries. Modern astrologers read it as a 'soul' layer. For her, almost everything keeps its sign, but Venus shifts back from Aquarius into late Capricorn.",
+    "sidereal": "Western astrology uses the tropical zodiac, tied to the equinoxes. Indian astrology generally uses a sidereal zodiac, tied to the stars; because of precession the two currently differ by about 24°. In sidereal (Lahiri) terms her Sun would be Aquarius, her Moon Taurus and her rising sign Aries. Same sky, different measuring stick.",
+    "withheld": "Some points are deliberately left out because they depend on the exact birth minute: the Lots (Fortune, Spirit), the Vertex, the Midheaven degree, house cusps, zodiacal releasing, lunar returns and progressed angles. Chiron isn't calculated because it needs an additional ephemeris file."
+  },
+  "time": {
+    "intro": "Everything above is the natal chart, a single moment. Astrologers also move the chart through time. These techniques are calculated from real planetary motion; what the timing 'means' is interpretation.",
+    "profection": "Annual profections move the Ascendant forward one sign per year of life. At 20, her profected year is the 9th house (Capricorn in whole signs), so Saturn is Lord of the Year. Traditionally, the Lord of the Year's own condition and transits colour the year: here, Saturn is retrograde in the 4th, in its detriment, and in the day sect.",
+    "firdaria": "Firdaria, a Persian time-lord system, assign long periods to each planet in a fixed order. In a day chart the sequence starts with the Sun. She is in her Mercury period (ages 18–31), currently in its Moon sub-period, so the Moon's ruler, Mercury, is doubly emphasised.",
+    "progressions": "Secondary progressions treat each day after birth as a year of life. Her progressed Sun moved into Aries at 14, and progressed Mercury, retrograde at birth, turned direct at 19. Astrologers often read that as thought and voice turning outward after years of revising inward.",
+    "solarArc": "Solar-arc directions move every planet forward by the progressed Sun's distance, currently about 20.5°.",
+    "transits": "Transits compare today's sky with the natal chart. What matters astrologically isn't that a planet is retrograde but whether it touches a natal planet. Transits to the Moon aren't listed here, because their dates would reveal its degree.",
+    "returns": "A return happens when a planet comes back to its natal position: Jupiter about every 12 years, Saturn about every 29.5, the lunar nodes about every 18.6 (with a nodal opposition halfway through).",
+    "solarReturn": "Her next solar return (the Sun reaching its exact natal degree) falls on",
+    "asOf": "Sky and transits calculated for"
+  },
+  "history": [
+    {
+      "when": "2nd millennium BCE",
+      "where": "Mesopotamia",
+      "what": "Scribes record celestial omens (later collected in the Enūma Anu Enlil series) interpreted as signs for kings, states, weather and war, not individuals."
+    },
+    {
+      "when": "5th century BCE",
+      "where": "Babylon",
+      "what": "The twelve 30° zodiac signs appear, and the oldest surviving personal birth horoscope dates to 410 BCE."
+    },
+    {
+      "when": "2nd–1st century BCE",
+      "where": "Hellenistic Egypt",
+      "what": "Babylonian astronomy, Greek geometry and Egyptian decans combine into horoscopic astrology: the Ascendant, the twelve places, rulerships and aspects."
+    },
+    {
+      "when": "2nd century CE",
+      "where": "Alexandria & the Roman world",
+      "what": "Ptolemy's Tetrabiblos and Vettius Valens' Anthology document and systematise traditions that already existed."
+    },
+    {
+      "when": "8th–10th century",
+      "where": "Baghdad",
+      "what": "Greek, Persian and Indian material is translated and developed in Arabic by astrologers such as Māshāʾallāh, al-Kindī and Abū Maʿshar."
+    },
+    {
+      "when": "12th century",
+      "where": "Spain",
+      "what": "Arabic works are translated into Latin in Toledo, and Abraham ibn Ezra writes astrology in Hebrew, carrying the tradition into medieval Europe."
+    },
+    {
+      "when": "15th–17th century",
+      "where": "Renaissance Europe",
+      "what": "Astrology is taught at universities and practised at court. William Lilly's Christian Astrology (1647) becomes a classic of horary."
+    },
+    {
+      "when": "Late 17th–18th century",
+      "where": "Enlightenment",
+      "what": "Astrology loses standing among educated elites as the new physics reshapes cosmology. Uranus is discovered in 1781."
+    },
+    {
+      "when": "19th century",
+      "where": "Britain & beyond",
+      "what": "A revival led by figures like Alan Leo reframes astrology around character. Neptune is discovered in 1846."
+    },
+    {
+      "when": "20th century",
+      "where": "Mass media & psychology",
+      "what": "Newspaper Sun-sign columns appear from 1930, Pluto is discovered the same year, and Dane Rudhyar's psychological astrology (1936) shapes the modern style."
+    },
+    {
+      "when": "1985",
+      "where": "Nature",
+      "what": "Shawn Carlson's double-blind test finds astrologers unable to match natal charts to personality profiles better than chance."
+    },
+    {
+      "when": "1990s–today",
+      "where": "Revival of tradition",
+      "what": "Translation projects bring Hellenistic and medieval techniques (profections, sect, zodiacal releasing) back into practice alongside modern psychological astrology."
+    }
+  ],
+  "build": [
+    {
+      "step": "Earth",
+      "tag": "Astronomy",
+      "text": "Everything is measured from where she was born: Lucknow, on a spinning, orbiting Earth."
+    },
+    {
+      "step": "Celestial sphere",
+      "tag": "Astronomy",
+      "text": "Imagine the sky as a sphere around the Earth, with every body projected onto it."
+    },
+    {
+      "step": "Ecliptic",
+      "tag": "Astronomy",
+      "text": "The Sun's apparent yearly path across that sphere. Planets stay close to it."
+    },
+    {
+      "step": "Zodiac",
+      "tag": "Convention",
+      "text": "The ecliptic is split into twelve 30° signs, counted from the spring equinox (the tropical zodiac)."
+    },
+    {
+      "step": "Planets placed",
+      "tag": "Astronomy",
+      "text": "Each body's geocentric longitude along the ecliptic at the birth moment, like Sun at 15° Pisces."
+    },
+    {
+      "step": "Horizon",
+      "tag": "Astronomy",
+      "text": "The local horizon at Lucknow cuts the ecliptic in two places: the rising degree (Ascendant) and setting degree (Descendant)."
+    },
+    {
+      "step": "Meridian",
+      "tag": "Astronomy",
+      "text": "The north–south line overhead cuts the ecliptic at the Midheaven (MC) and its opposite, the IC."
+    },
+    {
+      "step": "Houses",
+      "tag": "Convention",
+      "text": "The sky is divided into twelve places starting from the Ascendant, using one of several house systems."
+    },
+    {
+      "step": "Aspects",
+      "tag": "Geometry",
+      "text": "Angles between planets are measured; certain angles (0°, 60°, 90°, 120°, 180°) are named aspects."
+    },
+    {
+      "step": "Interpretation",
+      "tag": "Astrology",
+      "text": "Planet = what, sign = how, house = where, aspect = how parts relate. The symbolic reading begins here."
+    }
+  ],
+  "atlas": [
+    {
+      "group": "Relationships",
+      "status": "needs a second chart",
+      "items": [
+        [
+          "Synastry",
+          "One chart laid over another, aspect by aspect."
+        ],
+        [
+          "Composite",
+          "A chart built from the midpoints of two charts, read as the relationship itself."
+        ],
+        [
+          "Davison",
+          "A chart for the midpoint in time and space between two births."
+        ]
+      ]
+    },
+    {
+      "group": "Place",
+      "status": "withheld: needs the exact birth time",
+      "items": [
+        [
+          "Relocation",
+          "The same moment recalculated for another city, changing angles and houses."
+        ],
+        [
+          "Astrocartography",
+          "Lines on a world map where each planet was on an angle."
+        ],
+        [
+          "Local space",
+          "Planetary directions (azimuths) from a given place."
+        ]
+      ]
+    },
+    {
+      "group": "Questions & choices",
+      "status": "different kinds of chart",
+      "items": [
+        [
+          "Horary",
+          "A chart cast for the moment a question is asked."
+        ],
+        [
+          "Electional",
+          "Choosing a moment to begin something."
+        ]
+      ]
+    },
+    {
+      "group": "The collective",
+      "status": "not personal",
+      "items": [
+        [
+          "Mundane",
+          "Astrology of nations, events and cycles."
+        ],
+        [
+          "Ingresses & eclipses",
+          "Charts for the Sun entering Aries, or for eclipses."
+        ]
+      ]
+    },
+    {
+      "group": "Other lenses",
+      "status": "not calculated here",
+      "items": [
+        [
+          "Harmonic charts",
+          "Positions multiplied to study families of aspects."
+        ],
+        [
+          "Midpoints",
+          "Points halfway between two planets (Cosmobiology, Uranian astrology)."
+        ],
+        [
+          "Lots",
+          "Points like Fortune and Spirit built from three chart factors."
+        ],
+        [
+          "Zodiacal releasing",
+          "A Hellenistic time-lord system built from the Lots."
+        ],
+        [
+          "Primary directions",
+          "The oldest predictive technique, based on the sky's daily rotation."
+        ],
+        [
+          "Asteroids",
+          "Chiron, Ceres, Pallas, Juno, Vesta and many more."
+        ]
+      ]
+    }
+  ],
+  "schools": "Western astrology isn't one ideology: Hellenistic, medieval, Renaissance and modern traditional astrology; psychological, humanistic, evolutionary and archetypal astrology; Cosmobiology and the Uranian (Hamburg) school; and specialties like horary, electional, mundane and locational astrology. They can read the same chart very differently.",
+  "timelineNotes": {
+    "jupiter": "Jupiter returns to its natal place about every 12 years. Traditionally read as a new cycle of growth, learning and opportunity.",
+    "saturn": "Saturn returns about every 29.5 years. Probably the most famous astrological milestone: maturity, responsibility and restructuring.",
+    "nodal": "The lunar nodes return about every 18.6 years. Modern astrologers link nodal returns to life direction.",
+    "nodal_opposition": "Halfway through the nodal cycle the nodes reverse over their natal positions.",
+    "uranus_opposition": "Transiting Uranus opposes its natal place around age 40–42, the classic 'midlife' marker in modern astrology.",
+    "prog": "A progressed event, from the day-for-a-year technique.",
+    "firdaria": "A new firdaria period begins, with a new planetary time-lord."
+  },
+  "repeats": [
+    {
+      "theme": "Communication",
+      "factors": [
+        "Moon in Gemini",
+        "Mars in Gemini",
+        "Mercury rules both the Moon and Mars",
+        "Mercury □ Pluto, the chart's tightest aspect",
+        "Mercury ⚹ Venus",
+        "Mercury sits in the Jupiter–Mars–Mercury rulership loop"
+      ]
+    },
+    {
+      "theme": "Depth & devotion",
+      "factors": [
+        "Jupiter in Scorpio in the 7th",
+        "Jupiter and Pluto in mutual reception",
+        "Mercury □ Pluto",
+        "Venus ☍ Saturn",
+        "Moon △ Venus",
+        "Four planets in fixed signs"
+      ]
+    },
+    {
+      "theme": "Building & security",
+      "factors": [
+        "Moon in the 2nd",
+        "Mars in the 2nd",
+        "Taurus Rising",
+        "Saturn in the 4th",
+        "Saturn ⚹ Moon and ⚹ Mars",
+        "Five planets in succedent houses"
+      ]
+    },
+    {
+      "theme": "Imagination & the spiritual",
+      "factors": [
+        "Sun in Pisces",
+        "Mercury in Pisces",
+        "Uranus in Pisces",
+        "Neptune, Pisces' modern ruler, in the 10th",
+        "Jupiter □ Neptune"
+      ]
+    },
+    {
+      "theme": "Community",
+      "factors": [
+        "Sun in the 11th",
+        "Mercury in the 11th",
+        "Uranus in the 11th",
+        "Venus in Aquarius",
+        "Neptune in Aquarius"
+      ]
+    },
+    {
+      "theme": "Being seen",
+      "factors": [
+        "Venus, the chart ruler, in the 10th",
+        "Neptune in the 10th",
+        "Seven planets above the horizon",
+        "Saturn in Leo"
+      ]
+    },
+    {
+      "theme": "Adaptability",
+      "factors": [
+        "Six mutable planets",
+        "Sun and Moon both in mutable signs",
+        "No cardinal planets",
+        "Sun □ Moon keeps two viewpoints in play"
+      ]
+    }
+  ],
+  "repeatsNote": "Astrology reads repetition as emphasis: when several independent parts of a chart point the same way, the theme is weighted more heavily. These are transparent counts of interpretive indicators, not scores.",
+  "contradictions": [
+    {
+      "title": "Feels in waves, thinks in words",
+      "a": "Pisces Sun: intuitive, absorbing, non-linear",
+      "b": "Gemini Moon: verbal, curious, quick",
+      "why": "Sun □ Moon, both mutable"
+    },
+    {
+      "title": "Looks unhurried, moves fast",
+      "a": "Taurus Rising: steady, composed, earthy",
+      "b": "Moon and Mars in Gemini, and no earth planets at all",
+      "why": "Rising (fixed earth) vs. the 2nd-house Gemini pair (mutable air)"
+    },
+    {
+      "title": "All in, but needs room",
+      "a": "Jupiter in Scorpio in the 7th: deep, committed bonds",
+      "b": "Venus in Aquarius, Sun ☌ Uranus, Moon □ Uranus: freedom and space",
+      "why": "Water-sign devotion vs. Uranian independence"
+    },
+    {
+      "title": "Public life and private roots",
+      "a": "Venus, the chart ruler, at the top of the chart in the 10th",
+      "b": "Saturn at the base of the chart in the 4th",
+      "why": "Venus ☍ Saturn across the private/public axis"
+    },
+    {
+      "title": "Dreams bigger than the plan",
+      "a": "Jupiter: expansion and faith",
+      "b": "Neptune: ideals without edges",
+      "why": "Jupiter □ Neptune, half a degree from exact"
+    }
+  ],
+  "contradictionsNote": "Astrologers don't resolve tensions by deciding which side is 'true'. Both operate; circumstances decide which leads; and friction is traditionally read as a source of energy and growth, not a flaw.",
+  "importance": {
+    "Foundational": [
+      "Sun",
+      "Moon",
+      "Rising",
+      "Venus"
+    ],
+    "Major": [
+      "Mercury",
+      "Mars",
+      "Jupiter",
+      "Saturn"
+    ],
+    "Generational": [
+      "Uranus",
+      "Neptune",
+      "Pluto"
+    ],
+    "Specialized": [
+      "Nodes",
+      "Lilith"
+    ],
+    "Advanced": [
+      "Fixed stars",
+      "Minor aspects",
+      "Decans",
+      "Draconic chart"
+    ]
+  },
+  "importanceNote": {
+    "Foundational": "core of the chart; Venus is here as chart ruler",
+    "Major": "personal and social planets",
+    "Generational": "shared by everyone born within years; personal through house and aspects",
+    "Specialized": "points, not planets",
+    "Advanced": "fine detail, used by some schools"
+  },
+  "evolutionary": {
+    "Sun": "Growth comes from trusting intuition enough to lead with it among other people.",
+    "Moon": "Learning that feelings can be both spoken and held.",
+    "Mercury": "Turning a probing, inward-revising mind outward: sharing rather than endlessly editing.",
+    "Venus": "Letting love be both free and committed.",
+    "Mars": "Aiming quick energy at things that last.",
+    "Jupiter": "Finding meaning through depth in partnership.",
+    "Saturn": "Building a foundation that feels entirely her own.",
+    "Uranus": "Being the original voice within a group.",
+    "Neptune": "Giving ideals a public, visible form.",
+    "Pluto": "Letting beliefs transform through learning."
+  },
+  "debugger": [
+    {
+      "q": "House system",
+      "a": "The biggest source of disagreement. Cafe Astrology and many apps default to Placidus; her canonical chart matches Porphyry; ancient astrologers mostly used whole-sign houses. Planets near a house boundary can move between systems. Signs and aspects never change."
+    },
+    {
+      "q": "Zodiac",
+      "a": "Tropical (Western) vs. sidereal (Indian). About 24° apart today, so most placements shift back one sign: her Sun is Pisces tropically, Aquarius sidereally."
+    },
+    {
+      "q": "Birth time & time zone",
+      "a": "The Ascendant moves about one degree every four minutes. A wrong time, or a site applying the wrong historical time zone, moves the rising sign and houses. Planet signs barely move: every one of her planets was in the same sign for any birth time on 6 March 2006 in Lucknow."
+    },
+    {
+      "q": "Node & Lilith type",
+      "a": "True vs. mean node: her node is 4° Aries (true) or 5° Aries (mean), and different sites pick different ones. 'Lilith' can mean the mean Black Moon (4° Virgo), the true Black Moon (22° Leo) or an asteroid."
+    },
+    {
+      "q": "Orbs",
+      "a": "Sites allow different leeway. Her Sun–Moon square is included here with a wider orb for the lights; one calculator she used leaves it out, and another adds wide trines such as Mercury–Jupiter at over 7°."
+    },
+    {
+      "q": "Weighting",
+      "a": "Element and modality 'scores' depend on what's counted. A plain planet count gives water 4 · air 4 · fire 2 · earth 0; sites that add the Ascendant or weight the Sun and Moon double report different numbers for the same chart."
+    }
+  ],
+  "hero": {
+    "promise": "Your sky, explained.",
+    "sub": "Not just where the planets were, but why, what astrologers believe it means, where those meanings came from, and which parts are astronomy versus interpretation."
+  }
+}

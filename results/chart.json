@@ -1,163 +1,355 @@
 {
   "place": "Lucknow, Uttar Pradesh, India",
-  "western": {
-    "sun_sign": "Pisces",
-    "moon_sign": "Gemini",
-    "rising_sign": "Taurus",
-    "planets": [
-      {
-        "planet": "Sun",
-        "sign": "Pisces",
-        "house": 11,
-        "retrograde": false,
-        "degree": 15
-      },
-      {
-        "planet": "Moon",
-        "sign": "Gemini",
-        "house": 2,
-        "retrograde": false
-      },
-      {
-        "planet": "Mercury",
-        "sign": "Pisces",
-        "house": 11,
-        "retrograde": true,
-        "degree": 26
-      },
-      {
-        "planet": "Venus",
-        "sign": "Aquarius",
-        "house": 10,
-        "retrograde": false,
-        "degree": 0
-      },
-      {
-        "planet": "Mars",
-        "sign": "Gemini",
-        "house": 2,
-        "retrograde": false,
-        "degree": 8
-      },
-      {
-        "planet": "Jupiter",
-        "sign": "Scorpio",
-        "house": 7,
-        "retrograde": true,
-        "degree": 18
-      },
-      {
-        "planet": "Saturn",
-        "sign": "Leo",
-        "house": 4,
-        "retrograde": true,
-        "degree": 5
-      },
-      {
-        "planet": "Uranus",
-        "sign": "Pisces",
-        "house": 11,
-        "retrograde": false,
-        "degree": 10
-      },
-      {
-        "planet": "Neptune",
-        "sign": "Aquarius",
-        "house": 10,
-        "retrograde": false,
-        "degree": 18
-      },
-      {
-        "planet": "Pluto",
-        "sign": "Sagittarius",
-        "house": 8,
-        "retrograde": false,
-        "degree": 26
-      }
+  "house_system": "Porphyry",
+  "sun_sign": "Pisces",
+  "moon_sign": "Gemini",
+  "rising_sign": "Taurus",
+  "rising_element": "Earth",
+  "rising_modality": "Fixed",
+  "planets": [
+    {
+      "planet": "Sun",
+      "sign": "Pisces",
+      "house": 11,
+      "element": "Water",
+      "modality": "Mutable",
+      "retrograde": false,
+      "degree": 15
+    },
+    {
+      "planet": "Moon",
+      "sign": "Gemini",
+      "house": 2,
+      "element": "Air",
+      "modality": "Mutable",
+      "retrograde": false
+    },
+    {
+      "planet": "Mercury",
+      "sign": "Pisces",
+      "house": 11,
+      "element": "Water",
+      "modality": "Mutable",
+      "retrograde": true,
+      "degree": 26
+    },
+    {
+      "planet": "Venus",
+      "sign": "Aquarius",
+      "house": 10,
+      "element": "Air",
+      "modality": "Fixed",
+      "retrograde": false,
+      "degree": 0
+    },
+    {
+      "planet": "Mars",
+      "sign": "Gemini",
+      "house": 2,
+      "element": "Air",
+      "modality": "Mutable",
+      "retrograde": false,
+      "degree": 8
+    },
+    {
+      "planet": "Jupiter",
+      "sign": "Scorpio",
+      "house": 7,
+      "element": "Water",
+      "modality": "Fixed",
+      "retrograde": true,
+      "degree": 18
+    },
+    {
+      "planet": "Saturn",
+      "sign": "Leo",
+      "house": 4,
+      "element": "Fire",
+      "modality": "Fixed",
+      "retrograde": true,
+      "degree": 5
+    },
+    {
+      "planet": "Uranus",
+      "sign": "Pisces",
+      "house": 11,
+      "element": "Water",
+      "modality": "Mutable",
+      "retrograde": false,
+      "degree": 10
+    },
+    {
+      "planet": "Neptune",
+      "sign": "Aquarius",
+      "house": 10,
+      "element": "Air",
+      "modality": "Fixed",
+      "retrograde": false,
+      "degree": 18
+    },
+    {
+      "planet": "Pluto",
+      "sign": "Sagittarius",
+      "house": 9,
+      "element": "Fire",
+      "modality": "Mutable",
+      "retrograde": false,
+      "degree": 26
+    }
+  ],
+  "nodes": {
+    "north": {
+      "sign": "Aries",
+      "house": 12,
+      "degree": 4
+    },
+    "south": {
+      "sign": "Libra",
+      "house": 6,
+      "degree": 4
+    }
+  },
+  "houses": [
+    {
+      "house": 1,
+      "planets": []
+    },
+    {
+      "house": 2,
+      "planets": [
+        "Moon",
+        "Mars"
+      ]
+    },
+    {
+      "house": 3,
+      "planets": []
+    },
+    {
+      "house": 4,
+      "planets": [
+        "Saturn"
+      ]
+    },
+    {
+      "house": 5,
+      "planets": []
+    },
+    {
+      "house": 6,
+      "planets": []
+    },
+    {
+      "house": 7,
+      "planets": [
+        "Jupiter"
+      ]
+    },
+    {
+      "house": 8,
+      "planets": []
+    },
+    {
+      "house": 9,
+      "planets": [
+        "Pluto"
+      ]
+    },
+    {
+      "house": 10,
+      "planets": [
+        "Venus",
+        "Neptune"
+      ]
+    },
+    {
+      "house": 11,
+      "planets": [
+        "Sun",
+        "Mercury",
+        "Uranus"
+      ]
+    },
+    {
+      "house": 12,
+      "planets": []
+    }
+  ],
+  "aspects": [
+    {
+      "a": "Mercury",
+      "b": "Pluto",
+      "type": "square",
+      "orb": 0.5
+    },
+    {
+      "a": "Jupiter",
+      "b": "Neptune",
+      "type": "square",
+      "orb": 0.5
+    },
+    {
+      "a": "Mars",
+      "b": "Uranus",
+      "type": "square",
+      "orb": 2.7
+    },
+    {
+      "a": "Mars",
+      "b": "Saturn",
+      "type": "sextile",
+      "orb": 3.1
+    },
+    {
+      "a": "Sun",
+      "b": "Jupiter",
+      "type": "trine",
+      "orb": 3.5
+    },
+    {
+      "a": "Sun",
+      "b": "Uranus",
+      "type": "conjunction",
+      "orb": 4.4
+    },
+    {
+      "a": "Mercury",
+      "b": "Venus",
+      "type": "sextile",
+      "orb": 4.5
+    },
+    {
+      "a": "Venus",
+      "b": "Saturn",
+      "type": "opposition",
+      "orb": 4.6
+    },
+    {
+      "a": "Sun",
+      "b": "Mars",
+      "type": "square",
+      "orb": 7.1
+    },
+    {
+      "a": "Sun",
+      "b": "Moon",
+      "type": "square"
+    },
+    {
+      "a": "Moon",
+      "b": "Venus",
+      "type": "trine"
+    },
+    {
+      "a": "Moon",
+      "b": "Mars",
+      "type": "conjunction"
+    },
+    {
+      "a": "Moon",
+      "b": "Saturn",
+      "type": "sextile"
+    },
+    {
+      "a": "Moon",
+      "b": "Uranus",
+      "type": "square"
+    }
+  ],
+  "elements": {
+    "Fire": [
+      "Saturn",
+      "Pluto"
+    ],
+    "Earth": [],
+    "Air": [
+      "Moon",
+      "Venus",
+      "Mars",
+      "Neptune"
+    ],
+    "Water": [
+      "Sun",
+      "Mercury",
+      "Jupiter",
+      "Uranus"
     ]
   },
-  "vedic": {
-    "ayanamsa": "Lahiri",
-    "lagna": "Aries",
-    "lagna_rashi": "Mesha",
-    "moon_rashi": "Vrishabha",
-    "moon_sign": "Taurus",
-    "sun_rashi": "Kumbha",
-    "nakshatra": "Rohini",
-    "current_mahadasha": "Rahu",
-    "current_antardasha": "Saturn",
-    "planets": [
-      {
-        "planet": "Sun",
-        "sign": "Aquarius",
-        "house": 11,
-        "retrograde": false,
-        "degree": 21,
-        "rashi": "Kumbha"
-      },
-      {
-        "planet": "Moon",
-        "sign": "Taurus",
-        "house": 2,
-        "retrograde": false,
-        "rashi": "Vrishabha"
-      },
-      {
-        "planet": "Mars",
-        "sign": "Taurus",
-        "house": 2,
-        "retrograde": false,
-        "degree": 14,
-        "rashi": "Vrishabha"
-      },
-      {
-        "planet": "Mercury",
-        "sign": "Pisces",
-        "house": 12,
-        "retrograde": true,
-        "degree": 2,
-        "rashi": "Meena"
-      },
-      {
-        "planet": "Jupiter",
-        "sign": "Libra",
-        "house": 7,
-        "retrograde": true,
-        "degree": 24,
-        "rashi": "Tula"
-      },
-      {
-        "planet": "Venus",
-        "sign": "Capricorn",
-        "house": 10,
-        "retrograde": false,
-        "degree": 6,
-        "rashi": "Makara"
-      },
-      {
-        "planet": "Saturn",
-        "sign": "Cancer",
-        "house": 4,
-        "retrograde": true,
-        "degree": 11,
-        "rashi": "Karka"
-      },
-      {
-        "planet": "Rahu",
-        "sign": "Pisces",
-        "house": 12,
-        "retrograde": true,
-        "degree": 11,
-        "rashi": "Meena"
-      },
-      {
-        "planet": "Ketu",
-        "sign": "Virgo",
-        "house": 6,
-        "retrograde": true,
-        "degree": 11,
-        "rashi": "Kanya"
-      }
+  "modalities": {
+    "Cardinal": [],
+    "Fixed": [
+      "Venus",
+      "Jupiter",
+      "Saturn",
+      "Neptune"
+    ],
+    "Mutable": [
+      "Sun",
+      "Moon",
+      "Mercury",
+      "Mars",
+      "Uranus",
+      "Pluto"
+    ]
+  },
+  "hemispheres": {
+    "above": [
+      "Sun",
+      "Mercury",
+      "Venus",
+      "Jupiter",
+      "Uranus",
+      "Neptune",
+      "Pluto"
+    ],
+    "below": [
+      "Moon",
+      "Mars",
+      "Saturn"
+    ],
+    "east": [
+      "Sun",
+      "Moon",
+      "Mercury",
+      "Venus",
+      "Mars",
+      "Uranus",
+      "Neptune"
+    ],
+    "west": [
+      "Jupiter",
+      "Saturn",
+      "Pluto"
+    ]
+  },
+  "house_types": {
+    "angular": [
+      "Venus",
+      "Jupiter",
+      "Saturn",
+      "Neptune"
+    ],
+    "succedent": [
+      "Sun",
+      "Moon",
+      "Mercury",
+      "Mars",
+      "Uranus"
+    ],
+    "cadent": [
+      "Pluto"
+    ]
+  },
+  "rulers": {
+    "chart_ruler": [
+      "Venus"
+    ],
+    "sun_sign_rulers": [
+      "Jupiter",
+      "Neptune"
+    ],
+    "moon_sign_rulers": [
+      "Mercury"
     ]
   }
 }
